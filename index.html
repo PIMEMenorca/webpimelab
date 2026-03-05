@@ -1,21 +1,54 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/output.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/output.css" />
     <title>Pimelab</title>
-</head>
-<body>
-    <header class="bg-azul-claro text-negro w-full flex items-center justify-between">
-        <img src="./assets/logo.png" alt="Logo Pimelab" class="h-16 mx-4">
-        <nav>
-            <ul class="flex space-x-4 p-4">
-                <li><a href="/">Presentación</a></li>
-                <li><a href="/servicios">Servicios</a></li>
-                <li><a href="/noticias">Noticias</a></li>
-                <li><a href="/contacto">Contacto</a></li>
-            </ul>
-        </nav>
-        <button><img src="./assets/icons/icon-menu.png" alt="menu Icon" class="h-8 mx-4"></button>
+  </head>
+  <body>
+    <header
+      class="bg-azul-claro text-negro w-full flex items-center justify-between p-4 sticky top-0 z-50 shadow-md hover:cursor-pointer"
+    >
+      <img
+        src="./assets/images/logo.png"
+        alt="Logo Pimelab"
+        class="h-7 mx-4 md:h-10 lg:h-12"
+        aria-role="button banner"
+        onclick=""
+      />
+      <div class="search-bar">
+        <input
+          type="search"
+          name="search"
+          id="search-input"
+          class="search-input"
+          placeholder="Buscar..."
+        />
+        <img src="./assets/icons/lupa.svg" alt="Lupa" class="w-4 h-4" />
+      </div>
+      <div class="menu-container">
+        <button>
+          <img
+            src="./assets/icons/icon-menu.png"
+            alt="menu Icon"
+            id="menu-button"
+            class="h-5 mx-4 hover:cursor-pointer hover:transform-[scale(1.2)] lg:hidden"
+          />
+        </button>
+
+        <ul class="menu-links">
+          <button id="close-menu" class="close-menu lg:hidden">
+            <img src="./assets/icons/icon-close.svg" alt="cerrar menu" />
+          </button>
+          <li class="pagina"><a href="./pages/presentacion.html">Presentación</a></li>
+          <li class="pagina"><a href="./pages/servicios.html">Servicios</a></li>
+          <li class="pagina"><a href="./pages/noticias.html">Noticias</a></li>
+          <li class="pagina"><a href="./pages/contacto.html">Contacto</a></li>
+        </ul>
+      </div>
     </header>
+    <main></main>
+    <script src="./javascript/menu.js"></script>
+  </body>
+</html>

@@ -1,12 +1,70 @@
 @import "tailwindcss";
+@font-face {
+    font-family: Helvetica, sans-serif;
+    src: url(./assets/fonts/Helvetica_Neue/HelveticaNeue-Medium.otf) format("truetype");
+}
+@font-face {
+    font-family: Molengo, sans-serif;
+    src: url(./assets/fonts/Molengo/Molengo-Regular.ttf) format("truetype");
+}
 @theme {
     --color-azul-claro: #33DCFB;
     --color-azul-oscuro: #073D87;
     --color-gris: #736F6E;
     --color-blanco: #FAFAFA;
     --color-negro: #010101;
+
+    --font-primary: Molengo, sans-serif;
+    --font-secondary: Helvetica, sans-serif;
 }
 
 @layer components {
+    body{
+        @apply font-secondary
+    }
     
+    h1,h2,h3,h4,h5,h6 {
+        @apply font-primary
+    }
+    .pagina {
+        @apply p-2 hover:transform-[scale(1.2)] 
+    }
+
+    .search-bar {
+        @apply p-2 flex items-center border-negro rounded-xl bg-gris
+    }
+
+    /* Controles de formulario: estilos comunes para inputs, selects y textareas */
+    .form-control{
+        @apply w-full p-2 rounded border border-azul-claro bg-azul-oscuro focus:outline-none;
+    }
+
+    /* Barra de búsqueda: contenedor para el input y controles de búsqueda */
+    .search-bar{
+        @apply flex items-center justify-center border-negro rounded-xl bg-gris px-2 lg:w-auto lg:max-w-lg;
+    }
+
+    .search-input {
+        @apply p-1
+    }
+
+    .search-input:focus{
+        @apply border-none
+    }
+
+    /* Placeholder de búsqueda: texto de marcador más pequeño para inputs de búsqueda */
+    .search-input::placeholder{
+        @apply text-xs;
+    }
+    
+    /* Enlaces del menú: contenedor de los enlaces de navegación; oculto en pantallas pequeñas */
+    .menu-links{
+        @apply  list-none hidden gap-4 lg:flex lg:items-center lg:justify-center;
+    }
+
+    /* Menú activo: al togglear (móvil/tablet) muestra una columna a pantalla completa; en pantallas grandes es una fila normal */
+    .menu-links.active{
+        @apply flex bg-azul-oscuro flex-col gap-4 justify-start items-start absolute top-16 left-0 right-0 z-50 p-4 lg:flex-row lg:p-0 lg:bg-transparent lg:static lg:top-auto lg:left-auto lg:right-auto lg:z-auto;
+    }
+
 }
