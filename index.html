@@ -7,48 +7,149 @@
     <title>Pimelab</title>
   </head>
   <body>
-    <header
-      class="bg-azul-claro text-negro w-full flex items-center justify-between p-4 sticky top-0 z-50 shadow-md hover:cursor-pointer"
-    >
-      <img
-        src="./assets/images/logo.png"
-        alt="Logo Pimelab"
-        class="h-7 mx-4 md:h-10 lg:h-12"
-        aria-role="button banner"
-        onclick=""
-      />
+    <header class="bg-azul-claro text-negro w-full flex items-center justify-between p-4 sticky top-0 z-50 shadow-md hover:cursor-pointer">
+      <img src="./assets/images/logo.png" alt="Logo Pimelab" class="h-7 mx-4 md:h-10 lg:h-12" aria-role="button banner" onclick="" />
       <div class="search-bar">
-        <input
-          type="search"
-          name="search"
-          id="search-input"
-          class="search-input"
-          placeholder="Buscar..."
-        />
+        <input type="search" name="search" id="search-input" class="search-input" placeholder="Buscar..." />
         <img src="./assets/icons/lupa.svg" alt="Lupa" class="w-4 h-4" />
       </div>
       <div class="menu-container">
         <button>
-          <img
-            src="./assets/icons/icon-menu.png"
-            alt="menu Icon"
-            id="menu-button"
-            class="h-5 mx-4 hover:cursor-pointer hover:transform-[scale(1.2)] lg:hidden"
-          />
+          <img src="./assets/icons/icon-menu.png" alt="menu Icon" id="menu-button" class="h-5 mx-4 hover:cursor-pointer hover:transform-[scale(1.2)] lg:hidden" />
         </button>
 
         <ul class="menu-links">
-          <button id="close-menu" class="close-menu lg:hidden">
-            <img src="./assets/icons/icon-close.svg" alt="cerrar menu" />
-          </button>
-          <li class="pagina"><a href="./pages/presentacion.html">Presentación</a></li>
-          <li class="pagina"><a href="./pages/servicios.html">Servicios</a></li>
-          <li class="pagina"><a href="./pages/noticias.html">Noticias</a></li>
-          <li class="pagina"><a href="./pages/contacto.html">Contacto</a></li>
+            <button id="close-menu" class="close-menu lg:hidden">
+                <img src="./assets/icons/icon-close.svg" alt="cerrar menu" />
+            </button>
+            <button class="bg-azul-oscuro w-20 h-auto rounded-md text-blanco font-bold text-sm hover:bg-azul-oscuro/80 transition-colors duration-300 "> Login</button>
+            <li class="pagina"><a href="./pages/presentacion.html">Presentación</a></li>
+            <li class="pagina"><a href="./pages/servicios.html">Servicios</a></li>
+            <li class="pagina"><a href="./pages/noticias.html">Noticias</a></li>
+            <li class="pagina"><a href="./pages/contacto.html">Contacto</a></li>
         </ul>
       </div>
     </header>
-    <main></main>
+    <main class="bg-blanco flex flex-col items-center gap-8 p-4">
+        <section class="hero slideshows ">
+          <button class="slide-nav prev" type="button" aria-label="Slide anterior">&lt;</button>
+
+          <div class="slide active">
+                <img src="./assets/images/hero2.jpg" alt="Laboratorio Pimelab" class="slide-image" />
+                <div class="slide-content">
+                  <h2 class="slide-title">Su centro tecnologico</h2>
+                  <p class="slide-text">Le ofrecemos todo un abanico de servicios para cubrir todas sus necesidades</p>
+                </div>
+            </div>
+
+          <div class="slide">
+                <img src="./assets/images/hero3.jpg" alt="Servicios Pimelab" class="slide-image" />
+                <div class="slide-content">
+                  <h2 class="slide-title">La tecnologia mas moderna</h2>
+                  <p class="slide-text">Equipamiento cientifico de última generación</p>
+                </div>
+            </div>
+
+          <div class="slide">
+                <img src="./assets/images/hero6.jpg" alt="Comunidad Pimelab" class="slide-image" />
+                <div class="slide-content">
+                    <h2 class="slide-title">300 m<sup>2</sup> de instalaciones</h2>
+                    <p class="slide-text">Unas modernas instalaciones que dan respuesta a sus necesidades de análisis</p>
+                </div>
+            </div>
+
+          <div class="slide">
+                <img src="./assets/images/hero4.jpg" alt="Contacto Pimelab" class="slide-image" />
+                <div class="slide-content">
+                    <h2 class="slide-title">Ofrecemos calidad</h2>
+                    <p class="slide-text">Mejora continua para que nuestros clientes dispongan de un perfecto servicio</p>
+                </div>
+            </div>
+
+          <div class="slide">
+                <img src="./assets/images/hero1.jpg" alt="Creatividad Pimelab" class="slide-image" />
+                <div class="slide-content">
+                    <h2 class="slide-title">Trabajamos en equipo</h2>
+                    <p class="slide-text">Equipo multidisciplinar especializado en química, microbiología, alimentación, geología y edificación</p>
+                </div>
+            </div>
+
+          <div class="slide">
+                <img src="./assets/images/hero5.jpg" alt="Innovación Pimelab" class="slide-image" />
+                <div class="slide-content">
+                    <h2 class="slide-title">Preparados para innovar</h2>
+                    <p class="slide-text">Le acompañamos en su proceso de creación de nuevos productos</p>
+                </div>
+            </div>
+
+          <button class="slide-nav next" type="button" aria-label="Slide siguiente">&gt;</button>
+        </section>
+        <section class="descripción">
+          <h2 class="text-2xl font-bold mb-4">Laboratorio PIMELAB</h2>
+          <p class="text-gris text-lg mb-6" >El laboratorio de PIME Menorca (PIMELAB), desde su creación en 1988, continúa esforzándose para ofrecer un servicio integral a sus clientes, capaz de satisfacer todas sus necesidades, ofreciendo una infraestructura tecnológica adecuada para la implantación de sistemas de gestión y control de calidad, aumentando la calidad de la producción y la mejora de la competitividad de las empresas a través de la innovación tecnológica.</p>
+          <p class="text-gris text-lg mb-6" >Con sedes en Ciutadella y Maó, dispone de acreditaciones y/o reconocimientos oficiales para realizar ensayos analíticos con altas garantias de calidad.</p>
+          <a href="./pages/presentacion.html" class="bg-azul-oscuro w-32 h-auto rounded-md text-blanco font-bold text-sm hover:bg-azul-oscuro/80 transition-colors duration-300 inline-block text-center">Conócenos</a>
+        </section>
+        <section class="servicios">
+          <h2 class="text-2xl font-bold mb-4">Nuestros servicios</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <a href="./pages/servicios.html#agua" class="servicio">
+              <div class="icono-servicio">
+                <img src="./assets/icons/agua.png" alt="Icono de análisis" class="mx-auto mb-2 w-12 h-12" />
+              </div>
+              <div class="detalle-servicio">
+                <h3 class="text-lg font-semibold">Aguas</h3>
+                <p class="text-gris text-sm mt-2">Análisis de calidad de aguas naturales, de bebida, de baño y residuales y control de legionella </p>
+              </div>
+            </a>
+            <a href="./pages/servicios.html#calibracion" class="servicio">
+              <div class="icono-servicio">
+                <img src="./assets/icons/agricultura.png" alt="Icono de calibración" class="mx-auto mb-2 w-12 h-12" />
+              </div>
+              <div class="detalle-servicio">
+                <h3 class="text-lg font-semibold">Agricultura</h3>
+                <p class="text-gris text-sm mt-2">Controles de calidad de suelo, aguas para el riego, análisis de fertilizantes y de alimentación animal</p>
+              </div>
+            </a>
+            <a href="./pages/servicios.html#formacion" class="servicio">
+              <div class="icono-servicio">
+                <img src="./assets/icons/alimentacion.png" alt="Icono de formación" class="mx-auto mb-2 w-12 h-12" />
+              </div>
+              <div class="detalle-servicio">
+                <h3 class="text-lg font-semibold">Alimentación</h3>
+                <p class="text-gris text-sm mt-2">Análisis microbiológicos y de seguridad alimentaria para industrias cárnicas y lácteas, pastelerías, panaderías, hoteles y restaurantes </p>
+              </div>
+            </a>
+            <a href="./pages/servicios.html#biologia" class="servicio">
+              <div class="icono-servicio">
+                <img src="./assets/icons/construccion.png" alt="Icono de biología" class="mx-auto mb-2 w-12 h-12" />
+              </div>
+              <div class="detalle-servicio">
+                <h3 class="text-lg font-semibold">Construcción</h3>
+                <p class="text-gris text-sm mt-2">Ensayos de resistencia, control de calidad y análisis de materiales de construcción. Patalogía de construcciones </p>
+              </div>
+            </a>
+            <a href="./pages/servicios.html#biologia" class="servicio">
+              <div class="icono-servicio">
+                <img src="./assets/icons/planeta-tierra.png" alt="Icono de biología" class="mx-auto mb-2 w-12 h-12" />
+              </div>
+              <div class="detalle-servicio">
+                <h3 class="text-lg font-semibold">Geotecnia</h3>
+                <p class="text-gris text-sm mt-2">Hidrogeologia, estudios geotecnicos y de taludes, ensayos "in situ"</p>
+              </div>
+            </a>
+            <a href="./pages/servicios.html#biologia" class="servicio">
+              <div class="icono-servicio">
+                <img src="./assets/icons/la-carretera.png" alt="Icono de biología" class="mx-auto mb-2 w-12 h-12" />
+              </div>
+              <div class="detalle-servicio">
+                <h3 class="text-lg font-semibold">Viales</h3>
+                <p class="text-gris text-sm mt-2">Controles de calidad para obras civiles, análisis de mecanica de suelos y de ligantes y mezclas bituminosas </p>
+              </div>
+            </a>
+          </div>
+    </main>
     <script src="./javascript/menu.js"></script>
+    <script src="./javascript/homepage.js"></script>
   </body>
 </html>

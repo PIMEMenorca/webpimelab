@@ -8,7 +8,7 @@
     src: url(./assets/fonts/Molengo/Molengo-Regular.ttf) format("truetype");
 }
 @theme {
-    --color-azul-claro: #33DCFB;
+    --color-azul-claro: #CFF8FF;
     --color-azul-oscuro: #073D87;
     --color-gris: #736F6E;
     --color-blanco: #FAFAFA;
@@ -19,19 +19,20 @@
 }
 
 @layer components {
-    body{
-        @apply font-secondary
+    body {
+        @apply font-secondary;
     }
     
-    h1,h2,h3,h4,h5,h6 {
-        @apply font-primary
+    h1, h2, h3, h4, h5, h6 {
+        @apply font-primary;
     }
+
     .pagina {
-        @apply p-2 hover:transform-[scale(1.2)] 
+        @apply p-2 hover:transform-[scale(1.2)];
     }
 
     .search-bar {
-        @apply p-2 flex items-center border-negro rounded-xl bg-gris
+        @apply p-2 flex items-center border-negro rounded-xl bg-gris focus:outline-blanco;
     }
 
     /* Controles de formulario: estilos comunes para inputs, selects y textareas */
@@ -45,11 +46,11 @@
     }
 
     .search-input {
-        @apply p-1
+        @apply p-1;
     }
 
-    .search-input:focus{
-        @apply border-none
+    .search-input:focus {
+        @apply border-none outline-none;
     }
 
     /* Placeholder de búsqueda: texto de marcador más pequeño para inputs de búsqueda */
@@ -58,13 +59,65 @@
     }
     
     /* Enlaces del menú: contenedor de los enlaces de navegación; oculto en pantallas pequeñas */
-    .menu-links{
-        @apply  list-none hidden gap-4 lg:flex lg:items-center lg:justify-center;
+    .menu-links {
+        @apply list-none hidden gap-4 lg:flex lg:items-center lg:justify-center z-500;
     }
 
     /* Menú activo: al togglear (móvil/tablet) muestra una columna a pantalla completa; en pantallas grandes es una fila normal */
-    .menu-links.active{
-        @apply flex bg-azul-oscuro flex-col gap-4 justify-start items-start absolute top-16 left-0 right-0 z-50 p-4 lg:flex-row lg:p-0 lg:bg-transparent lg:static lg:top-auto lg:left-auto lg:right-auto lg:z-auto;
+    .menu-links.active {
+        @apply flex bg-azul-claro flex-col gap-4 justify-start items-start absolute top-16 left-0 right-0 z-500 p-4 lg:flex-row lg:p-0 lg:bg-transparent lg:static lg:top-auto lg:left-auto lg:right-auto lg:z-auto;
+    }
+
+    .slideshows {
+        @apply relative w-full p-4 md:p-6;
+    }
+
+    .slide {
+        @apply hidden relative w-full shadow-xl;
+    }
+
+    .slide-image {
+        @apply block w-full object-cover rounded-md;
+    }
+
+    .slide-content {
+        @apply absolute w-[85%] left-7 right-4 -bottom-8 md:bottom-4 md:left-8 md:right-auto bg-azul-oscuro/70 p-4 md:p-6 rounded-md text-blanco shadow-xl;
+    }
+
+    .slide-nav {
+        @apply absolute top-1/2 -translate-y-1/2 z-20 w-10 h-10 md:w-12 md:h-12 rounded-full bg-azul-oscuro/75 text-blanco flex items-center justify-center text-xl font-bold transition-colors duration-200 hover:bg-azul-oscuro;
+    }
+
+    .slide-nav.prev {
+        @apply left-1;
+    }
+
+    .slide-nav.next {
+        @apply right-1;
+    }
+
+    .slide.active {
+        @apply block;
+    }
+
+    .slide-title{
+        @apply text-lg md:text-4xl font-bold text-blanco;
+    }
+
+    .slide-text{
+        @apply text-sm md:text-2xl text-blanco mt-2;
+    }
+
+    .servicio {
+        @apply bg-azul-claro rounded-md p-4 text-center hover:bg-azul-claro/80 transition-colors duration-300 flex md:flex-col;
+    }
+
+    .icono-servicio {
+        @apply basis-10;  ;
+    }
+
+    .detalle-servicio {
+        @apply flex-1;
     }
 
 }
