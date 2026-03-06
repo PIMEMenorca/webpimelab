@@ -120,4 +120,10 @@
         @apply flex-1;
     }
 
+    .noticia {
+        @apply bg-azul-claro rounded-md p-4 text-center hover:bg-azul-claro/80 transition-colors duration-300 flex md:flex-col items-center;
+    }
+
+    
+
 }
