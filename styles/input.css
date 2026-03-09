@@ -154,7 +154,7 @@
     }
 
     .servicio {
-        @apply bg-azul-claro rounded-md p-4 text-center hover:bg-azul-claro/80 transition-colors duration-300 flex md:flex-col hover:transform-[scale(1.05)] shadow-xl;
+        @apply bg-azul-claro rounded-md p-4 text-center hover:bg-azul-claro/80 transition-colors duration-300 flex flex-col hover:transform-[scale(1.05)] shadow-xl;
     }
 
     .ver-mas{
@@ -170,7 +170,7 @@
     }
 
     .noticia {
-        @apply bg-azul-claro rounded-md text-center hover:bg-azul-claro/80 transition-colors duration-300 flex flex-col items-center hover:transform-[scale(1.05)] shadow-xl p-4;
+        @apply bg-azul-claro rounded-md text-center hover:bg-azul-claro/80 transition-colors duration-300 flex items-center hover:transform-[scale(1.05)] shadow-xl p-4 flex-col;
     }
 
     .footer-links {
