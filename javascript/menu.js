@@ -1,31 +1,78 @@
 document.addEventListener("DOMContentLoaded", function () {
   const menuButton = document.querySelector("#menu-button");
   const closeButton = document.getElementById("close-menu");
-  const mobileMenu = document.querySelector(".menu-container");
   const menuLinks = document.querySelector(".menu-links");
-  const logo = document.getElementsByClassName("logo");
-  const searchbar = document.querySelector(".search-bar");
+  const logo = document.querySelector(".logo");
+  const slotCenter = document.getElementById("slot-center");
+  const slotDrawer = document.getElementById("slot-drawer");
+  const slotRight = document.getElementById("slot-right");
+  const searchControl = document.getElementById("search-control");
+  const loginControl = document.getElementById("login-control");
+
+  if (!menuButton || !closeButton || !menuLinks) {
+    return;
+  }
+
+  const placeHeaderControls = () => {
+    if (!slotCenter || !slotDrawer || !slotRight || !searchControl || !loginControl) {
+      return;
+    }
+
+    const isDesktop = window.matchMedia("(min-width: 1024px)").matches;
+    const isTablet = window.matchMedia("(min-width: 768px)").matches && !isDesktop;
+
+    if (isDesktop) {
+      slotRight.append(searchControl, loginControl);
+      return;
+    }
+
+    if (isTablet) {
+      slotCenter.append(searchControl);
+      slotDrawer.append(loginControl);
+      return;
+    }
+
+    slotDrawer.append(loginControl, searchControl);
+  };
+
+  const closeMobileMenu = () => {
+    menuLinks.classList.remove("active");
+    menuButton.classList.remove("hidden");
+    menuButton.setAttribute("aria-expanded", "false");
+  };
 
   // Evento para abrir el menú móvil
   menuButton.addEventListener("click", function () {
-    mobileMenu.classList.add("active");
     menuLinks.classList.add("active");
-    searchbar.classList.remove("hidden");
-    menuButton.style.display = "none";
-    console.log("menu");
+    menuButton.classList.add("hidden");
+    menuButton.setAttribute("aria-expanded", "true");
   });
 
   // Evento para cerrar el menú móvil
   closeButton.addEventListener("click", function () {
-    mobileMenu.classList.remove("active");
-    menuLinks.classList.remove("active");
-    searchbar.classList.add("hidden");
-    menuButton.style.display = "block";
+    closeMobileMenu();
   });
 
+  // Cierra el menu al pulsar cualquier enlace en mobile/tablet
+  menuLinks.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      closeMobileMenu();
+    });
+  });
+
+  // Si se vuelve a desktop, se limpia el estado mobile.
+  window.addEventListener("resize", () => {
+    placeHeaderControls();
+    if (window.innerWidth >= 1024) {
+      closeMobileMenu();
+    }
+  });
+
+  placeHeaderControls();
+
   // evento para redirigir al home al hacer click en el logo
-  if (logo.length > 0) {
-    logo[0].addEventListener("click", () => {
+  if (logo) {
+    logo.addEventListener("click", () => {
       window.location.href = "/";
     });
   }

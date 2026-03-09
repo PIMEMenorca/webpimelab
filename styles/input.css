@@ -29,11 +29,7 @@
     }
 
     .pagina {
-        @apply p-2 hover:transform-[scale(1.2)];
-    }
-
-    .search-bar {
-        @apply p-2 flex items-center border-negro rounded-xl bg-gris focus:outline-blanco;
+        @apply w-full p-2 text-left hover:transform-[scale(1.03)] lg:w-auto;
     }
     
     .boton-azul{
@@ -47,7 +43,7 @@
 
     /* Barra de búsqueda: contenedor para el input y controles de búsqueda */
     .search-bar{
-        @apply flex items-center justify-center border-negro rounded-xl bg-gris px-2 lg:w-auto lg:max-w-lg;
+        @apply flex w-fit items-center justify-center gap-2 border border-negro rounded-xl bg-gris px-2 py-1;
     }
 
     .search-input {
@@ -64,17 +60,45 @@
     }
 
     .menu-container{
-        @apply flex items-center
+        @apply relative flex items-center;
     }
     
     /* Enlaces del menú: contenedor de los enlaces de navegación; oculto en pantallas pequeñas */
     .menu-links {
-        @apply list-none hidden gap-4 lg:flex lg:items-center lg:justify-center z-500;
+        @apply hidden list-none gap-4 lg:flex lg:items-center lg:justify-center;
     }
 
     /* Menú activo: al togglear (móvil/tablet) muestra una columna a pantalla completa; en pantallas grandes es una fila normal */
     .menu-links.active {
-        @apply flex bg-azul-claro flex-col gap-4 justify-start items-start absolute top-16 left-0 right-0 z-500 p-4 lg:flex-row lg:p-0 lg:bg-transparent lg:static lg:top-auto lg:left-auto lg:right-auto lg:z-auto;
+        @apply fixed inset-x-0 top-0 z-50 flex flex-col items-start gap-4 bg-azul-claro p-4 shadow-md lg:static lg:flex lg:flex-row lg:items-center lg:gap-4 lg:bg-transparent lg:p-0 lg:shadow-none;
+    }
+
+    .menu-top-action {
+        @apply flex w-full justify-end;
+    }
+
+    .close-menu {
+        @apply p-1 hover:transform-[scale(1.1)];
+    }
+
+    .menu-mobile-search {
+        @apply w-full;
+    }
+
+    .menu-drawer-slot {
+        @apply flex w-full flex-col gap-4;
+    }
+
+    #slot-center .search-bar {
+        @apply max-w-md;
+    }
+
+    #slot-drawer .search-bar {
+        @apply w-full;
+    }
+
+    #slot-right .search-bar {
+        @apply w-fit;
     }
 
     .slideshows {
@@ -118,15 +142,23 @@
     }
 
     .descripcion {
-        @apply flex flex-col md:flex-row gap-6 items-center px-6;
+        @apply flex flex-col md:flex-row gap-6 items-start px-6;
     }
 
     .servicios, .noticias {
         @apply w-full px-6;
     }
 
+    .noticias {
+        @apply mb-8;
+    }
+
     .servicio {
         @apply bg-azul-claro rounded-md p-4 text-center hover:bg-azul-claro/80 transition-colors duration-300 flex md:flex-col hover:transform-[scale(1.05)] shadow-xl;
+    }
+
+    .ver-mas{
+        @apply border-t border-azul-oscuro mt-4 pt-2;
     }
 
     .icono-servicio {
@@ -138,7 +170,7 @@
     }
 
     .noticia {
-        @apply bg-azul-claro rounded-md text-center hover:bg-azul-claro/80 transition-colors duration-300 flex flex-col items-center hover:transform-[scale(1.05)];
+        @apply bg-azul-claro rounded-md text-center hover:bg-azul-claro/80 transition-colors duration-300 flex flex-col items-center hover:transform-[scale(1.05)] shadow-xl p-4;
     }
 
     .footer-links {
