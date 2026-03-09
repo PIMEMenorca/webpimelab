@@ -1,11 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Noticias</title>
+    <link rel="stylesheet" href="../styles/output.css">
 </head>
+
 <body>
-    
+    <header class="bg-azul-claro text-negro w-full sticky top-0 z-50 shadow-md px-4 py-3">
+        <div class="flex items-center gap-3 lg:gap-6">
+            <img src="../assets/images/logo.png" alt="Logo Pimelab" class="logo h-7 md:h-10 lg:h-12 z-100"
+                aria-role="button banner" onclick="" />
+
+            <div id="slot-center" class="hidden md:flex lg:hidden flex-1 justify-center w-fit"></div>
+
+            <div class="menu-container ml-auto lg:ml-0 lg:flex-1 lg:justify-center">
+                <button id="menu-button" type="button" class="lg:hidden" aria-expanded="false"
+                    aria-controls="site-menu">
+                    <img src="../assets/icons/icon-menu.png" alt="menu Icon"
+                        class="h-5 hover:cursor-pointer hover:transform-[scale(1.2)]" />
+                </button>
+
+                <ul class="menu-links" id="site-menu">
+                    <li class="menu-top-action lg:hidden">
+                        <button id="close-menu" type="button" class="close-menu">
+                            <img src="../assets/icons/icon-close.svg" alt="cerrar menu" />
+                        </button>
+                    </li>
+                    <li id="slot-drawer" class="menu-drawer-slot lg:hidden"></li>
+                    <li class="pagina"><a href="../pages/presentacion.html">Presentación</a></li>
+                    <li class="pagina"><a href="../pages/servicios.html">Servicios</a></li>
+                    <li class="pagina"><a href="../pages/noticias.html">Noticias</a></li>
+                    <li class="pagina"><a href="../pages/contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div id="slot-right" class="hidden lg:flex items-center gap-3 ml-auto">
+                <div id="search-control" class="search-bar">
+                    <input type="search" name="search" id="search-input" class="search-input" placeholder="Buscar..." />
+                    <img src="../assets/icons/lupa.svg" alt="Lupa" class="w-4 h-4" />
+                </div>
+                <button id="login-control" class="boton-azul">Login</button>
+            </div>
+        </div>
+    </header>
+    <main class="bg-blanco flex flex-col items-center gap-8 py-8 px-4">
+        <h1 class="text-2xl font-bold mb-4">Noticias</h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <a href="./pages/noticias.html#noticia1" class="noticia">
+                <img src="https://placehold.co/480x280" alt="Noticia 1" class="w-full h-auto rounded-md mb-4 " />
+                <h3 class="text-lg font-semibold p-4">PIMELAB obtiene la certificación ISO 9001:2015</h3>
+                <p class="text-gris text-sm mt-2 p-4">PIMELAB se enorgullece de anunciar que ha obtenido la
+                    certificación ISO 9001:2015, un reconocimiento a nuestro compromiso con la calidad y la mejora
+                    continua en nuestros servicios de laboratorio.</p>
+            </a>
+            <a href="./pages/noticias.html#noticia2" class="noticia">
+                <img src="https://placehold.co/480x280" alt="Noticia 2" class="w-full h-auto rounded-md mb-4 " />
+                <h3 class="text-lg font-semibold p-4">PIMELAB amplía sus instalaciones con un nuevo laboratorio de
+                    microbiología</h3>
+                <p class="text-gris text-sm mt-2 p-4">PIMELAB se complace en anunciar la ampliación de sus
+                    instalaciones con la incorporación de un nuevo laboratorio de microbiología, equipado con
+                    tecnología de vanguardia para ofrecer servicios de análisis microbiológicos de alta calidad a
+                    nuestros clientes.</p>
+            </a>
+            <a href="./pages/noticias.html#noticia3" class="noticia">
+                <img src="https://placehold.co/480x280" alt="Noticia 3" class="w-full h-auto rounded-md mb-4" />
+                <h3 class="text-lg font-semibold p-4">PIMELAB lanza un nuevo servicio de análisis ambiental para
+                    empresas
+                </h3>
+                <p class="text-gris text-sm mt-2 p-4">PIMELAB se enorgullece de anunciar el lanzamiento de nuestro
+                    nuevo servicio de análisis ambiental, diseñado para ayudar a las empresas a cumplir con las
+                    regulaciones ambientales y promover prácticas sostenibles en sus operaciones.
+                </p>
+            </a>
+        </div>
+    </main>
+    <footer class="bg-footer p-5 flex flex-col lg:flex-row items-center justify-between gap-4">
+        <div class="md:w-1/2 ">
+            <ul class="footer-links">
+                <li class="footer-link">
+                    <img src="../assets/icons/logo-pequeño.png" alt="Logo de PIMELAB" class="w-5 h-5" />
+                    <span class="text-blanco text-xs">PIMELAB - Centro Tecnológico</span>
+                </li>
+                <li class="footer-link">
+                    <img src="../assets/icons/casa.svg" alt="Correo electrónico" class="w-5 h-5" />
+                    <span class="text-blanco text-xs">C/Comerciants, 9 - 07760 Ciutadella de Menorca - Illes Balears,
+                        España</span>
+                </li>
+                <li class="footer-link">
+                    <img src="../assets/icons/telefono.svg" alt="Teléfono" class="w-5 h-5" />
+                    <span class="text-blanco text-xs">971 484 536</span>
+                </li>
+                <li class="footer-link">
+                    <img src="../assets/icons/mail.svg" alt="Correo electrónico" class="w-5 h-5" />
+                    <span class="text-blanco text-xs">lab@pimemenorca.org</span>
+                </li>
+                <li class="footer-link">
+                    <img src="../assets/icons/arroba.svg" alt="arroba" class="w-5 h-5" />
+                    <a class="text-blanco text-xs underline" href="../pages/contacto.html">Formulario de contacto</a>
+                </li>
+                <li class="footer-link">
+                    <a class="text-blanco text-xs underline" href="../pages/aviso-legal.html">Nota legal</a>
+                </li>
+                <li class="footer-link">
+                    <a class="text-blanco text-xs underline" href="../pages/politica-privacidad.html">+Info RGPDUE</a>
+                </li>
+            </ul>
+        </div>
+        <div
+            class="md:w-1/2 flex items-center justify-center gap-15 border-t-blanco md:border-t-0 md:border-l-blanco md:border-l border-t p-4 lg:pl-8 md:p-0">
+            <img src="../assets/icons/logo-pime.png" alt="Logo de PIME Menorca" class="w-20 h-auto mx-auto lg:mx-0" />
+            <img src="../assets/icons/certificaciones.png" alt="Certificaciones"
+                class="w-20 h-auto mx-auto lg:mx-0 mt-4 lg:mt-0" />
+        </div>
+    </footer>
+    <script src="../javascript/menu.js"></script>
 </body>
+
 </html>

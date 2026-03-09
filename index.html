@@ -11,7 +11,7 @@
 <body>
     <header class="bg-azul-claro text-negro w-full sticky top-0 z-50 shadow-md px-4 py-3">
         <div class="flex items-center gap-3 lg:gap-6">
-            <img src="./assets/images/logo.png" alt="Logo Pimelab" class="logo h-7 md:h-10 lg:h-12"
+            <img src="./assets/images/logo.png" alt="Logo Pimelab" class="logo h-7 md:h-10 lg:h-12 z-100"
                 aria-role="button banner" onclick="" />
 
             <div id="slot-center" class="hidden md:flex lg:hidden flex-1 justify-center w-fit"></div>
@@ -123,13 +123,15 @@
             <h2 class="text-2xl font-bold mb-4">Nuestros servicios</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <a href="./pages/servicios.html#agua" class="servicio">
-                    <div class="icono-servicio">
-                        <img src="./assets/icons/agua.png" alt="Icono de análisis" class="mx-auto mb-2 w-12 h-12" />
-                    </div>
-                    <div class="detalle-servicio">
-                        <h3 class="text-lg font-semibold">Aguas</h3>
-                        <p class="text-gris text-sm mt-2">Análisis de calidad de aguas naturales, de bebida, de baño y
-                            residuales y control de legionella </p>
+                    <div class="flex">
+                        <div class="icono-servicio">
+                            <img src="./assets/icons/agua.png" alt="Icono de análisis" class="mx-auto mb-2 w-12 h-12" />
+                        </div>
+                        <div class="detalle-servicio">
+                            <h3 class="text-lg font-semibold">Aguas</h3>
+                            <p class="text-gris text-sm mt-2">Análisis de calidad de aguas naturales, de bebida, de baño y
+                                residuales y control de legionella </p>
+                        </div>
                     </div>
                     <div class="ver-mas">
                         <img src="./assets/icons/flecha-ver-mas.png" alt="Flecha derecha"
@@ -138,14 +140,16 @@
                     </div>
                 </a>
                 <a href="./pages/servicios.html#calibracion" class="servicio">
-                    <div class="icono-servicio">
-                        <img src="./assets/icons/agricultura.png" alt="Icono de calibración"
-                            class="mx-auto mb-2 w-12 h-12" />
-                    </div>
-                    <div class="detalle-servicio">
-                        <h3 class="text-lg font-semibold">Agricultura</h3>
-                        <p class="text-gris text-sm mt-2">Controles de calidad de suelo, aguas para el riego, análisis
-                            de fertilizantes y de alimentación animal</p>
+                    <div class="flex">
+                        <div class="icono-servicio">
+                            <img src="./assets/icons/agricultura.png" alt="Icono de calibración"
+                                class="mx-auto mb-2 w-12 h-12" />
+                        </div>
+                        <div class="detalle-servicio">
+                            <h3 class="text-lg font-semibold">Agricultura</h3>
+                            <p class="text-gris text-sm mt-2">Controles de calidad de suelo, aguas para el riego, análisis
+                                de fertilizantes y de alimentación animal</p>
+                        </div>
                     </div>
                     <div class="ver-mas">
                         <img src="./assets/icons/flecha-ver-mas.png" alt="Flecha derecha"
@@ -154,30 +158,16 @@
                     </div>
                 </a>
                 <a href="./pages/servicios.html#formacion" class="servicio">
-                    <div class="icono-servicio">
-                        <img src="./assets/icons/alimentacion.png" alt="Icono de formación"
-                            class="mx-auto mb-2 w-12 h-12" />
-                    </div>
-                    <div class="detalle-servicio">
-                        <h3 class="text-lg font-semibold">Alimentación</h3>
-                        <p class="text-gris text-sm mt-2">Análisis microbiológicos y de seguridad alimentaria para
-                            industrias cárnicas y lácteas, pastelerías, panaderías, hoteles y restaurantes </p>
-                    </div>
-                    <div class="ver-mas">
-                        <img src="./assets/icons/flecha-ver-mas.png" alt="Flecha derecha"
-                            class="w-4 h-4 inline-block mr-1" />
-                        <span class="text-azul-oscuro text-sm font-semibold">Ver más</span>
-                    </div>
-                </a>
-                <a href="./pages/servicios.html#biologia" class="servicio">
-                    <div class="icono-servicio">
-                        <img src="./assets/icons/construccion.png" alt="Icono de biología"
-                            class="mx-auto mb-2 w-12 h-12" />
-                    </div>
-                    <div class="detalle-servicio">
-                        <h3 class="text-lg font-semibold">Construcción</h3>
-                        <p class="text-gris text-sm mt-2">Ensayos de resistencia, control de calidad y análisis de
-                            materiales de construcción. Patalogía de construcciones </p>
+                    <div class="flex">
+                        <div class="icono-servicio">
+                            <img src="./assets/icons/alimentacion.png" alt="Icono de formación"
+                                class="mx-auto mb-2 w-12 h-12" />
+                        </div>
+                        <div class="detalle-servicio">
+                            <h3 class="text-lg font-semibold">Alimentación</h3>
+                            <p class="text-gris text-sm mt-2">Análisis microbiológicos y de seguridad alimentaria para
+                                industrias cárnicas y lácteas, pastelerías, panaderías, hoteles y restaurantes </p>
+                        </div>
                     </div>
                     <div class="ver-mas">
                         <img src="./assets/icons/flecha-ver-mas.png" alt="Flecha derecha"
@@ -186,14 +176,16 @@
                     </div>
                 </a>
                 <a href="./pages/servicios.html#biologia" class="servicio">
-                    <div class="icono-servicio">
-                        <img src="./assets/icons/planeta-tierra.png" alt="Icono de biología"
-                            class="mx-auto mb-2 w-12 h-12" />
-                    </div>
-                    <div class="detalle-servicio">
-                        <h3 class="text-lg font-semibold">Geotecnia</h3>
-                        <p class="text-gris text-sm mt-2">Hidrogeologia, estudios geotecnicos y de taludes, ensayos "in
-                            situ"</p>
+                    <div class="flex">
+                        <div class="icono-servicio">
+                            <img src="./assets/icons/construccion.png" alt="Icono de biología"
+                                class="mx-auto mb-2 w-12 h-12" />
+                        </div>
+                        <div class="detalle-servicio">
+                            <h3 class="text-lg font-semibold">Construcción</h3>
+                            <p class="text-gris text-sm mt-2">Ensayos de resistencia, control de calidad y análisis de
+                                materiales de construcción. Patalogía de construcciones </p>
+                        </div>
                     </div>
                     <div class="ver-mas">
                         <img src="./assets/icons/flecha-ver-mas.png" alt="Flecha derecha"
@@ -202,14 +194,34 @@
                     </div>
                 </a>
                 <a href="./pages/servicios.html#biologia" class="servicio">
-                    <div class="icono-servicio">
-                        <img src="./assets/icons/la-carretera.png" alt="Icono de biología"
-                            class="mx-auto mb-2 w-12 h-12" />
+                    <div class="flex">
+                        <div class="icono-servicio">
+                            <img src="./assets/icons/planeta-tierra.png" alt="Icono de biología"
+                                class="mx-auto mb-2 w-12 h-12" />
+                        </div>
+                        <div class="detalle-servicio">
+                            <h3 class="text-lg font-semibold">Geotecnia</h3>
+                            <p class="text-gris text-sm mt-2">Hidrogeologia, estudios geotecnicos y de taludes, ensayos "in
+                                situ"</p>
+                        </div>
                     </div>
-                    <div class="detalle-servicio">
-                        <h3 class="text-lg font-semibold">Viales</h3>
-                        <p class="text-gris text-sm mt-2">Controles de calidad para obras civiles, análisis de mecanica
-                            de suelos y de ligantes y mezclas bituminosas </p>
+                    <div class="ver-mas">
+                        <img src="./assets/icons/flecha-ver-mas.png" alt="Flecha derecha"
+                            class="w-4 h-4 inline-block mr-1" />
+                        <span class="text-azul-oscuro text-sm font-semibold">Ver más</span>
+                    </div>
+                </a>
+                <a href="./pages/servicios.html#biologia" class="servicio">
+                    <div class="flex">
+                        <div class="icono-servicio">
+                            <img src="./assets/icons/la-carretera.png" alt="Icono de biología"
+                                class="mx-auto mb-2 w-12 h-12" />
+                        </div>
+                        <div class="detalle-servicio">
+                            <h3 class="text-lg font-semibold">Viales</h3>
+                            <p class="text-gris text-sm mt-2">Controles de calidad para obras civiles, análisis de mecanica
+                                de suelos y de ligantes y mezclas bituminosas </p>
+                        </div>
                     </div>
                     <div class="ver-mas">
                         <img src="./assets/icons/flecha-ver-mas.png" alt="Flecha derecha"
