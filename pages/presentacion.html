@@ -3,9 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Presentacion</title>
+    <link rel="stylesheet" href="../styles/output.css">
 </head>
 <body>
-    
+    <header class="bg-azul-claro text-negro w-full sticky top-0 z-50 shadow-md px-4 py-3">
+        <div class="flex items-center gap-3 lg:gap-6">
+            <img src="../assets/images/logo.png" alt="Logo Pimelab" class="logo h-7 md:h-10 lg:h-12 z-100"
+                aria-role="button banner" onclick="" />
+
+            <div id="slot-center" class="hidden md:flex lg:hidden flex-1 justify-center w-fit"></div>
+
+            <div class="menu-container ml-auto lg:ml-0 lg:flex-1 lg:justify-center">
+                <button id="menu-button" type="button" class="lg:hidden" aria-expanded="false"
+                    aria-controls="site-menu">
+                    <img src="../assets/icons/icon-menu.png" alt="menu Icon"
+                        class="h-5 hover:cursor-pointer hover:transform-[scale(1.2)]" />
+                </button>
+
+                <ul class="menu-links" id="site-menu">
+                    <li class="menu-top-action lg:hidden">
+                        <button id="close-menu" type="button" class="close-menu">
+                            <img src="../assets/icons/icon-close.svg" alt="cerrar menu" />
+                        </button>
+                    </li>
+                    <li id="slot-drawer" class="menu-drawer-slot lg:hidden"></li>
+                    <li class="pagina"><a href="../pages/presentacion.html">Presentación</a></li>
+                    <li class="pagina"><a href="../pages/servicios.html">Servicios</a></li>
+                    <li class="pagina"><a href="../pages/noticias.html">Noticias</a></li>
+                    <li class="pagina"><a href="../pages/contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div id="slot-right" class="hidden lg:flex items-center gap-3 ml-auto">
+                <div id="search-control" class="search-bar">
+                    <input type="search" name="search" id="search-input" class="search-input" placeholder="Buscar..." />
+                    <img src="../assets/icons/lupa.svg" alt="Lupa" class="w-4 h-4" />
+                </div>
+                <button id="login-control" class="boton-azul">Login</button>
+            </div>
+        </div>
+    </header>
+    <main class="bg-blanco w-full py-8">
+        <section class="w-full px-4 md:px-6 lg:px-8">
+            <h1 class="mb-5 border-b border-gris/30 pb-2 text-3xl font-bold text-negro">Presentación</h1>
+
+            <div class="flex flex-col gap-5 md:flex-row md:items-start">
+                <div class="space-y-4 text-justify text-sm leading-6 text-gris md:w-2/3 md:text-[15px]">
+                    <p>
+                        La Federación de la Pequeña y Mediana Empresa de Menorca, PIME Menorca, es una organización empresarial sin ánimo de lucro. Fue
+                        <strong>constituida el año 1977 con el objetivo de promover y difundir los derechos e intereses de los empresarios menorquines</strong>.
+                        Desde entonces, ha conseguido agrupar más de 1.800 empresas integradas en más de 36 asociaciones.
+                    </p>
+                    <p>
+                        La Federación ha combinado su labor patronal, en el marco de la economía de mercado, independencia y de ayuda al desarrollo de la
+                        actividad económica insular, con una clara vocación de servicio al pequeño y media empresario de Menorca.
+                    </p>
+                    <p>
+                        Con el fin de poner al alcance de las empresas de Menorca una infraestructura tecnológica adecuada para la implantación de sistemas de
+                        gestión y control de la calidad, el incremento de la calidad de producción, la mejora de la competitividad de las empresas a través de
+                        la innovación tecnológica, el fomento de la modernización y diversificación de las industries a través de la prestación de servicios a
+                        sus asociados y la realización de proyectos de I+D+i, la Federación creó el 1988 el Laboratorio para la Investigación y el Fomento de la
+                        Calidad - PIMELAB. El Centro inició su actividad en el campo de la edificación, análisis agrícola y control de calidad de calzado. Con
+                        el tiempo se han ido ampliando las diversas secciones, incorporando nuevos servicios, con el fin de contribuir a la mejora de la
+                        competitividad de las empresas.
+                    </p>
+                </div>
+
+                <img src="../assets/images/pime-difuminada.jpg" alt="Foto del logo de PIME en edificio"
+                    class="w-full md:w-1/3 md:max-w-75" />
+            </div>
+
+            <div class="mt-6 grid grid-cols-1 gap-3 md:grid-cols-3 md:auto-rows-[170px]">
+                <img src="../assets/images/presentacion1.JPG" alt="Vehículos de PIMELAB"
+                    class="h-full w-full object-cover md:col-span-2" />
+                <img src="../assets/images/presentacion2.JPG" alt="Edificio de PIME"
+                    class="h-full w-full object-cover md:row-span-2" />
+                <img src="../assets/images/presentación3.JPG" alt="Tubos de ensayo en laboratorio"
+                    class="h-full w-full object-cover" />
+                <img src="../assets/images/presentacion4.jpg" alt="Análisis en laboratorio"
+                    class="h-full w-full object-cover" />
+            </div>
+
+            <div class="mt-6 text-gris">
+                <p class="mb-2 text-sm md:text-[15px]">Las actividades actuales del centro son:</p>
+                <ul class="list-disc space-y-1 pl-5 text-sm leading-6 md:text-[15px]">
+                    <li>la realización de proyectos de investigación y desarrollo tecnológico, y estudios sectoriales promoviendo la cooperación entre empresas.</li>
+                    <li>la participación en programas e iniciativas europeas, dentro del ámbito de la calidad y la investigación, así como la promoción de intercambios a nivel nacional e internacional.</li>
+                    <li>la colaboración en la transferencia de resultados de investigación.</li>
+                    <li>la promoción y realización de acciones formativas, informativas y de difusión dentro del ámbito de la calidad, medio ambiente y tecnología.</li>
+                    <li>la prestación de asistencia técnica y servicios analíticos para la mejora y el control de la calidad.</li>
+                    <li class="underline">la implantación de sistemas de gestión de la calidad.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-footer p-5 flex flex-col lg:flex-row items-center justify-between gap-4">
+        <div class="md:w-1/2 ">
+            <ul class="footer-links">
+                <li class="footer-link">
+                    <img src="../assets/icons/logo-pequeño.png" alt="Logo de PIMELAB" class="w-5 h-5" />
+                    <span class="text-blanco text-xs">PIMELAB - Centro Tecnológico</span>
+                </li>
+                <li class="footer-link">
+                    <img src="../assets/icons/casa.svg" alt="Correo electrónico" class="w-5 h-5" />
+                    <span class="text-blanco text-xs">C/Comerciants, 9 - 07760 Ciutadella de Menorca - Illes Balears,
+                        España</span>
+                </li>
+                <li class="footer-link">
+                    <img src="../assets/icons/telefono.svg" alt="Teléfono" class="w-5 h-5" />
+                    <span class="text-blanco text-xs">971 484 536</span>
+                </li>
+                <li class="footer-link">
+                    <img src="../assets/icons/mail.svg" alt="Correo electrónico" class="w-5 h-5" />
+                    <span class="text-blanco text-xs">lab@pimemenorca.org</span>
+                </li>
+                <li class="footer-link">
+                    <img src="../assets/icons/arroba.svg" alt="arroba" class="w-5 h-5" />
+                    <a class="text-blanco text-xs underline" href="../pages/contacto.html">Formulario de contacto</a>
+                </li>
+                <li class="footer-link">
+                    <a class="text-blanco text-xs underline" href="../pages/aviso-legal.html">Nota legal</a>
+                </li>
+                <li class="footer-link">
+                    <a class="text-blanco text-xs underline" href="../pages/politica-privacidad.html">+Info RGPDUE</a>
+                </li>
+            </ul>
+        </div>
+        <div
+            class="md:w-1/2 flex items-center justify-center gap-15 border-t-blanco md:border-t-0 md:border-l-blanco md:border-l border-t p-4 lg:pl-8 md:p-0">
+            <img src="../assets/icons/logo-pime.png" alt="Logo de PIME Menorca" class="w-20 h-auto mx-auto lg:mx-0" />
+            <img src="../assets/icons/certificaciones.png" alt="Certificaciones"
+                class="w-20 h-auto mx-auto lg:mx-0 mt-4 lg:mt-0" />
+        </div>
+    </footer>
+    <script src="../javascript/menu.js"></script>
 </body>
 </html>

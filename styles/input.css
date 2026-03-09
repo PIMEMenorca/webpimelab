@@ -8,7 +8,7 @@
     src: url(./assets/fonts/Molengo/Molengo-Regular.ttf) format("truetype");
 }
 @theme {
-    --color-azul-claro: #CFF8FF;
+    --color-azul-claro: #FEFEFE;
     --color-azul-oscuro: #073D87;
     --color-gris: #736F6E;
     --color-blanco: #FAFAFA;
