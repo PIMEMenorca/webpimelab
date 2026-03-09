@@ -13,6 +13,7 @@
     --color-gris: #736F6E;
     --color-blanco: #FAFAFA;
     --color-negro: #010101;
+    --color-footer: #34656e;
 
     --font-primary: Molengo, sans-serif;
     --font-secondary: Helvetica, sans-serif;
@@ -33,6 +34,10 @@
 
     .search-bar {
         @apply p-2 flex items-center border-negro rounded-xl bg-gris focus:outline-blanco;
+    }
+    
+    .boton-azul{
+        @apply bg-azul-oscuro w-20 h-auto p-2 rounded-md text-blanco font-bold text-sm hover:bg-azul-oscuro/80 transition-colors duration-300 hover:transform-[scale(1.05)];
     }
 
     /* Controles de formulario: estilos comunes para inputs, selects y textareas */
@@ -57,6 +62,10 @@
     .search-input::placeholder{
         @apply text-xs;
     }
+
+    .menu-container{
+        @apply flex items-center
+    }
     
     /* Enlaces del menú: contenedor de los enlaces de navegación; oculto en pantallas pequeñas */
     .menu-links {
@@ -69,7 +78,7 @@
     }
 
     .slideshows {
-        @apply relative w-full p-4 md:p-6;
+        @apply relative w-full p-4 md:p-0;
     }
 
     .slide {
@@ -108,8 +117,16 @@
         @apply text-sm md:text-2xl text-blanco mt-2;
     }
 
+    .descripcion {
+        @apply flex flex-col md:flex-row gap-6 items-center px-6;
+    }
+
+    .servicios, .noticias {
+        @apply w-full px-6;
+    }
+
     .servicio {
-        @apply bg-azul-claro rounded-md p-4 text-center hover:bg-azul-claro/80 transition-colors duration-300 flex md:flex-col;
+        @apply bg-azul-claro rounded-md p-4 text-center hover:bg-azul-claro/80 transition-colors duration-300 flex md:flex-col hover:transform-[scale(1.05)] shadow-xl;
     }
 
     .icono-servicio {
@@ -121,7 +138,15 @@
     }
 
     .noticia {
-        @apply bg-azul-claro rounded-md p-4 text-center hover:bg-azul-claro/80 transition-colors duration-300 flex md:flex-col items-center;
+        @apply bg-azul-claro rounded-md text-center hover:bg-azul-claro/80 transition-colors duration-300 flex flex-col items-center hover:transform-[scale(1.05)];
+    }
+
+    .footer-links {
+        @apply list-none grid grid-cols-2 gap-2;
+    }
+
+    .footer-link {
+        @apply flex items-center gap-2 w-fit;
     }
 
     

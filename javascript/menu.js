@@ -4,11 +4,13 @@ document.addEventListener("DOMContentLoaded", function () {
   const mobileMenu = document.querySelector(".menu-container");
   const menuLinks = document.querySelector(".menu-links");
   const logo = document.getElementsByClassName("logo");
+  const searchbar = document.querySelector(".search-bar");
 
   // Evento para abrir el menú móvil
   menuButton.addEventListener("click", function () {
     mobileMenu.classList.add("active");
     menuLinks.classList.add("active");
+    searchbar.classList.remove("hidden");
     menuButton.style.display = "none";
     console.log("menu");
   });
@@ -17,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
   closeButton.addEventListener("click", function () {
     mobileMenu.classList.remove("active");
     menuLinks.classList.remove("active");
+    searchbar.classList.add("hidden");
     menuButton.style.display = "block";
   });
 
