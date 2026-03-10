@@ -30,6 +30,7 @@
     --font-weight-medium: 500;
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
+    --leading-tight: 1.25;
     --radius-md: 0.375rem;
     --radius-xl: 0.75rem;
     --ease-out: cubic-bezier(0, 0, 0.2, 1);
@@ -223,6 +224,9 @@
   .mr-1 {
     margin-right: calc(var(--spacing) * 1);
   }
+  .mb-1 {
+    margin-bottom: calc(var(--spacing) * 1);
+  }
   .mb-2 {
     margin-bottom: calc(var(--spacing) * 2);
   }
@@ -256,6 +260,9 @@
   .inline-block {
     display: inline-block;
   }
+  .table {
+    display: table;
+  }
   .h-4 {
     height: calc(var(--spacing) * 4);
   }
@@ -286,6 +293,9 @@
   .w-12 {
     width: calc(var(--spacing) * 12);
   }
+  .w-19 {
+    width: calc(var(--spacing) * 19);
+  }
   .w-19\/20 {
     width: calc(19 / 20 * 100%);
   }
@@ -300,6 +310,12 @@
   }
   .flex-1 {
     flex: 1;
+  }
+  .border-collapse {
+    border-collapse: collapse;
+  }
+  .transform {
+    transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
   }
   .resize {
     resize: both;
@@ -324,9 +340,6 @@
   }
   .justify-center {
     justify-content: center;
-  }
-  .justify-end {
-    justify-content: flex-end;
   }
   .gap-1 {
     gap: calc(var(--spacing) * 1);
@@ -408,29 +421,8 @@
   .bg-footer {
     background-color: var(--color-footer);
   }
-  .bg-\[url\(\'\.\.\/assets\/images\/servicio-agricultura\.jpg\'\)\] {
-    background-image: url('../assets/images/servicio-agricultura.jpg');
-  }
-  .bg-\[url\(\'\.\.\/assets\/images\/servicio-agua\.jpg\'\)\] {
-    background-image: url('../assets/images/servicio-agua.jpg');
-  }
-  .bg-\[url\(\'\.\.\/assets\/images\/servicio-alimentacion\.jpg\'\)\] {
-    background-image: url('../assets/images/servicio-alimentacion.jpg');
-  }
-  .bg-\[url\(\'\.\.\/assets\/images\/servicio-construccion\.JPG\'\)\] {
-    background-image: url('../assets/images/servicio-construccion.JPG');
-  }
-  .bg-\[url\(\'\.\.\/assets\/images\/servicio-geotecnia\.jpg\'\)\] {
-    background-image: url('../assets/images/servicio-geotecnia.jpg');
-  }
-  .bg-contain {
-    background-size: contain;
-  }
-  .bg-cover {
-    background-size: cover;
-  }
-  .bg-center {
-    background-position: center;
+  .object-contain {
+    object-fit: contain;
   }
   .object-cover {
     object-fit: cover;
@@ -542,6 +534,19 @@
     --tw-shadow: 0 20px 25px -5px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 8px 10px -6px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
+  }
+  .transition {
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+  .ease-out {
+    --tw-ease: var(--ease-out);
+    transition-timing-function: var(--ease-out);
+  }
   .placeholder\:text-sm {
     &::placeholder {
       font-size: var(--text-sm);
@@ -564,14 +569,6 @@
     &:hover {
       @media (hover: hover) {
         cursor: pointer;
-      }
-    }
-  }
-  .hover\:text-base {
-    &:hover {
-      @media (hover: hover) {
-        font-size: var(--text-base);
-        line-height: var(--tw-leading, var(--text-base--line-height));
       }
     }
   }
@@ -1229,11 +1226,127 @@
     transition: background-size 220ms ease-in-out;
   }
   .servicios .servicio h3 {
-    background-image: linear-gradient(#ffffff, #ffffff);
-    text-shadow: 0 1px 2px rgb(0 0 0 / 0.55);
+    background-image: linear-gradient(var(--color-azul-oscuro), var(--color-azul-oscuro));
+    text-shadow: none;
   }
   .servicio:is(:hover, :focus-visible, :focus-within) h3 {
     background-size: 100% 3px;
+  }
+  .servicios-header {
+    margin-bottom: calc(var(--spacing) * 4);
+  }
+  .servicios-subtitle {
+    font-size: var(--text-base);
+    line-height: var(--tw-leading, var(--text-base--line-height));
+    color: var(--color-gris);
+  }
+  .servicios .servicio-card {
+    position: relative;
+    height: auto;
+    overflow: hidden;
+    border-radius: var(--radius-xl);
+    background-color: var(--color-blanco-accent);
+    padding: calc(var(--spacing) * 0);
+    text-align: left;
+    --tw-shadow: 0 20px 25px -5px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 8px 10px -6px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+    transition-property: all;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+    --tw-duration: 300ms;
+    transition-duration: 300ms;
+    &:hover {
+      @media (hover: hover) {
+        transform: scale(1.02);
+      }
+    }
+  }
+  .servicio-media {
+    height: calc(var(--spacing) * 32);
+    overflow: hidden;
+    @media (width >= 48rem) {
+      height: calc(var(--spacing) * 36);
+    }
+  }
+  .servicio-media-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 320ms ease;
+  }
+  .servicio-card:hover .servicio-media-image {
+    transform: scale(1.04);
+  }
+  .servicio-body {
+    position: relative;
+    padding: calc(var(--spacing) * 4);
+    padding-top: calc(var(--spacing) * 6);
+  }
+  .servicio-icon {
+    position: absolute;
+    top: calc(var(--spacing) * -5);
+    left: calc(var(--spacing) * 4);
+    display: flex;
+    height: calc(var(--spacing) * 11);
+    width: calc(var(--spacing) * 11);
+    align-items: center;
+    justify-content: center;
+    border-radius: calc(infinity * 1px);
+    border-style: var(--tw-border-style);
+    border-width: 2px;
+    border-color: var(--color-blanco-accent);
+    --tw-shadow: 0 4px 6px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 2px 4px -2px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .servicio-icon img {
+    height: calc(var(--spacing) * 5);
+    width: calc(var(--spacing) * 5);
+    object-fit: contain;
+  }
+  .servicio-icon-agua, .servicio-icon-construccion {
+    background-color: #0b3f8f;
+  }
+  .servicio-icon-agricultura, .servicio-icon-alimentacion {
+    background-color: #e8b11e;
+  }
+  .servicio-icon-geotecnia {
+    background-color: #0b8f80;
+  }
+  .servicios .servicio-card h3 {
+    width: fit-content;
+    font-size: var(--text-2xl);
+    line-height: var(--tw-leading, var(--text-2xl--line-height));
+    --tw-leading: var(--leading-tight);
+    line-height: var(--leading-tight);
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-azul-oscuro);
+  }
+  .servicios .servicio-card p {
+    margin-top: calc(var(--spacing) * 2);
+    font-size: var(--text-base);
+    line-height: var(--tw-leading, var(--text-base--line-height));
+    color: var(--color-gris);
+    min-height: 3.5rem;
+  }
+  .servicio-link {
+    margin-top: calc(var(--spacing) * 3);
+    display: inline-flex;
+    align-items: center;
+    gap: calc(var(--spacing) * 2);
+    font-size: var(--text-base);
+    line-height: var(--tw-leading, var(--text-base--line-height));
+    --tw-font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-azul-oscuro);
+    transition: gap 220ms ease;
+  }
+  .servicio-link img {
+    height: calc(var(--spacing) * 4);
+    width: calc(var(--spacing) * 4);
+  }
+  .servicio-card:hover .servicio-link {
+    gap: 0.7rem;
   }
   .ver-mas {
     margin-top: calc(var(--spacing) * 4);
@@ -1326,6 +1439,26 @@
     animation: none;
   }
 }
+@property --tw-rotate-x {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-rotate-y {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-rotate-z {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-skew-x {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-skew-y {
+  syntax: "*";
+  inherits: false;
+}
 @property --tw-space-y-reverse {
   syntax: "*";
   inherits: false;
@@ -1409,23 +1542,12 @@
   inherits: false;
   initial-value: 0 0 #0000;
 }
-@property --tw-rotate-x {
+@property --tw-outline-style {
   syntax: "*";
   inherits: false;
+  initial-value: solid;
 }
-@property --tw-rotate-y {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-rotate-z {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-skew-x {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-skew-y {
+@property --tw-ease {
   syntax: "*";
   inherits: false;
 }
@@ -1448,10 +1570,6 @@
   inherits: false;
   initial-value: 0;
 }
-@property --tw-ease {
-  syntax: "*";
-  inherits: false;
-}
 @property --tw-scale-x {
   syntax: "*";
   inherits: false;
@@ -1470,6 +1588,11 @@
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
+      --tw-rotate-x: initial;
+      --tw-rotate-y: initial;
+      --tw-rotate-z: initial;
+      --tw-skew-x: initial;
+      --tw-skew-y: initial;
       --tw-space-y-reverse: 0;
       --tw-border-style: solid;
       --tw-leading: initial;
@@ -1488,16 +1611,12 @@
       --tw-ring-offset-width: 0px;
       --tw-ring-offset-color: #fff;
       --tw-ring-offset-shadow: 0 0 #0000;
-      --tw-rotate-x: initial;
-      --tw-rotate-y: initial;
-      --tw-rotate-z: initial;
-      --tw-skew-x: initial;
-      --tw-skew-y: initial;
+      --tw-outline-style: solid;
+      --tw-ease: initial;
       --tw-duration: initial;
       --tw-translate-x: 0;
       --tw-translate-y: 0;
       --tw-translate-z: 0;
-      --tw-ease: initial;
       --tw-scale-x: 1;
       --tw-scale-y: 1;
       --tw-scale-z: 1;

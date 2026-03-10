@@ -104,76 +104,80 @@
                 <button class="slide-nav next" type="button" aria-label="Slide siguiente">&gt;</button>
             </section>
             <section class="servicios">
-                <h2 class="text-2xl font-bold mb-4">Nuestros servicios</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 justify-center">
-                    <a href="./pages/servicios.html#agua" class="servicio" >
-                        <div class="flex flex-col bg-[url('../assets/images/servicio-agua.jpg')] bg-cover h-full items-center justify-end p-4">
-                            <h3 class="text-lg font-semibold text-blanco">Aguas</h3>
+                <div class="servicios-header">
+                    <h2 class="text-2xl font-bold mb-1">Nuestros servicios</h2>
+                    <p class="servicios-subtitle">Análisis y control para diferentes sectores</p>
+                </div>
+                <div class="servicios-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-5 justify-center">
+                    <a href="./pages/servicios.html#agua" class="servicio servicio-card">
+                        <div class="servicio-media">
+                            <img src="./assets/images/servicio-agua.jpg" alt="Servicio de análisis de aguas" class="servicio-media-image" />
                         </div>
-                        <div class="ver-mas">
-                            <img src="./assets/icons/flecha-ver-mas.png" alt="Flecha derecha"
-                                class="w-4 h-4 inline-block mr-1" />
-                            <span class="text-azul-oscuro text-sm font-semibold hover:text-base">Ver más</span>
-                        </div>
-                    </a>
-                    <a href="./pages/servicios.html#calibracion" class="servicio">
-                        <div class="flex flex-col bg-[url('../assets/images/servicio-agricultura.jpg')] bg-cover h-full items-center justify-end p-4">                            
-                            <h3 class="text-lg font-semibold text-blanco">Agricultura</h3>
-                        </div>
-                        <div class="ver-mas">
-                            <img src="./assets/icons/flecha-ver-mas.png" alt="Flecha derecha"
-                                class="w-4 h-4 inline-block mr-1" />
-                            <span class="text-azul-oscuro text-sm font-semibold hover:text-base">Ver más</span>
+                        <div class="servicio-body">
+                            <span class="servicio-icon servicio-icon-agua">
+                                <img src="./assets/icons/agua.png" alt="" aria-hidden="true" />
+                            </span>
+                            <h3>Aguas</h3>
+                            <p>Análisis microbiológicos y químicos</p>
+                            <span class="servicio-link">Ver más <img src="./assets/icons/flecha-derecha.svg" alt="" aria-hidden="true" /></span>
                         </div>
                     </a>
-                    <a href="./pages/servicios.html#formacion" class="servicio">
-                        <div class="flex flex-col bg-[url('../assets/images/servicio-alimentacion.jpg')] bg-cover h-full items-center justify-end p-4">
-                            <h3 class="text-lg font-semibold text-blanco">Alimentación</h3>
+
+                    <a href="./pages/servicios.html#calibracion" class="servicio servicio-card">
+                        <div class="servicio-media">
+                            <img src="./assets/images/servicio-agricultura.jpg" alt="Servicio de control agrícola" class="servicio-media-image" />
                         </div>
-                        <div class="ver-mas">
-                            <img src="./assets/icons/flecha-ver-mas.png" alt="Flecha derecha"
-                                class="w-4 h-4 inline-block mr-1" />
-                            <span class="text-azul-oscuro text-sm font-semibold hover:text-base">Ver más</span>
-                        </div>
-                    </a>
-                    <a href="./pages/servicios.html#biologia" class="servicio">
-                        <div class="flex flex-col bg-[url('../assets/images/servicio-construccion.JPG')] bg-cover h-full items-center justify-end p-4">
-                            <h3 class="text-lg font-semibold text-blanco">Construcción/Obra Civil</h3>
-                        </div>
-                        <div class="ver-mas">
-                            <img src="./assets/icons/flecha-ver-mas.png" alt="Flecha derecha"
-                                class="w-4 h-4 inline-block mr-1" />
-                            <span class="text-azul-oscuro text-sm font-semibold hover:text-base">Ver más</span>
+                        <div class="servicio-body">
+                            <span class="servicio-icon servicio-icon-agricultura">
+                                <img src="./assets/icons/agricultura.png" alt="" aria-hidden="true" />
+                            </span>
+                            <h3>Agricultura</h3>
+                            <p>Control de suelos y fitosanitario</p>
+                            <span class="servicio-link">Ver más <img src="./assets/icons/flecha-derecha.svg" alt="" aria-hidden="true" /></span>
                         </div>
                     </a>
-                    <a href="./pages/servicios.html#biologia" class="servicio">
-                        <div class="flex flex-col bg-[url('../assets/images/servicio-geotecnia.jpg')] bg-contain h-full items-center justify-end bg-center p-4">
-                            <h3 class="text-lg font-semibold text-blanco ">Geotecnia </h3>                        
+
+                    <a href="./pages/servicios.html#formacion" class="servicio servicio-card">
+                        <div class="servicio-media">
+                            <img src="./assets/images/servicio-alimentacion.jpg" alt="Servicio de análisis de alimentación" class="servicio-media-image" />
                         </div>
-                        <div class="ver-mas">
-                            <img src="./assets/icons/flecha-ver-mas.png" alt="Flecha derecha"
-                                class="w-4 h-4 inline-block mr-1" />
-                            <span class="text-azul-oscuro text-sm font-semibold hover:text-base">Ver más</span>
+                        <div class="servicio-body">
+                            <span class="servicio-icon servicio-icon-alimentacion">
+                                <img src="./assets/icons/alimentacion.png" alt="" aria-hidden="true" />
+                            </span>
+                            <h3>Alimentación</h3>
+                            <p>Seguridad y calidad alimentaria</p>
+                            <span class="servicio-link">Ver más <img src="./assets/icons/flecha-derecha.svg" alt="" aria-hidden="true" /></span>
                         </div>
                     </a>
-                    <!-- <a href="./pages/servicios.html#biologia" class="servicio">
-                        <div class="flex flex-col">
-                            <div class="icono-servicio">
-                                <img src="./assets/icons/la-carretera.png" alt="Icono de biología"
-                                    class="mx-auto mb-2 w-12 h-12" />
-                            </div>
-                            <div class="detalle-servicio">
-                                <h3 class="text-lg font-semibold">Viales</h3>
-                                <p class="text-gris text-sm mt-2">Controles de calidad para obras civiles, análisis de mecanica
-                                    de suelos y de ligantes y mezclas bituminosas </p>
-                            </div>
+
+                    <a href="./pages/servicios.html#biologia" class="servicio servicio-card">
+                        <div class="servicio-media">
+                            <img src="./assets/images/servicio-construccion.JPG" alt="Servicio de construcción y obra civil" class="servicio-media-image" />
                         </div>
-                        <div class="ver-mas">
-                            <img src="./assets/icons/flecha-ver-mas.png" alt="Flecha derecha"
-                                class="w-4 h-4 inline-block mr-1" />
-                            <span class="text-azul-oscuro text-sm font-semibold">Ver más</span>
+                        <div class="servicio-body">
+                            <span class="servicio-icon servicio-icon-construccion">
+                                <img src="./assets/icons/construccion.png" alt="" aria-hidden="true" />
+                            </span>
+                            <h3>Construcción</h3>
+                            <p>Control ambiental y materiales</p>
+                            <span class="servicio-link">Ver más <img src="./assets/icons/flecha-derecha.svg" alt="" aria-hidden="true" /></span>
                         </div>
-                    </a> -->
+                    </a>
+
+                    <a href="./pages/servicios.html#biologia" class="servicio servicio-card">
+                        <div class="servicio-media">
+                            <img src="./assets/images/servicio-geotecnia.jpg" alt="Servicio de geotecnia" class="servicio-media-image" />
+                        </div>
+                        <div class="servicio-body">
+                            <span class="servicio-icon servicio-icon-geotecnia">
+                                <img src="./assets/icons/planeta-tierra.png" alt="" aria-hidden="true" />
+                            </span>
+                            <h3>Geotecnia</h3>
+                            <p>Ensayos y control de calidad</p>
+                            <span class="servicio-link">Ver más <img src="./assets/icons/flecha-derecha.svg" alt="" aria-hidden="true" /></span>
+                        </div>
+                    </a>
                 </div>
             </section>
             <section class="noticias">
@@ -242,30 +246,30 @@
             <ul class="footer-links">
                 <li class="footer-link">
                     <img src="./assets/icons/logo-pequeño.png" alt="Logo de PIMELAB" class="w-5 h-5" />
-                    <span class="text-blanco text-xs">PIMELAB - Centro Tecnológico</span>
+                    <span class="text-blanco">PIMELAB - Centro Tecnológico</span>
                 </li>
                 <li class="footer-link">
                     <img src="./assets/icons/casa.svg" alt="Correo electrónico" class="w-5 h-5" />
-                    <span class="text-blanco text-xs">C/Comerciants, 9 - 07760 Ciutadella de Menorca - Illes Balears,
+                    <span class="text-blanco">C/Comerciants, 9 - 07760 Ciutadella de Menorca - Illes Balears,
                         España</span>
                     </li>
                 <li class="footer-link">
                     <img src="./assets/icons/telefono.svg" alt="Teléfono" class="w-5 h-5" />
-                    <span class="text-blanco text-xs">971 484 536</span>
+                    <span class="text-blanco">971 484 536</span>
                 </li>
                 <li class="footer-link">
                     <img src="./assets/icons/mail.svg" alt="Correo electrónico" class="w-5 h-5" />
-                    <span class="text-blanco text-xs">lab@pimemenorca.org</span>
+                    <span class="text-blanco">lab@pimemenorca.org</span>
                 </li>
                 <li class="footer-link">
                     <img src="./assets/icons/arroba.svg" alt="arroba" class="w-5 h-5" />
-                    <a class="text-blanco text-xs underline" href="./pages/contacto.html">Formulario de contacto</a>
+                    <a class="text-blanco underline" href="./pages/contacto.html">Formulario de contacto</a>
                 </li>
                 <li class="footer-link">
-                    <a class="text-blanco text-xs underline" href="./pages/aviso-legal.html">Nota legal</a>
+                    <a class="text-blanco underline" href="./pages/aviso-legal.html">Nota legal</a>
                 </li>
                 <li class="footer-link">
-                    <a class="text-blanco text-xs underline" href="./pages/politica-privacidad.html">+Info RGPDUE</a>
+                    <a class="text-blanco underline" href="./pages/politica-privacidad.html">+Info RGPDUE</a>
                 </li>
             </ul>
         </div>
