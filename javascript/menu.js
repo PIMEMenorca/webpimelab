@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const slotRight = document.getElementById("slot-right");
   const searchControl = document.getElementById("search-control");
   const loginControl = document.getElementById("login-control");
+  const loginForm = document.querySelector(".login");
 
   if (!menuButton || !closeButton || !menuLinks) {
     return;
@@ -65,6 +66,17 @@ document.addEventListener("DOMContentLoaded", function () {
     placeHeaderControls();
     if (window.innerWidth >= 1024) {
       closeMobileMenu();
+    }
+  });
+
+  // evento para mostrar el formulario de login
+  loginControl.addEventListener("click", () => {
+    loginForm.classList.add("active");
+  });
+
+  document.addEventListener("click", (event) => {
+    if (loginForm.classList.contains("active") && !loginForm.contains(event.target) && event.target !== loginControl) {
+      loginForm.classList.remove("active");
     }
   });
 

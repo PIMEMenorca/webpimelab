@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <header class="bg-azul-claro text-negro w-full sticky top-0 z-50 shadow-md px-4 py-3">
+    <header class="bg-blanco-accent text-negro w-full sticky top-0 z-50 shadow-md px-4 py-3">
         <div class="flex items-center gap-3 lg:gap-6">
             <img src="../assets/images/logo.png" alt="Logo Pimelab" class="logo h-7 md:h-10 lg:h-12 z-100"
                 aria-role="button banner" onclick="" />
@@ -47,17 +47,25 @@
         </div>
     </header>
     <main class="bg-blanco flex flex-col items-center gap-8 py-8 px-4">
-        <h2 class="text-2xl font-bold mb-4">Nuestros servicios</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-6">
-            <a href="../pages/servicios.html#agua" class="servicio">
-                <div class="flex">
+        <h2 class="text-2xl font-bold mb-4">Nuestros servicios</h2> 
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-6 w-19/20">
+            <a href="../pages/servicios.html#agua" class="servicio ">
+                <div class="flex items-center">
                     <div class="icono-servicio">
                         <img src="../assets/icons/agua.png" alt="Icono de análisis" class="mx-auto mb-2 w-12 h-12" />
                     </div>
                     <div class="detalle-servicio">
                         <h3 class="text-lg font-semibold">Aguas</h3>
-                        <p class="text-gris text-sm mt-2">Análisis de calidad de aguas naturales, de bebida, de baño y
-                            residuales y control de legionella </p>
+                        <p class="text-gris text-sm mt-2">La tecnología más moderna y un equipo de persopnas altamente cualificado nos permiten grantizar la fiabilidad y rigor de nuestros servicios. Análisis de calidad de aguas naturales, de bebida, de baño y
+                            residuales y control de legionella
+                        </p>
+                        <p>Ofrecemos: </p>
+                        <ul class="text-left list-none text-gris text-sm mt-2 flex flex-col gap-1 justify-center items-center w-fit">
+                            <li>Control de calidad de Aguas Naturañes y de Bebida</li>
+                            <li>Análisis de Aguas de Baño</li>
+                            <li>Analisis y control de Aguas residuales</li>
+                            <li>Control de legionella</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="ver-mas">
@@ -155,6 +163,22 @@
                 </div>
             </a>
         </div>
+        <section class="login">
+            <h2 class="text-2xl font-bold mb-4 text-negro">Área de clientes</h2>
+            <p class="text-gris text-lg mb-6">Acceda a su cuenta para gestionar sus análisis, consultar resultados y
+                solicitar nuevos servicios.</p>
+            <form action="./pages/login.html" method="get">
+                <div class="mb-4">
+                    <label for="username" class="block text-gris text-sm font-medium mb-2 ">Nombre de usuario</label>
+                    <input type="text" id="username" name="username" class="bg-blanco-accent text-negro placeholder:text-gris placeholder:text-sm border border-gris focus:outline-none focus:ring-2 focus:ring-azul-oscuro rounded w-fit p-3" placeholder="Introduzca su nombre de usuario" />
+                </div>
+                <div class="mb-4">
+                    <label for="password" class="block text-gris text-sm font-medium mb-2">Contraseña</label>
+                    <input type="password" id="password" name="password" class="bg-blanco-accent text-negro placeholder:text-gris placeholder:text-sm border border-gris focus:outline-none focus:ring-2 focus:ring-azul-oscuro rounded p-3" placeholder="Introduzca su contraseña" />
+                </div>
+                <button type="submit" class="boton-azul w-fit text-xl">Acceder</button>
+            </form>
+        </section>
     </main>
     <footer class="bg-footer p-5 flex flex-col lg:flex-row items-center justify-between gap-4">
         <div class="md:w-1/2 ">

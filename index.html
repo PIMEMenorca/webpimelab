@@ -9,9 +9,9 @@
 </head>
 
 <body>
-    <header class="bg-azul-claro text-negro w-full sticky top-0 z-50 shadow-xl px-4 py-3">
+    <header class="bg-blanco-accent text-negro w-full sticky top-0 z-50 shadow-xl px-4 py-3">
         <div class="flex items-center gap-3 lg:gap-6">
-            <img src="./assets/images/logo.png" alt="Logo Pimelab" class="logo h-7 md:h-10 lg:h-12 z-100"
+            <img src="./assets/images/logo.png" alt="Logo Pimelab" class="logo h-7 md:h-15 lg:h-25 z-100"
                 aria-role="button banner" onclick="" />
 
             <div id="slot-center" class="hidden md:flex lg:hidden flex-1 justify-center w-fit"></div>
@@ -42,7 +42,7 @@
                     <input type="search" name="search" id="search-input" class="search-input" placeholder="Buscar..." />
                     <img src="./assets/icons/lupa.svg" alt="Lupa" class="w-4 h-4" />
                 </div>
-                <button id="login-control" class="boton-azul">Login</button>
+                <button id="login-control" class="boton-azul text-xl ">Login</button>
             </div>
         </div>
     </header>
@@ -88,24 +88,141 @@
             <div class="slide">
                 <img src="./assets/images/hero1.jpg" alt="Creatividad Pimelab" class="slide-image" />
                 <div class="slide-content">
-                    <h2 class="slide-title">Trabajamos en equipo</h2>
-                    <p class="slide-text">Equipo multidisciplinar especializado en química, microbiología, alimentación,
-                        geología y edificación</p>
+                    <h2 class="slide-title">Control de Legionella</h2>
+                    <p class="slide-text">Análisis y control de la legionella en instalaciones de agua caliente sanitaria</p>
+                    </div>
                 </div>
-            </div>
-
-            <div class="slide">
-                <img src="./assets/images/hero5.jpg" alt="Innovación Pimelab" class="slide-image" />
-                <div class="slide-content">
-                    <h2 class="slide-title">Preparados para innovar</h2>
-                    <p class="slide-text">Le acompañamos en su proceso de creación de nuevos productos</p>
+                
+                <div class="slide">
+                    <img src="./assets/images/foto-noticia1.jpg" alt="Innovación Pimelab" class="slide-image" />
+                    <div class="slide-content">
+                        <h2 class="slide-title">Preparados para innovar</h2>
+                        <p class="slide-text">Le acompañamos en su proceso de creación de nuevos productos</p>
+                    </div>
                 </div>
+                
+                <button class="slide-nav next" type="button" aria-label="Slide siguiente">&gt;</button>
+            </section>
+            <section class="servicios">
+                <h2 class="text-2xl font-bold mb-4">Nuestros servicios</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 justify-center">
+                    <a href="./pages/servicios.html#agua" class="servicio" >
+                        <div class="flex flex-col bg-[url('../assets/images/servicio-agua.jpg')] bg-cover h-full items-center justify-end p-4">
+                            <h3 class="text-lg font-semibold text-blanco">Aguas</h3>
+                        </div>
+                        <div class="ver-mas">
+                            <img src="./assets/icons/flecha-ver-mas.png" alt="Flecha derecha"
+                                class="w-4 h-4 inline-block mr-1" />
+                            <span class="text-azul-oscuro text-sm font-semibold hover:text-base">Ver más</span>
+                        </div>
+                    </a>
+                    <a href="./pages/servicios.html#calibracion" class="servicio">
+                        <div class="flex flex-col bg-[url('../assets/images/servicio-agricultura.jpg')] bg-cover h-full items-center justify-end p-4">                            
+                            <h3 class="text-lg font-semibold text-blanco">Agricultura</h3>
+                        </div>
+                        <div class="ver-mas">
+                            <img src="./assets/icons/flecha-ver-mas.png" alt="Flecha derecha"
+                                class="w-4 h-4 inline-block mr-1" />
+                            <span class="text-azul-oscuro text-sm font-semibold hover:text-base">Ver más</span>
+                        </div>
+                    </a>
+                    <a href="./pages/servicios.html#formacion" class="servicio">
+                        <div class="flex flex-col bg-[url('../assets/images/servicio-alimentacion.jpg')] bg-cover h-full items-center justify-end p-4">
+                            <h3 class="text-lg font-semibold text-blanco">Alimentación</h3>
+                        </div>
+                        <div class="ver-mas">
+                            <img src="./assets/icons/flecha-ver-mas.png" alt="Flecha derecha"
+                                class="w-4 h-4 inline-block mr-1" />
+                            <span class="text-azul-oscuro text-sm font-semibold hover:text-base">Ver más</span>
+                        </div>
+                    </a>
+                    <a href="./pages/servicios.html#biologia" class="servicio">
+                        <div class="flex flex-col bg-[url('../assets/images/servicio-construccion.JPG')] bg-cover h-full items-center justify-end p-4">
+                            <h3 class="text-lg font-semibold text-blanco">Construcción/Obra Civil</h3>
+                        </div>
+                        <div class="ver-mas">
+                            <img src="./assets/icons/flecha-ver-mas.png" alt="Flecha derecha"
+                                class="w-4 h-4 inline-block mr-1" />
+                            <span class="text-azul-oscuro text-sm font-semibold hover:text-base">Ver más</span>
+                        </div>
+                    </a>
+                    <a href="./pages/servicios.html#biologia" class="servicio">
+                        <div class="flex flex-col bg-[url('../assets/images/servicio-geotecnia.jpg')] bg-contain h-full items-center justify-end bg-center p-4">
+                            <h3 class="text-lg font-semibold text-blanco ">Geotecnia </h3>                        
+                        </div>
+                        <div class="ver-mas">
+                            <img src="./assets/icons/flecha-ver-mas.png" alt="Flecha derecha"
+                                class="w-4 h-4 inline-block mr-1" />
+                            <span class="text-azul-oscuro text-sm font-semibold hover:text-base">Ver más</span>
+                        </div>
+                    </a>
+                    <!-- <a href="./pages/servicios.html#biologia" class="servicio">
+                        <div class="flex flex-col">
+                            <div class="icono-servicio">
+                                <img src="./assets/icons/la-carretera.png" alt="Icono de biología"
+                                    class="mx-auto mb-2 w-12 h-12" />
+                            </div>
+                            <div class="detalle-servicio">
+                                <h3 class="text-lg font-semibold">Viales</h3>
+                                <p class="text-gris text-sm mt-2">Controles de calidad para obras civiles, análisis de mecanica
+                                    de suelos y de ligantes y mezclas bituminosas </p>
+                            </div>
+                        </div>
+                        <div class="ver-mas">
+                            <img src="./assets/icons/flecha-ver-mas.png" alt="Flecha derecha"
+                                class="w-4 h-4 inline-block mr-1" />
+                            <span class="text-azul-oscuro text-sm font-semibold">Ver más</span>
+                        </div>
+                    </a> -->
+                </div>
+            </section>
+            <section class="noticias">
+                <h2 class="text-2xl font-bold mb-4">Noticias</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <a href="./pages/noticias.html#noticia1" class="noticia">
+                    <img src="https://placehold.co/240x140" alt="Noticia 1" class="w-full h-auto rounded-md mb-4 " />
+                    <h3 class="text-lg font-semibold p-4">PIMELAB obtiene la certificación ISO 9001:2015</h3>
+                    <span class="text-azul-oscuro text-sm font-semibold p-4 ">Fecha: 1 de febrero de 2023</span>
+                    <p class="text-gris text-base mt-2 p-4">PIMELAB se enorgullece de anunciar que ha obtenido la certificación ISO 9001:2015, un reconocimiento a nuestro compromiso con la calidad y la mejora continua en nuestros servicios de laboratorio.</p>
+                </a>
+                <a href="./pages/noticias.html#noticia2" class="noticia">
+                    <img src="https://placehold.co/240x140" alt="Noticia 2" class="w-full h-auto rounded-md mb-4 " />
+                    <h3 class="text-lg font-semibold p-4">PIMELAB amplía sus instalaciones con un nuevo laboratorio de microbiología</h3>
+                    <span class="text-azul-oscuro text-sm font-semibold p-4 ">Fecha: 15 de marzo de 2023</span>
+                    <p class="text-gris text-base mt-2 p-4">PIMELAB se complace en anunciar la ampliación de sus instalaciones con la incorporación de un nuevo laboratorio de microbiología, equipado con tecnología de vanguardia para ofrecer servicios de análisis microbiológicos de alta calidad a nuestros clientes.</p>
+                </a>
+                <a href="./pages/noticias.html#noticia3" class="noticia">
+                    <img src="https://placehold.co/240x140" alt="Noticia 3" class="w-full h-auto rounded-md mb-4" />
+                    <h3 class="text-lg font-semibold p-4">PIMELAB lanza un nuevo servicio de análisis ambiental para empresas</h3>
+                    <span class="text-azul-oscuro text-sm font-semibold p-4">Fecha: 10 de abril de 2023</span>
+                    <p class="text-gris text-base mt-2 p-4">PIMELAB se enorgullece de anunciar el lanzamiento de nuestro regulaciones ambientales y promover prácticas sostenibles en sus operaciones. </p>
+                </a>
+                <a href="./pages/noticias.html#noticia3" class="noticia">
+                    <img src="https://placehold.co/240x140" alt="Noticia 3" class="w-full h-auto rounded-md mb-4" />
+                    <h3 class="text-lg font-semibold p-4">PIMELAB lanza un nuevo servicio de análisis ambiental para empresas</h3>
+                    <span class="text-azul-oscuro text-sm font-semibold p-4">Fecha: 10 de abril de 2023</span>
+                    <p class="text-gris text-base mt-2 p-4">PIMELAB se enorgullece de anunciar el lanzamiento de nuestro regulaciones ambientales y promover prácticas sostenibles en sus operaciones. </p>
+                </a>
             </div>
-
-            <button class="slide-nav next" type="button" aria-label="Slide siguiente">&gt;</button>
+        </section>
+        <section class="login">
+            <h2 class="text-2xl font-bold mb-4 text-negro">Área de clientes</h2>
+            <p class="text-gris text-lg mb-6">Acceda a su cuenta para gestionar sus análisis, consultar resultados y
+                solicitar nuevos servicios.</p>
+                <form action="./pages/login.html" method="get">
+                    <div class="mb-4">
+                    <label for="username" class="block text-gris text-sm font-medium mb-2 ">Nombre de usuario</label>
+                    <input type="text" id="username" name="username" class="bg-blanco-accent text-negro placeholder:text-gris placeholder:text-sm border border-gris focus:outline-none focus:ring-2 focus:ring-azul-oscuro rounded w-fit p-3" placeholder="Introduzca su nombre de usuario" />
+                </div>
+                <div class="mb-4">
+                    <label for="password" class="block text-gris text-sm font-medium mb-2">Contraseña</label>
+                    <input type="password" id="password" name="password" class="bg-blanco-accent text-negro placeholder:text-gris placeholder:text-sm border border-gris focus:outline-none focus:ring-2 focus:ring-azul-oscuro rounded p-3" placeholder="Introduzca su contraseña" />
+                </div>
+                <button type="submit" class="boton-azul w-fit text-xl">Acceder</button>
+            </form>
         </section>
         <section class="descripcion">
-            <div class="mb-6 md:mb-0 md:w-2/3">
+            <div class="mb-6 md:mb-0 md:w-4/5">
                 <h2 class="text-2xl font-bold mb-4">Laboratorio PIMELAB</h2>
                 <p class="text-gris text-lg mb-6">El laboratorio de PIME Menorca (PIMELAB), desde su creación en 1988,
                     continúa esforzándose para ofrecer un servicio integral a sus clientes, capaz de satisfacer todas
@@ -117,151 +234,7 @@
                 <a href="./pages/presentacion.html" class="boton-azul p-3 text-xl">Conócenos</a>
             </div>
             <img src="./assets/images/foto-lab.JPG" alt="Foto del laboratorio PIMELAB"
-                class="w-full md:w-1/3 h-auto rounded-md shadow-lg" />
-        </section>
-        <section class="servicios">
-            <h2 class="text-2xl font-bold mb-4">Nuestros servicios</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-6">
-                <a href="./pages/servicios.html#agua" class="servicio">
-                    <div class="flex flex-col">
-                        <div class="icono-servicio">
-                            <img src="./assets/icons/agua.png" alt="Icono de análisis" class="mx-auto mb-2 w-12 h-12" />
-                        </div>
-                        <div class="detalle-servicio">
-                            <h3 class="text-lg font-semibold">Aguas</h3>
-                            <p class="text-gris text-sm mt-2">Análisis de calidad de aguas naturales, de bebida, de baño y
-                                residuales y control de legionella </p>
-                        </div>
-                    </div>
-                    <div class="ver-mas">
-                        <img src="./assets/icons/flecha-ver-mas.png" alt="Flecha derecha"
-                            class="w-4 h-4 inline-block mr-1" />
-                        <span class="text-azul-oscuro text-sm font-semibold">Ver más</span>
-                    </div>
-                </a>
-                <a href="./pages/servicios.html#calibracion" class="servicio">
-                    <div class="flex flex-col">
-                        <div class="icono-servicio">
-                            <img src="./assets/icons/agricultura.png" alt="Icono de calibración"
-                                class="mx-auto mb-2 w-12 h-12" />
-                        </div>
-                        <div class="detalle-servicio">
-                            <h3 class="text-lg font-semibold">Agricultura</h3>
-                            <p class="text-gris text-sm mt-2">Controles de calidad de suelo, aguas para el riego, análisis
-                                de fertilizantes y de alimentación animal</p>
-                        </div>
-                    </div>
-                    <div class="ver-mas">
-                        <img src="./assets/icons/flecha-ver-mas.png" alt="Flecha derecha"
-                            class="w-4 h-4 inline-block mr-1" />
-                        <span class="text-azul-oscuro text-sm font-semibold">Ver más</span>
-                    </div>
-                </a>
-                <a href="./pages/servicios.html#formacion" class="servicio">
-                    <div class="flex flex-col">
-                        <div class="icono-servicio">
-                            <img src="./assets/icons/alimentacion.png" alt="Icono de formación"
-                                class="mx-auto mb-2 w-12 h-12" />
-                        </div>
-                        <div class="detalle-servicio">
-                            <h3 class="text-lg font-semibold">Alimentación</h3>
-                            <p class="text-gris text-sm mt-2">Análisis microbiológicos y de seguridad alimentaria para
-                                industrias cárnicas y lácteas, pastelerías, panaderías, hoteles y restaurantes </p>
-                        </div>
-                    </div>
-                    <div class="ver-mas">
-                        <img src="./assets/icons/flecha-ver-mas.png" alt="Flecha derecha"
-                            class="w-4 h-4 inline-block mr-1" />
-                        <span class="text-azul-oscuro text-sm font-semibold">Ver más</span>
-                    </div>
-                </a>
-                <a href="./pages/servicios.html#biologia" class="servicio">
-                    <div class="flex flex-col">
-                        <div class="icono-servicio">
-                            <img src="./assets/icons/construccion.png" alt="Icono de biología"
-                                class="mx-auto mb-2 w-12 h-12" />
-                        </div>
-                        <div class="detalle-servicio">
-                            <h3 class="text-lg font-semibold">Construcción</h3>
-                            <p class="text-gris text-sm mt-2">Ensayos de resistencia, control de calidad y análisis de
-                                materiales de construcción. Patalogía de construcciones </p>
-                        </div>
-                    </div>
-                    <div class="ver-mas">
-                        <img src="./assets/icons/flecha-ver-mas.png" alt="Flecha derecha"
-                            class="w-4 h-4 inline-block mr-1" />
-                        <span class="text-azul-oscuro text-sm font-semibold">Ver más</span>
-                    </div>
-                </a>
-                <a href="./pages/servicios.html#biologia" class="servicio">
-                    <div class="flex flex-col">
-                        <div class="icono-servicio">
-                            <img src="./assets/icons/planeta-tierra.png" alt="Icono de biología"
-                                class="mx-auto mb-2 w-12 h-12" />
-                        </div>
-                        <div class="detalle-servicio">
-                            <h3 class="text-lg font-semibold">Geotecnia</h3>
-                            <p class="text-gris text-sm mt-2">Hidrogeologia, estudios geotecnicos y de taludes, ensayos "in
-                                situ"</p>
-                        </div>
-                    </div>
-                    <div class="ver-mas">
-                        <img src="./assets/icons/flecha-ver-mas.png" alt="Flecha derecha"
-                            class="w-4 h-4 inline-block mr-1" />
-                        <span class="text-azul-oscuro text-sm font-semibold">Ver más</span>
-                    </div>
-                </a>
-                <a href="./pages/servicios.html#biologia" class="servicio">
-                    <div class="flex flex-col">
-                        <div class="icono-servicio">
-                            <img src="./assets/icons/la-carretera.png" alt="Icono de biología"
-                                class="mx-auto mb-2 w-12 h-12" />
-                        </div>
-                        <div class="detalle-servicio">
-                            <h3 class="text-lg font-semibold">Viales</h3>
-                            <p class="text-gris text-sm mt-2">Controles de calidad para obras civiles, análisis de mecanica
-                                de suelos y de ligantes y mezclas bituminosas </p>
-                        </div>
-                    </div>
-                    <div class="ver-mas">
-                        <img src="./assets/icons/flecha-ver-mas.png" alt="Flecha derecha"
-                            class="w-4 h-4 inline-block mr-1" />
-                        <span class="text-azul-oscuro text-sm font-semibold">Ver más</span>
-                    </div>
-                </a>
-            </div>
-        </section>
-        <section class="noticias">
-            <h2 class="text-2xl font-bold mb-4">Noticias</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <a href="./pages/noticias.html#noticia1" class="noticia">
-                    <img src="https://placehold.co/480x280" alt="Noticia 1" class="w-full h-auto rounded-md mb-4 " />
-                    <h3 class="text-lg font-semibold p-4">PIMELAB obtiene la certificación ISO 9001:2015</h3>
-                    <span class="text-azul-oscuro text-sm font-semibold p-4 ">Fecha: 1 de febrero de 2023</span>
-                    <p class="text-gris text-sm mt-2 p-4">PIMELAB se enorgullece de anunciar que ha obtenido la
-                        certificación ISO 9001:2015, un reconocimiento a nuestro compromiso con la calidad y la mejora
-                        continua en nuestros servicios de laboratorio.</p>
-                </a>
-                <a href="./pages/noticias.html#noticia2" class="noticia">
-                    <img src="https://placehold.co/480x280" alt="Noticia 2" class="w-full h-auto rounded-md mb-4 " />
-                    <h3 class="text-lg font-semibold p-4">PIMELAB amplía sus instalaciones con un nuevo laboratorio de
-                        microbiología</h3>
-                    <span class="text-azul-oscuro text-sm font-semibold p-4 ">Fecha: 15 de marzo de 2023</span>
-                    <p class="text-gris text-sm mt-2 p-4">PIMELAB se complace en anunciar la ampliación de sus
-                        instalaciones con la incorporación de un nuevo laboratorio de microbiología, equipado con
-                        tecnología de vanguardia para ofrecer servicios de análisis microbiológicos de alta calidad a
-                        nuestros clientes.</p>
-                </a>
-                <a href="./pages/noticias.html#noticia3" class="noticia">
-                    <img src="https://placehold.co/480x280" alt="Noticia 3" class="w-full h-auto rounded-md mb-4" />
-                    <h3 class="text-lg font-semibold p-4">PIMELAB lanza un nuevo servicio de análisis ambiental para
-                        empresas</h3>
-                    <span class="text-azul-oscuro text-sm font-semibold p-4">Fecha: 10 de abril de 2023</span>
-                    <p class="text-gris text-sm mt-2 p-4">PIMELAB se enorgullece de anunciar el lanzamiento de nuestro
-                        nuevo servicio de análisis ambiental, diseñado para ayudar a las empresas a cumplir con las
-                        regulaciones ambientales y promover prácticas sostenibles en sus operaciones.</p>
-                </a>
-            </div>
+                class="w-full md:w-1/5 h-auto rounded-md shadow-lg" />
         </section>
     </main>
     <footer class="bg-footer p-5 flex flex-col lg:flex-row items-center justify-between gap-4">
@@ -275,7 +248,7 @@
                     <img src="./assets/icons/casa.svg" alt="Correo electrónico" class="w-5 h-5" />
                     <span class="text-blanco text-xs">C/Comerciants, 9 - 07760 Ciutadella de Menorca - Illes Balears,
                         España</span>
-                </li>
+                    </li>
                 <li class="footer-link">
                     <img src="./assets/icons/telefono.svg" alt="Teléfono" class="w-5 h-5" />
                     <span class="text-blanco text-xs">971 484 536</span>

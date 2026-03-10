@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <header class="bg-azul-claro text-negro w-full sticky top-0 z-50 shadow-md px-4 py-3">
+    <header class="bg-blanco-accent text-negro w-full sticky top-0 z-50 shadow-md px-4 py-3">
         <div class="flex items-center gap-3 lg:gap-6">
             <img src="../assets/images/logo.png" alt="Logo Pimelab" class="logo h-7 md:h-10 lg:h-12 z-100"
                 aria-role="button banner" onclick="" />
@@ -76,6 +76,22 @@
                 </p>
             </a>
         </div>
+        <section class="login">
+            <h2 class="text-2xl font-bold mb-4 text-negro">Área de clientes</h2>
+            <p class="text-gris text-lg mb-6">Acceda a su cuenta para gestionar sus análisis, consultar resultados y
+                solicitar nuevos servicios.</p>
+            <form action="./pages/login.html" method="get">
+                <div class="mb-4">
+                    <label for="username" class="block text-gris text-sm font-medium mb-2 ">Nombre de usuario</label>
+                    <input type="text" id="username" name="username" class="bg-blanco-accent text-negro placeholder:text-gris placeholder:text-sm border border-gris focus:outline-none focus:ring-2 focus:ring-azul-oscuro rounded w-fit p-3" placeholder="Introduzca su nombre de usuario" />
+                </div>
+                <div class="mb-4">
+                    <label for="password" class="block text-gris text-sm font-medium mb-2">Contraseña</label>
+                    <input type="password" id="password" name="password" class="bg-blanco-accent text-negro placeholder:text-gris placeholder:text-sm border border-gris focus:outline-none focus:ring-2 focus:ring-azul-oscuro rounded p-3" placeholder="Introduzca su contraseña" />
+                </div>
+                <button type="submit" class="boton-azul w-fit text-xl">Acceder</button>
+            </form>
+        </section>
     </main>
     <footer class="bg-footer p-5 flex flex-col lg:flex-row items-center justify-between gap-4">
         <div class="md:w-1/2 ">

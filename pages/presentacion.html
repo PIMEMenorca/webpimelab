@@ -6,8 +6,8 @@
     <title>Presentacion</title>
     <link rel="stylesheet" href="../styles/output.css">
 </head>
-<body>
-    <header class="bg-azul-claro text-negro w-full sticky top-0 z-50 shadow-md px-4 py-3">
+<body class="h-page">
+    <header class="bg-blanco-accent text-negro w-full sticky top-0 z-50 shadow-md px-4 py-3">
         <div class="flex items-center gap-3 lg:gap-6">
             <img src="../assets/images/logo.png" alt="Logo Pimelab" class="logo h-7 md:h-10 lg:h-12 z-100"
                 aria-role="button banner" onclick="" />
@@ -70,19 +70,19 @@
                     </p>
                 </div>
 
-                <img src="../assets/images/pime-difuminada.jpg" alt="Foto del logo de PIME en edificio"
+                <img src="../assets/images/pime-difuminada.png" alt="Foto del logo de PIME en edificio"
                     class="w-full md:w-1/3 md:max-w-75" />
             </div>
 
-            <div class="mt-6 grid grid-cols-1 gap-3 md:grid-cols-3 md:auto-rows-[170px]">
+            <div class="mt-6 grid grid-cols-1 gap-3 gap-x-6 md:grid-cols-3 md:auto-rows-[500px]">
                 <img src="../assets/images/presentacion1.JPG" alt="Vehículos de PIMELAB"
-                    class="h-full w-full object-cover md:col-span-2" />
+                    class="h-full w-full object-cover md:col-span-3" />
                 <img src="../assets/images/presentacion2.JPG" alt="Edificio de PIME"
-                    class="h-full w-full object-cover md:row-span-2" />
+                    class="h-full w-full object-scale-down md:col-start-3 md:row-start-2" />
                 <img src="../assets/images/presentación3.JPG" alt="Tubos de ensayo en laboratorio"
                     class="h-full w-full object-cover" />
                 <img src="../assets/images/presentacion4.jpg" alt="Análisis en laboratorio"
-                    class="h-full w-full object-cover" />
+                    class="h-full w-full object-cover object-top" />
             </div>
 
             <div class="mt-6 text-gris">
@@ -96,6 +96,22 @@
                     <li class="underline">la implantación de sistemas de gestión de la calidad.</li>
                 </ul>
             </div>
+        </section>
+        <section class="login">
+            <h2 class="text-2xl font-bold mb-4 text-negro">Área de clientes</h2>
+            <p class="text-gris text-lg mb-6">Acceda a su cuenta para gestionar sus análisis, consultar resultados y
+                solicitar nuevos servicios.</p>
+            <form action="./pages/login.html" method="get">
+                <div class="mb-4">
+                    <label for="username" class="block text-gris text-sm font-medium mb-2 ">Nombre de usuario</label>
+                    <input type="text" id="username" name="username" class="bg-blanco-accent text-negro placeholder:text-gris placeholder:text-sm border border-gris focus:outline-none focus:ring-2 focus:ring-azul-oscuro rounded w-fit p-3" placeholder="Introduzca su nombre de usuario" />
+                </div>
+                <div class="mb-4">
+                    <label for="password" class="block text-gris text-sm font-medium mb-2">Contraseña</label>
+                    <input type="password" id="password" name="password" class="bg-blanco-accent text-negro placeholder:text-gris placeholder:text-sm border border-gris focus:outline-none focus:ring-2 focus:ring-azul-oscuro rounded p-3" placeholder="Introduzca su contraseña" />
+                </div>
+                <button type="submit" class="boton-azul w-fit text-xl">Acceder</button>
+            </form>
         </section>
     </main>
     <footer class="bg-footer p-5 flex flex-col lg:flex-row items-center justify-between gap-4">

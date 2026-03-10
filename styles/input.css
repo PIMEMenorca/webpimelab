@@ -8,7 +8,7 @@
     src: url(./assets/fonts/Molengo/Molengo-Regular.ttf) format("truetype");
 }
 @theme {
-    --color-azul-claro: #FEFEFE;
+    --color-blanco-accent: #FEFEFE;
     --color-azul-oscuro: #073D87;
     --color-gris: #736F6E;
     --color-blanco: #FAFAFA;
@@ -17,6 +17,28 @@
 
     --font-primary: Molengo, sans-serif;
     --font-secondary: Helvetica, sans-serif;
+}
+
+@keyframes slideImageZoom {
+    0% {
+        transform: scale(1.06);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes slideContentReveal {
+    0% {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @layer components {
@@ -29,7 +51,7 @@
     }
 
     .pagina {
-        @apply w-full p-2 text-left hover:transform-[scale(1.03)] lg:w-auto;
+        @apply w-full p-2 text-left hover:transform-[scale(1.03)] text-2xl lg:w-auto;
     }
     
     .boton-azul{
@@ -38,12 +60,12 @@
 
     /* Controles de formulario: estilos comunes para inputs, selects y textareas */
     .form-control{
-        @apply w-full p-2 rounded border border-azul-claro bg-azul-oscuro focus:outline-none;
+        @apply w-full p-2 rounded border border-blanco-accent bg-azul-oscuro focus:outline-none;
     }
 
     /* Barra de búsqueda: contenedor para el input y controles de búsqueda */
     .search-bar{
-        @apply flex w-fit items-center justify-center gap-2 border border-negro rounded-xl bg-gris px-2 py-1;
+        @apply flex w-fit items-center justify-center gap-2 border border-negro rounded-xl bg-gray-300 px-4 py-2 placeholder:text-xl;
     }
 
     .search-input {
@@ -70,7 +92,7 @@
 
     /* Menú activo: al togglear (móvil/tablet) muestra una columna a pantalla completa; en pantallas grandes es una fila normal */
     .menu-links.active {
-        @apply fixed inset-x-0 top-0 z-50 flex flex-col items-start gap-4 bg-azul-claro p-4 shadow-md lg:static lg:flex lg:flex-row lg:items-center lg:gap-4 lg:bg-transparent lg:p-0 lg:shadow-none;
+        @apply fixed inset-x-0 top-0 z-50 flex flex-col items-start gap-4 bg-blanco-accent p-4 shadow-md lg:static lg:flex lg:flex-row lg:items-center lg:gap-4 lg:bg-transparent lg:p-0 lg:shadow-none;
     }
 
     .menu-top-action {
@@ -100,25 +122,25 @@
     #slot-right .search-bar {
         @apply w-fit;
     }
-
+    
     .slideshows {
-        @apply relative w-full p-4 md:p-0;
+        @apply relative w-full p-4 md:p-0 overflow-hidden;
     }
 
     .slide {
-        @apply hidden relative w-full shadow-xl;
+        @apply absolute inset-0 w-full shadow-xl opacity-0 translate-y-2 scale-[1.01] pointer-events-none transition-all duration-700 ease-out z-10;
     }
 
     .slide-image {
-        @apply block w-full object-cover rounded-md;
+        @apply block w-full object-contain rounded-md;
     }
 
     .slide-content {
-        @apply absolute w-[85%] left-7 right-4 -bottom-8 md:bottom-4 md:left-8 md:right-auto bg-azul-oscuro/70 p-4 md:p-6 rounded-md text-blanco shadow-xl;
+        @apply absolute w-[85%] left-7 right-4 -bottom-5 md:bottom-4 md:left-8 md:right-auto bg-azul-oscuro/70 p-4 md:p-6 rounded-md text-blanco shadow-xl;
     }
 
     .slide-nav {
-        @apply absolute top-1/2 -translate-y-1/2 z-20 w-10 h-10 md:w-12 md:h-12 rounded-full bg-azul-oscuro/75 text-blanco flex items-center justify-center text-xl font-bold transition-colors duration-200 hover:bg-azul-oscuro;
+        @apply absolute top-1/2 -translate-y-1/2 z-30 w-10 h-10 md:w-12 md:h-12 rounded-full bg-azul-oscuro/75 text-blanco flex items-center justify-center text-xl font-bold transition-all duration-300 hover:bg-azul-oscuro hover:scale-105;
     }
 
     .slide-nav.prev {
@@ -130,7 +152,15 @@
     }
 
     .slide.active {
-        @apply block;
+        @apply relative opacity-100 translate-y-0 scale-100 pointer-events-auto z-20;
+    }
+
+    .slide.active .slide-image {
+        animation: slideImageZoom 8s ease-out both;
+    }
+
+    .slide.active .slide-content {
+        animation: slideContentReveal 700ms ease-out 120ms both;
     }
 
     .slide-title{
@@ -142,7 +172,7 @@
     }
 
     .descripcion {
-        @apply flex flex-col md:flex-row gap-6 items-start px-6;
+        @apply flex flex-col md:flex-row gap-6 items-start px-6 mb-3;
     }
 
     .servicios, .noticias {
@@ -154,7 +184,25 @@
     }
 
     .servicio {
-        @apply bg-azul-claro rounded-md p-4 text-center hover:bg-azul-claro/80 transition-colors duration-300 flex flex-col hover:transform-[scale(1.05)] shadow-xl;
+        @apply bg-blanco-accent rounded-md p-4 text-center hover:bg-blanco-accent/80 transition-colors duration-300 flex flex-col hover:transform-[scale(1.05)] shadow-xl h-100;
+    }
+
+    .servicio h3 {
+        @apply inline-block pb-1;
+        background-image: linear-gradient(currentColor, currentColor);
+        background-repeat: no-repeat;
+        background-size: 0% 3px;
+        background-position: left 100%;
+        transition: background-size 220ms ease-in-out;
+    }
+
+    .servicios .servicio h3 {
+        background-image: linear-gradient(#ffffff, #ffffff);
+        text-shadow: 0 1px 2px rgb(0 0 0 / 0.55);
+    }
+
+    .servicio:is(:hover, :focus-visible, :focus-within) h3 {
+        background-size: 100% 3px;
     }
 
     .ver-mas{
@@ -166,11 +214,11 @@
     }
 
     .detalle-servicio {
-        @apply flex-1;
+        @apply flex items-end;
     }
 
     .noticia {
-        @apply bg-azul-claro rounded-md text-center hover:bg-azul-claro/80 transition-colors duration-300 flex items-center hover:transform-[scale(1.05)] shadow-xl p-4 flex-col;
+        @apply bg-blanco-accent rounded-md text-center hover:bg-blanco-accent/80 transition-colors duration-300 flex items-center hover:transform-[scale(1.05)] shadow-xl p-4 flex-col;
     }
 
     .footer-links {
@@ -181,6 +229,25 @@
         @apply flex items-center gap-2 w-fit;
     }
 
+    .login{
+        @apply hidden rounded-md text-blanco font-bold text-sm bg-blanco-accent  shadow-2xl;
+    }
+
+    .login.active {
+        @apply block z-50 fixed inset-x-0 top-0 p-4 rounded-md shadow-xl w-full max-w-sm mx-auto mt-20;
+    }
     
 
 }
+
+    @media (prefers-reduced-motion: reduce) {
+        .slide,
+        .slide-nav {
+            transition: none;
+        }
+
+        .slide.active .slide-image,
+        .slide.active .slide-content {
+            animation: none;
+        }
+    }
