@@ -49,7 +49,7 @@
             <h1 class="mb-5 border-b border-gris/30 pb-2 text-3xl font-bold text-negro">Presentación</h1>
 
             <div class="flex flex-col gap-5 md:flex-row md:items-start">
-                <div class="space-y-4 text-justify text-sm leading-6 text-gris md:w-2/3 md:text-[15px]">
+                <div class="space-y-4 text-justify text-base leading-6 text-gris md:w-2/3 md:text-[20px]">
                     <p>
                         La Federación de la Pequeña y Mediana Empresa de Menorca, PIME Menorca, es una organización empresarial sin ánimo de lucro. Fue
                         <strong>constituida el año 1977 con el objetivo de promover y difundir los derechos e intereses de los empresarios menorquines</strong>.
@@ -86,8 +86,8 @@
             </div>
 
             <div class="mt-6 text-gris">
-                <p class="mb-2 text-sm md:text-[15px]">Las actividades actuales del centro son:</p>
-                <ul class="list-disc space-y-1 pl-5 text-sm leading-6 md:text-[15px]">
+                <p class="mb-2 text-sm md:text-[20px]">Las actividades actuales del centro son:</p>
+                <ul class="list-disc space-y-1 pl-5 text-base leading-6 md:text-[20px]">
                     <li>la realización de proyectos de investigación y desarrollo tecnológico, y estudios sectoriales promoviendo la cooperación entre empresas.</li>
                     <li>la participación en programas e iniciativas europeas, dentro del ámbito de la calidad y la investigación, así como la promoción de intercambios a nivel nacional e internacional.</li>
                     <li>la colaboración en la transferencia de resultados de investigación.</li>
@@ -114,43 +114,46 @@
             </form>
         </section>
     </main>
-    <footer class="bg-footer p-5 flex flex-col lg:flex-row items-center justify-between gap-4">
-        <div class="md:w-1/2 ">
-            <ul class="footer-links">
-                <li class="footer-link">
-                    <img src="../assets/icons/logo-pequeño.png" alt="Logo de PIMELAB" class="w-5 h-5" />
-                    <span class="text-blanco text-xs">PIMELAB - Centro Tecnológico</span>
-                </li>
+    <footer class="bg-footer p-5 grid grid-cols-2 gap-x-6 gap-y-3 items-start">
+        <h3 class="text-blanco text-2xl text-center">Contacto</h3>
+        <h3 class="text-blanco text-2xl pl-4 text-center">Certificados</h3>
+
+        <div class="grid grid-cols-2 justify-between gap-3">
+            <ul class="flex flex-col gap-1">
                 <li class="footer-link">
                     <img src="../assets/icons/casa.svg" alt="Correo electrónico" class="w-5 h-5" />
-                    <span class="text-blanco text-xs">C/Comerciants, 9 - 07760 Ciutadella de Menorca - Illes Balears,
-                        España</span>
+                    <span class="text-blanco text-base">C/Comerciants, 9 - 07760 Ciutadella de Menorca - Illes Balears, España</span>
                 </li>
                 <li class="footer-link">
                     <img src="../assets/icons/telefono.svg" alt="Teléfono" class="w-5 h-5" />
-                    <span class="text-blanco text-xs">971 484 536</span>
+                    <span class="text-blanco text-base">971 484 536</span>
                 </li>
                 <li class="footer-link">
                     <img src="../assets/icons/mail.svg" alt="Correo electrónico" class="w-5 h-5" />
-                    <span class="text-blanco text-xs">lab@pimemenorca.org</span>
+                    <span class="text-blanco text-base">lab@pimemenorca.org</span>
                 </li>
                 <li class="footer-link">
                     <img src="../assets/icons/arroba.svg" alt="arroba" class="w-5 h-5" />
-                    <a class="text-blanco text-xs underline" href="../pages/contacto.html">Formulario de contacto</a>
-                </li>
-                <li class="footer-link">
-                    <a class="text-blanco text-xs underline" href="../pages/aviso-legal.html">Nota legal</a>
-                </li>
-                <li class="footer-link">
-                    <a class="text-blanco text-xs underline" href="../pages/politica-privacidad.html">+Info RGPDUE</a>
+                    <a class="text-blanco text-base underline" href="../pages/contacto.html">Formulario de contacto</a>
                 </li>
             </ul>
+            <div class="row-start-3 col-span-2 flex gap-10 items-center justify-center">
+                <li class="footer-link">
+                    <a class="text-blanco text-base underline" href="../pages/aviso-legal.html">Nota legal</a>
+                </li>
+                <li class="footer-link">
+                    <a class="text-blanco text-base underline" href="../pages/politica-privacidad.html">+Info RGPDUE</a>
+                </li>
+            </div>
+
+            <div class="flex gap-3 items-center justify-center">
+                <img src="../assets/icons/logo-pimelab-pequeño.png" alt="Logo de PIMELAB" class="w-20 h-auto" />
+                <img src="../assets/icons/logo-pime.png" alt="Logo de PIME Menorca" class="w-20 h-auto" />
+            </div>
         </div>
-        <div
-            class="md:w-1/2 flex items-center justify-center gap-15 border-t-blanco md:border-t-0 md:border-l-blanco md:border-l border-t p-4 lg:pl-8 md:p-0">
-            <img src="../assets/icons/logo-pime.png" alt="Logo de PIME Menorca" class="w-20 h-auto mx-auto lg:mx-0" />
-            <img src="../assets/icons/certificaciones.png" alt="Certificaciones"
-                class="w-20 h-auto mx-auto lg:mx-0 mt-4 lg:mt-0" />
+
+        <div class="flex items-center justify-center border-l border-l-blanco pl-4 h-full">
+            <img src="../assets/icons/certificaciones.png" alt="Certificaciones" class="w-40 h-auto" />
         </div>
     </footer>
     <script src="../javascript/menu.js"></script>

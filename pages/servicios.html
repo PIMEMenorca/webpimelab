@@ -47,122 +47,131 @@
         </div>
     </header>
     <main class="bg-blanco flex flex-col items-center gap-8 py-8 px-4">
-        <h2 class="text-2xl font-bold mb-4">Nuestros servicios</h2> 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-6 w-19/20">
-            <a href="../pages/servicios.html#agua" class="servicio ">
-                <div class="flex items-center">
-                    <div class="icono-servicio">
-                        <img src="../assets/icons/agua.png" alt="Icono de análisis" class="mx-auto mb-2 w-12 h-12" />
+        <section class="servicios w-full px-2 md:px-4">
+            <div class="servicios-header">
+                <h1 class="text-3xl font-bold mb-1">Nuestros servicios</h1>
+                <p class="servicios-subtitle">Análisis y control para diferentes sectores</p>
+            </div>
+
+            <div class="servicios-grid grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6">
+                <a id="agua" href="../pages/agua.html" class="servicio servicio-card h-full">
+                    <div class="servicio-media h-44 md:h-48">
+                        <img src="../assets/images/servicio-agua.jpg" alt="Servicio de análisis de aguas" class="servicio-media-image" />
                     </div>
-                    <div class="detalle-servicio">
-                        <h3 class="text-lg font-semibold">Aguas</h3>
-                        <p class="text-gris text-sm mt-2">La tecnología más moderna y un equipo de persopnas altamente cualificado nos permiten grantizar la fiabilidad y rigor de nuestros servicios. Análisis de calidad de aguas naturales, de bebida, de baño y
-                            residuales y control de legionella
-                        </p>
-                        <p>Ofrecemos: </p>
-                        <ul class="text-left list-none text-gris text-sm mt-2 flex flex-col gap-1 justify-center items-center w-fit">
-                            <li>Control de calidad de Aguas Naturañes y de Bebida</li>
-                            <li>Análisis de Aguas de Baño</li>
-                            <li>Analisis y control de Aguas residuales</li>
-                            <li>Control de legionella</li>
+                    <div class="servicio-body flex h-full flex-col gap-2">
+                        <span class="servicio-icon servicio-icon-agua">
+                            <img src="../assets/icons/agua.png" alt="" aria-hidden="true" />
+                        </span>
+                        <h3>Aguas</h3>
+                        <p class="text-sm leading-relaxed">La tecnología más moderna y un equipo altamente cualificado nos permiten garantizar la fiabilidad y rigor de nuestros servicios. Analizamos aguas naturales, de bebida, de baño y residuales, incluyendo control de legionella.</p>
+                        <p class="text-gris text-sm font-semibold">Ofrecemos:</p>
+                        <ul class="text-gris text-sm leading-relaxed list-disc pl-5 space-y-1">
+                            <li>Control de calidad de aguas naturales y de bebida.</li>
+                            <li>Análisis de aguas de baño.</li>
+                            <li>Análisis y control de aguas residuales.</li>
+                            <li>Control de legionella.</li>
                         </ul>
+                        <span class="servicio-link mt-auto">Ver más <img src="../assets/icons/flecha-derecha.svg" alt="" aria-hidden="true" /></span>
                     </div>
-                </div>
-                <div class="ver-mas">
-                    <img src="../assets/icons/flecha-ver-mas.png" alt="Flecha derecha"
-                        class="w-4 h-4 inline-block mr-1" />
-                    <span class="text-azul-oscuro text-sm font-semibold">Ver más</span>
-                </div>
-            </a>
-            <a href="../pages/servicios.html#calibracion" class="servicio">
-                <div class="flex">
-                    <div class="icono-servicio">
-                        <img src="../assets/icons/agricultura.png" alt="Icono de calibración"
-                            class="mx-auto mb-2 w-12 h-12" />
+                </a>
+
+                <a id="calibracion" href="../pages/calibracion.html" class="servicio servicio-card h-full">
+                    <div class="servicio-media h-44 md:h-48">
+                        <img src="../assets/images/servicio-agricultura.jpg" alt="Servicio de análisis para agricultura" class="servicio-media-image" />
                     </div>
-                    <div class="detalle-servicio">
-                        <h3 class="text-lg font-semibold">Agricultura</h3>
-                        <p class="text-gris text-sm mt-2">Controles de calidad de suelo, aguas para el riego, análisis
-                            de fertilizantes y de alimentación animal</p>
+                    <div class="servicio-body flex h-full flex-col gap-2">
+                        <span class="servicio-icon servicio-icon-agricultura">
+                            <img src="../assets/icons/agricultura.png" alt="" aria-hidden="true" />
+                        </span>
+                        <h3>Agricultura</h3>
+                        <p class="text-sm leading-relaxed">Controles de calidad de suelo, aguas para el riego, análisis de fertilizantes y de alimentación animal.</p>
+                        <p class="text-gris text-sm font-semibold">Ofrecemos:</p>
+                        <ul class="text-gris text-sm leading-relaxed list-disc pl-5 space-y-1">
+                            <li>Caracterización de suelo agrícola</li>
+                            <li>Análisis de aguas para el riego</li>
+                            <li>Estudios de fertilidad</li>
+                            <li>Análisis de alimentación animal</li>
+                            <li>Control de calidad de alimentos para el ganado</li>
+                            <li>Comprobación de presencia de contaminantes en suelos agrícolas</li>
+                        </ul>
+                        <span class="servicio-link mt-auto">Ver más <img src="../assets/icons/flecha-derecha.svg" alt="" aria-hidden="true" /></span>
                     </div>
-                </div>
-                <div class="ver-mas">
-                    <img src="../assets/icons/flecha-ver-mas.png" alt="Flecha derecha"
-                        class="w-4 h-4 inline-block mr-1" />
-                    <span class="text-azul-oscuro text-sm font-semibold">Ver más</span>
-                </div>
-            </a>
-            <a href="../pages/servicios.html#formacion" class="servicio">
-                <div class="flex">
-                    <div class="icono-servicio">
-                        <img src="../assets/icons/alimentacion.png" alt="Icono de formación"
-                            class="mx-auto mb-2 w-12 h-12" />
+                </a>
+
+                <a id="formacion" href="../pages/servicios.html#formacion" class="servicio servicio-card h-full">
+                    <div class="servicio-media h-44 md:h-48">
+                        <img src="../assets/images/servicio-alimentacion.jpg" alt="Servicio de análisis de alimentación" class="servicio-media-image" />
                     </div>
-                    <div class="detalle-servicio">
-                        <h3 class="text-lg font-semibold">Alimentación</h3>
-                        <p class="text-gris text-sm mt-2">Análisis microbiológicos y de seguridad alimentaria para
-                            industrias cárnicas y lácteas, pastelerías, panaderías, hoteles y restaurantes </p>
+                    <div class="servicio-body flex h-full flex-col gap-2">
+                        <span class="servicio-icon servicio-icon-alimentacion">
+                            <img src="../assets/icons/alimentacion.png" alt="" aria-hidden="true" />
+                        </span>
+                        <h3>Alimentación</h3>
+                        <p class="text-sm leading-relaxed">Análisis microbiológicos y de seguridad alimentaria para industrias cárnicas y lácteas, pastelerías, panaderías, hoteles y restaurantes.</p>
+                        <p class="text-gris text-sm font-semibold">Ofrecemos:</p>
+                        <ul class="text-gris text-sm leading-relaxed list-disc pl-5 space-y-1">
+                            <li>Controles de calidad</li>
+                            <li>Controles de contaminacion microbiológica (Análisis de patógenos)</li>
+                            <li>Análisis de aditivos</li>
+                            <li>Insecpecciones higiénico-sanitarias</li>
+                            <li>Control higiéneco de superficies, manipuladores y ambientes</li>
+                            <li>Análisis nutricionales para prevenir contaminación quimica y nutritiva</li>
+                            <li>Controles microbiológicos ambientales</li>
+                        </ul>
+                        <span class="servicio-link mt-auto">Ver más <img src="../assets/icons/flecha-derecha.svg" alt="" aria-hidden="true" /></span>
                     </div>
-                </div>
-                <div class="ver-mas">
-                    <img src="../assets/icons/flecha-ver-mas.png" alt="Flecha derecha"
-                        class="w-4 h-4 inline-block mr-1" />
-                    <span class="text-azul-oscuro text-sm font-semibold">Ver más</span>
-                </div>
-            </a>
-            <a href="../pages/servicios.html#biologia" class="servicio">
-                <div class="flex">
-                    <div class="icono-servicio">
-                        <img src="../assets/icons/construccion.png" alt="Icono de biología" class="mx-auto mb-2 w-12 h-12" />
+                </a>
+            </div>
+            <div class="w-full flex flex-col md:flex-row md:items-stretch justify-center gap-6 col-span-3 mt-6">
+                <a id="biologia" href="../pages/servicios.html#biologia" class="servicio servicio-card w-full md:w-[calc((100%-3rem)/3)] md:self-stretch">
+                    <div class="servicio-media h-44 md:h-48">
+                        <img src="../assets/images/servicio-construccion.jpg" alt="Servicio de construcción" class="servicio-media-image" />
                     </div>
-                    <div class="detalle-servicio">
-                        <h3 class="text-lg font-semibold">Construcción</h3>
-                        <p class="text-gris text-sm mt-2">Ensayos de resistencia, control de calidad y análisis de
-                            materiales de construcción. Patalogía de construcciones </p>
+                    <div class="servicio-body flex h-full flex-col gap-2">
+                        <span class="servicio-icon servicio-icon-construccion">
+                            <img src="../assets/icons/construccion.png" alt="" aria-hidden="true" />
+                        </span>
+                        <h3>Construcción</h3>
+                        <p class="text-sm leading-relaxed">Ensayos de resistencia, control de calidad y análisis de materiales de construcción. Patología de construcciones.</p>
+                        <p class="text-gris text-sm font-semibold">Ofrecemos controles y ensayos para:</p>
+                        <ul class="text-gris text-sm leading-relaxed list-disc pl-5 space-y-1">
+                            <li>Hormigón</li>
+                            <li>Áridos (naturales y reciclados)</li>
+                            <li>Cemento</li>
+                            <li>Acero</li>
+                            <li>Bloques y piezas de hormigón</li>
+                            <li>Patología de Construcciones</li>
+                        </ul>
+                        <span class="servicio-link mt-auto">Ver más <img src="../assets/icons/flecha-derecha.svg" alt="" aria-hidden="true" /></span>
                     </div>
-                </div>
-                <div class="ver-mas">
-                    <img src="../assets/icons/flecha-ver-mas.png" alt="Flecha derecha"
-                        class="w-4 h-4 inline-block mr-1" />
-                    <span class="text-azul-oscuro text-sm font-semibold">Ver más</span>
-                </div>
-            </a>
-            <a href="../pages/servicios.html#biologia" class="servicio">
-                <div class="flex">
-                    <div class="icono-servicio">
-                        <img src="../assets/icons/planeta-tierra.png" alt="Icono de biología"
-                            class="mx-auto mb-2 w-12 h-12" />
+                </a>
+    
+                <a id="geotecnia" href="../pages/servicios.html#geotecnia" class="servicio servicio-card w-full md:w-[calc((100%-3rem)/3)] md:self-stretch">
+                    <div class="servicio-media h-44 md:h-48">
+                        <img src="../assets/images/servicio-geotecnia.jpg" alt="Servicio de geotecnia" class="servicio-media-image" />
                     </div>
-                    <div class="detalle-servicio">
-                        <h3 class="text-lg font-semibold">Geotecnia</h3>
-                        <p class="text-gris text-sm mt-2">Hidrogeologia, estudios geotecnicos y de taludes, ensayos "in
-                            situ"</p>
+                    <div class="servicio-body flex h-full flex-col gap-2">
+                        <span class="servicio-icon servicio-icon-geotecnia">
+                            <img src="../assets/icons/planeta-tierra.png" alt="" aria-hidden="true" />
+                        </span>
+                        <h3>Geotecnia</h3>
+                        <p class="text-sm leading-relaxed">Hidrogeología, estudios geotécnicos y de taludes, ensayos in situ y control de estabilidad del terreno.</p>
+                        <p class="text-gris text-sm font-semibold">Ofrecemos controles y ensayos para:</p>
+                        <ul class="text-gris text-sm leading-relaxed list-disc pl-5 space-y-1">
+                            <li>Hidrogeología</li>
+                            <li>Estudios geotécnicos y de taludes</li>
+                            <li>Ensayos in situ</li>
+                            <li>Control de estabilidad del terreno</li>
+                            <li>Ensayos de aptitud de materiales</li>
+                            <li>Ensayos de carga y resistencia</li>
+                            <li>Estudios de compactación</li>
+                        </ul>
+                        <span class="servicio-link mt-auto">Ver más <img src="../assets/icons/flecha-derecha.svg" alt="" aria-hidden="true" /></span>
                     </div>
-                </div>
-                <div class="ver-mas">
-                    <img src="../assets/icons/flecha-ver-mas.png" alt="Flecha derecha"
-                        class="w-4 h-4 inline-block mr-1" />
-                    <span class="text-azul-oscuro text-sm font-semibold">Ver más</span>
-                </div>
-            </a>
-            <a href="../pages/servicios.html#biologia" class="servicio">
-                <div class="flex">
-                    <div class="icono-servicio">
-                        <img src="../assets/icons/la-carretera.png" alt="Icono de biología" class="mx-auto mb-2 w-12 h-12" />
-                    </div>
-                    <div class="detalle-servicio">
-                        <h3 class="text-lg font-semibold">Viales</h3>
-                        <p class="text-gris text-sm mt-2">Controles de calidad para obras civiles, análisis de mecanica
-                            de suelos y de ligantes y mezclas bituminosas </p>
-                    </div>
-                </div>
-                <div class="ver-mas">
-                    <img src="../assets/icons/flecha-ver-mas.png" alt="Flecha derecha"
-                        class="w-4 h-4 inline-block mr-1" />
-                    <span class="text-azul-oscuro text-sm font-semibold">Ver más</span>
-                </div>
-            </a>
-        </div>
+                </a>
+            </div>
+            
+        </section>
         <section class="login">
             <h2 class="text-2xl font-bold mb-4 text-negro">Área de clientes</h2>
             <p class="text-gris text-lg mb-6">Acceda a su cuenta para gestionar sus análisis, consultar resultados y
@@ -189,8 +198,7 @@
                 </li>
                 <li class="footer-link">
                     <img src="../assets/icons/casa.svg" alt="Correo electrónico" class="w-5 h-5" />
-                    <span class="text-blanco text-xs">C/Comerciants, 9 - 07760 Ciutadella de Menorca - Illes Balears,
-                        España</span>
+                    <span class="text-blanco text-xs">C/Comerciants, 9 - 07760 Ciutadella de Menorca - Illes Balears, España</span>
                 </li>
                 <li class="footer-link">
                     <img src="../assets/icons/telefono.svg" alt="Teléfono" class="w-5 h-5" />
