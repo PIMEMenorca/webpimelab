@@ -38,9 +38,16 @@ document.addEventListener("DOMContentLoaded", function () {
 			return;
 		}
 
-		slides[currentSlideIndex].classList.remove("active");
+		const previousSlide = slides[currentSlideIndex];
+		previousSlide.classList.add("exiting");
+		previousSlide.classList.remove("active");
+
 		currentSlideIndex = nextSlideIndex;
 		slides[currentSlideIndex].classList.add("active");
+
+		setTimeout(() => {
+			previousSlide.classList.remove("exiting");
+		}, 600);
 	}
 
 	prevButton.addEventListener("click", function () {

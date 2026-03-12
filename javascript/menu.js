@@ -9,10 +9,16 @@ document.addEventListener("DOMContentLoaded", function () {
   const searchControl = document.getElementById("search-control");
   const loginControl = document.getElementById("login-control");
   const loginForm = document.querySelector(".login");
+  const header = document.querySelector("header");
+  const PIME = document.querySelector("img[alt='Logo de PIME Menorca']");
 
   if (!menuButton || !closeButton || !menuLinks) {
     return;
   }
+
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 0);
+  });
 
   const placeHeaderControls = () => {
     if (!slotCenter || !slotDrawer || !slotRight || !searchControl || !loginControl) {
@@ -78,6 +84,10 @@ document.addEventListener("DOMContentLoaded", function () {
     if (loginForm.classList.contains("active") && !loginForm.contains(event.target) && event.target !== loginControl) {
       loginForm.classList.remove("active");
     }
+  });
+
+  PIME.addEventListener("click", (event) => {
+    window.location.href = "https://www.pimemenorca.org/"
   });
 
   placeHeaderControls();

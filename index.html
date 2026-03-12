@@ -9,9 +9,9 @@
 </head>
 
 <body class="bg-none">
-    <header class=" ">
+    <header class="">
         <div class="flex items-center gap-3 lg:gap-6">
-            <img src="./assets/images/logo.png" alt="Logo Pimelab" class="logo h-7 md:h-15 z-100" aria-role="button banner" onclick="" />
+            <img src="./assets/icons/logo-pimelab-blanco.png" alt="Logo Pimelab" class="logo h-7 md:h-15 z-100" aria-role="button banner" onclick="" />
 
             <div id="slot-center" class="hidden md:flex lg:hidden flex-1 justify-center w-fit"></div>
 
@@ -40,11 +40,11 @@
                     <input type="search" name="search" id="search-input" class="search-input" placeholder="Buscar..." />
                     <img src="./assets/icons/lupa.svg" alt="Lupa" class="w-4 h-4" />
                 </div>
-                <button id="login-control" class="boton-azul w-fit text-xl ">Área Clientes</button>
+                <button id="login-control" class="boton-blanco w-fit text-xl ">Área Clientes</button>
             </div>
         </div>
     </header>
-    <main class="bg-blanco flex flex-col items-center gap-8 h-full  absolute top-0">
+    <main class="bg-blanco flex flex-col items-center gap-8 h-full">
         <section class="hero slideshows">
             <button class="slide-nav prev" type="button" aria-label="Slide anterior">&lt;</button>
 
@@ -53,7 +53,7 @@
                 <div class="slide-content rounded-inherit">
                     <h2 class="slide-title">Su centro tecnologico</h2>
                     <p class="slide-text">Le ofrecemos todo un abanico de servicios para cubrir todas sus necesidades</p>
-                    <button class="hidden md:block boton-azul mt-4 lg:text-xl w-fit rounded-xl bg-blanco text-azul-oscuro" onclick="window.location.href='./pages/servicios.html#agua'">Saber más</button>
+                    <button class="hidden md:block boton-blanco" onclick="window.location.href='./pages/servicios.html#agua'">Saber más</button>
                 </div>
             </div>
 
@@ -62,7 +62,7 @@
                 <div class="slide-content rounded-inherit">
                     <h2 class="slide-title">La tecnologia mas moderna</h2>
                     <p class="slide-text">Equipamiento cientifico de última generación</p>
-                    <button class="hidden md:block boton-azul mt-4 lg:text-xl w-fit rounded-xl bg-blanco text-azul-oscuro" onclick="window.location.href='./pages/servicios.html#agua'">Saber más</button>
+                    <button class="hidden md:block boton-blanco" onclick="window.location.href='./pages/servicios.html#agua'">Saber más</button>
                 </div>
             </div>
 
@@ -71,7 +71,7 @@
                 <div class="slide-content rounded-inherit">
                     <h2 class="slide-title">300 m<sup>2</sup> de instalaciones</h2>
                     <p class="slide-text">Unas modernas instalaciones que dan respuesta a sus necesidades de análisis</p>
-                    <button class="hidden md:block boton-azul mt-4 lg:text-xl w-fit rounded-xl bg-blanco text-azul-oscuro" onclick="window.location.href='./pages/servicios.html#agua'">Saber más</button>
+                    <button class="hidden md:block boton-blanco" onclick="window.location.href='./pages/servicios.html#agua'">Saber más</button>
                 </div>
             </div>
 
@@ -80,7 +80,7 @@
                 <div class="slide-content rounded-inherit">
                     <h2 class="slide-title">Ofrecemos calidad</h2>
                     <p class="slide-text">Mejora continua para que nuestros clientes dispongan de un perfecto servicio</p>
-                    <button class="hidden md:block boton-azul mt-4 lg:text-xl w-fit rounded-xl bg-blanco text-azul-oscuro" onclick="window.location.href='./pages/servicios.html#agua'">Saber más</button>
+                    <button class="hidden md:block boton-blanco" onclick="window.location.href='./pages/servicios.html#agua'">Saber más</button>
                 </div>
             </div>
 
@@ -89,7 +89,7 @@
                 <div class="slide-content rounded-inherit">
                     <h2 class="slide-title">Control de Legionella</h2>
                     <p class="slide-text">Análisis y control de la legionella en instalaciones de agua caliente sanitaria</p>
-                    <button class="hidden md:block boton-azul mt-4 lg:text-xl w-fit rounded-xl bg-blanco text-azul-oscuro" onclick="window.location.href='./pages/servicios.html#agua'">Saber más</button>
+                    <button class="hidden md:block boton-blanco" onclick="window.location.href='./pages/servicios.html#agua'">Saber más</button>
                 </div>
             </div>
                 
@@ -98,7 +98,7 @@
                     <div class="slide-content rounded-inherit">
                     <h2 class="slide-title">Preparados para innovar</h2>
                     <p class="slide-text">Le acompañamos en su proceso de creación de nuevos productos</p>
-                    <button class="hidden md:block boton-azul mt-4 lg:text-xl w-fit rounded-xl bg-blanco text-azul-oscuro" onclick="window.location.href='./pages/servicios.html#agua'">Saber más</button>
+                    <button class="hidden md:block boton-blanco" onclick="window.location.href='./pages/servicios.html#agua'">Saber más</button>
                 </div>
             </div>
                 
@@ -242,20 +242,39 @@
                 class="w-full md:w-1/5 h-auto rounded-md shadow-lg" />
         </section>
     </main>
-    <footer class="bg-footer p-5 grid grid-cols-2 gap-x-6 gap-y-3 items-start">
+    <footer>
         <h3 class="text-blanco text-2xl text-center">Contacto</h3>
         <h3 class="text-blanco text-2xl pl-4 text-center">Certificados</h3>
 
         <div class="grid grid-cols-1 md:grid-cols-2 justify-between gap-3">
             <ul class="flex flex-col gap-1">
-                <li class="footer-link">
-                    <img src="./assets/icons/casa.svg" alt="Correo electrónico" class="w-5 h-5" />
-                    <span class="text-blanco text-base">C/Comerciants, 9 - 07760 Ciutadella de Menorca - Illes Balears, España</span>
-                </li>
-                <li class="footer-link">
-                    <img src="./assets/icons/telefono.svg" alt="Teléfono" class="w-5 h-5" />
-                    <span class="text-blanco text-base">971 484 536</span>
-                </li>
+                <div class="flex flex-col text-blanco">
+                    <p>Oficina Ciutadella: </p>
+                    <div class="flex flex-col p-3">
+                        <li class="footer-link">
+                            <img src="./assets/icons/casa.svg" alt="Correo electrónico" class="w-5 h-5" />
+                            <span class="text-blanco text-base">Edifi Pau Seguí - C/Comerciants, 9 - 07760 Ciutadella de Menorca - Illes Balears, España</span>
+                        </li>
+                        <li class="footer-link">
+                            <img src="./assets/icons/telefono.svg" alt="Teléfono" class="w-5 h-5" />
+                            <span class="text-blanco text-base">971 484 536</span>
+                        </li>
+                    </div>
+                </div>
+                <div class="flex flex-col text-blanco">
+                    <p>Oficina Mahón: </p>
+                    <div class="flex flex-col p-3">
+                        <li class="footer-link">
+                            <img src="./assets/icons/casa.svg" alt="Correo electrónico" class="w-5 h-5" />
+                            <span class="text-blanco text-base">C/Curniola, 7 - 07714 Maó - Illes Balears, España</span>
+                        </li>
+                        <li class="footer-link">
+                            <img src="./assets/icons/telefono.svg" alt="Teléfono" class="w-5 h-5" />
+                            <span class="text-blanco text-base">971 352 464</span>
+                        </li>
+                    </div>
+                </div>
+                
                 <li class="footer-link">
                     <img src="./assets/icons/mail.svg" alt="Correo electrónico" class="w-5 h-5" />
                     <span class="text-blanco text-base">lab@pimemenorca.org</span>
@@ -276,7 +295,7 @@
 
             <div class="flex gap-3 items-center justify-center">
                 <img src="./assets/icons/logo-pimelab-pequeño.png" alt="Logo de PIMELAB" class="w-20 h-auto" />
-                <img src="./assets/icons/logo-pime.png" alt="Logo de PIME Menorca" class="w-20 h-auto" />
+                <img src="./assets/icons/logo-pime.png" alt="Logo de PIME Menorca" class="w-20 h-auto cursor-pointer" />
             </div>
         </div>
 

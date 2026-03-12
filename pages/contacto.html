@@ -7,10 +7,9 @@
     <title>Contacto</title>
 </head>
 <body class="h-screen flex flex-col">
-    <header class="bg-blanco-accent text-negro w-full sticky top-0 z-50 shadow-xl px-4 py-3">
+    <header class="bg-azul-oscuro/90 sticky shadow-xl backdrop-blur-sm">
         <div class="flex items-center gap-3 lg:gap-6">
-            <img src="../assets/images/logo.png" alt="Logo Pimelab" class="logo h-7 md:h-15 z-100"
-                aria-role="button banner" onclick="" />
+            <img src="../assets/icons/logo-pimelab-blanco.png" alt="Logo Pimelab" class="logo h-7 md:h-15 z-100 " aria-role="button banner" onclick="" />
 
             <div id="slot-center" class="hidden md:flex lg:hidden flex-1 justify-center w-fit"></div>
 
@@ -28,7 +27,7 @@
                         </button>
                     </li>
                     <li id="slot-drawer" class="menu-drawer-slot lg:hidden"></li>
-                    <li class="pagina"><a href="../pages/presentacion.html">Presentación</a></li>
+                    <li class="pagina"><a href="../pages/presentacion.html">Pimelab</a></li>
                     <li class="pagina"><a href="../pages/servicios.html">Servicios</a></li>
                     <li class="pagina"><a href="../pages/noticias.html">Noticias</a></li>
                     <li class="pagina"><a href="../pages/contacto.html">Contacto</a></li>
@@ -40,11 +39,11 @@
                     <input type="search" name="search" id="search-input" class="search-input" placeholder="Buscar..." />
                     <img src="../assets/icons/lupa.svg" alt="Lupa" class="w-4 h-4" />
                 </div>
-                <button id="login-control" class="boton-azul w-fit text-xl ">Área Clientes</button>
+                <button id="login-control" class="boton-blanco w-fit text-xl ">Área Clientes</button>
             </div>
         </div>
     </header>
-    <main class="bg-blanco flex flex-col items-center gap-8 py-8 px-4 w-full h-full">
+    <main class="bg-blanco flex flex-col items-center gap-8 py-8 px-40 w-full h-full">
         <h1 class="text-3xl font-bold text-gris mb-4">Contacto</h1>
         <section class="mb-8 w-full">
             <form action="" class="w-full">
@@ -73,27 +72,46 @@
             </ul>
         </section>
     </main>
-    <footer class="bg-footer p-5 grid grid-cols-2 gap-x-6 gap-y-3 items-start">
+    <footer>
         <h3 class="text-blanco text-2xl text-center">Contacto</h3>
         <h3 class="text-blanco text-2xl pl-4 text-center">Certificados</h3>
 
-        <div class="grid grid-cols-1  md:grid-cols-2 justify-between gap-3">
+        <div class="grid grid-cols-1 md:grid-cols-2 justify-between gap-3">
             <ul class="flex flex-col gap-1">
-                <li class="footer-link">
-                    <img src="../assets/icons/casa.svg" alt="Correo electrónico" class="w-5 h-5" />
-                    <span class="text-blanco text-base">C/Comerciants, 9 - 07760 Ciutadella de Menorca - Illes Balears, España</span>
-                </li>
-                <li class="footer-link">
-                    <img src="../assets/icons/telefono.svg" alt="Teléfono" class="w-5 h-5" />
-                    <span class="text-blanco text-base">971 484 536</span>
-                </li>
+                <div class="flex flex-col text-blanco">
+                    <p>Oficina Ciutadella: </p>
+                    <div class="flex flex-col p-3">
+                        <li class="footer-link">
+                            <img src="../assets/icons/casa.svg" alt="Correo electrónico" class="w-5 h-5" />
+                            <span class="text-blanco text-base">C/Comerciants, 9 - 07760 Ciutadella de Menorca - Illes Balears, España</span>
+                        </li>
+                        <li class="footer-link">
+                            <img src="../assets/icons/telefono.svg" alt="Teléfono" class="w-5 h-5" />
+                            <span class="text-blanco text-base">971 484 536</span>
+                        </li>
+                    </div>
+                </div>
+                <div class="flex flex-col text-blanco">
+                    <p>Oficina Mahón: </p>
+                    <div class="flex flex-col p-3">
+                        <li class="footer-link">
+                            <img src="../assets/icons/casa.svg" alt="Correo electrónico" class="w-5 h-5" />
+                            <span class="text-blanco text-base">C/Curniola, 7 - 07714 Maó - Illes Balears, España</span>
+                        </li>
+                        <li class="footer-link">
+                            <img src="../assets/icons/telefono.svg" alt="Teléfono" class="w-5 h-5" />
+                            <span class="text-blanco text-base">971 352 464</span>
+                        </li>
+                    </div>
+                </div>
+                
                 <li class="footer-link">
                     <img src="../assets/icons/mail.svg" alt="Correo electrónico" class="w-5 h-5" />
                     <span class="text-blanco text-base">lab@pimemenorca.org</span>
                 </li>
                 <li class="footer-link">
                     <img src="../assets/icons/arroba.svg" alt="arroba" class="w-5 h-5" />
-                    <a class="text-blanco text-base underline" href="./pages/contacto.html">Formulario de contacto</a>
+                    <a class="text-blanco text-base underline" href="../pages/contacto.html">Formulario de contacto</a>
                 </li>
                 <div class="row-start-3 col-span-2 flex gap-10 items-center justify-center">
                     <li class="footer-link">
@@ -107,7 +125,7 @@
 
             <div class="flex gap-3 items-center justify-center">
                 <img src="../assets/icons/logo-pimelab-pequeño.png" alt="Logo de PIMELAB" class="w-20 h-auto" />
-                <img src="../assets/icons/logo-pime.png" alt="Logo de PIME Menorca" class="w-20 h-auto" />
+                <img src="../assets/icons/logo-pime.png" alt="Logo de PIME Menorca" class="w-20 h-auto cursor-pointer" />
             </div>
         </div>
 
