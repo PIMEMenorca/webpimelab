@@ -9,7 +9,7 @@
 <body class="h-screen bg-blanco">
     <header class="bg-blanco-accent text-negro w-full sticky top-0 z-50 shadow-xl px-4 py-3">
         <div class="flex items-center gap-3 lg:gap-6">
-            <img src="../assets/images/logo.png" alt="Logo Pimelab" class="logo h-7 md:h-15 lg:h-25 z-100"
+            <img src="../assets/images/logo.png" alt="Logo Pimelab" class="logo h-7 md:h-15 z-100"
                 aria-role="button banner" onclick="" />
 
             <div id="slot-center" class="hidden md:flex lg:hidden flex-1 justify-center w-fit"></div>
@@ -40,18 +40,18 @@
                     <input type="search" name="search" id="search-input" class="search-input" placeholder="Buscar..." />
                     <img src="../assets/icons/lupa.svg" alt="Lupa" class="w-4 h-4" />
                 </div>
-                <button id="login-control" class="boton-azul w-fit text-xl ">Area Clientes</button>
+                <button id="login-control" class="boton-azul w-fit text-xl ">Área Clientes</button>
             </div>
         </div>
     </header>
-    <main class="bg-blanco flex flex-col gap-8 py-8 px-4 items-center">
+    <main class="bg-blanco flex flex-col gap-8 py-8 px-4 items-center absolute -top-1">
         <div class="agua-header">
             <h1 class="text-3xl font-bold mb-1">Agua</h1>
             <p class="text-lg leading-relaxed">La tecnología más moderna y un equipo de personas altamente cualificado nos permiten garantizar la fiabilidad y rigor de nuestros servicios.</p>
         </div>
         <section class="servicios-detalle-container">
             <section class="servicio-detalle-card">
-                <div class="flex flex-col gap-4 mb-4 basis-2/3">
+                <div class="flex flex-col gap-4 basis-full lg:basis-2/3 min-w-0">
                     <h2 class="text-2xl font-semibold">Aguas Naturales y destinadas a Consumo Humano</h2>
                     <ul class="list-disc list-inside mt-4 p-4">
                         <li>Controles de potabilidad según R.D. 140/2003</li>
@@ -62,21 +62,21 @@
                     </ul>
                 </div>
     
-                <img src="../assets/images/aguas-2.jpg" alt="Servicio de análisis de aguas" class="servicio-media-image" />
+                <img src="../assets/images/aguas-2.jpg" alt="Servicio de análisis de aguas" class="servicio-detalle-image" />
             </section>
             <section class="servicio-detalle-card">
-                <div class="flex flex-col gap-4 mb-4 basis-2/3">
+                <div class="flex flex-col gap-4 basis-full lg:basis-2/3 ">
                     <h2 class="text-2xl font-semibold">Aguas de baño</h2>
                     <ul class="list-disc list-inside mt-4 p-4">
                         <li>Aptitud de uso para baño en piscinas públicas y/o privadas, y aguas de mar</li>
                         <li>Contaminación química y microbiológica</li>
                     </ul>
                 </div>
-                <img src="../assets/images/aguas-1.jpg" alt="Servicio de análisis de aguas" class="servicio-media-image" />
+                <img src="../assets/images/aguas-1.jpg" alt="Servicio de análisis de aguas" class="servicio-detalle-image" />
     
             </section>
             <section class="servicio-detalle-card">
-                <div class="flex flex-col gap-4 mb-4 basis-2/3">
+                <div class="flex flex-col gap-4 basis-full lg:basis-2/3 min-w-0">
                     <h2 class="text-2xl font-semibold">Aguas residuales</h2>
                     <ul class="list-disc list-inside mt-4 p-4">
                         <li>Controles analíticos de E.D.A.R. y Rendimientos de Depuración</li>
@@ -85,11 +85,11 @@
                         <li>Contaminantes: Metales Pesados, Residuos de Pesticidas, HPA’s</li>
                     </ul>
                 </div>
-                <img src="../assets/images/aguas-3.jpg" alt="Servicio de análisis de aguas" class="servicio-media-image" />
+                <img src="../assets/images/aguas-3.jpg" alt="Servicio de análisis de aguas" class="servicio-detalle-image" />
                 </ul>
             </section>
             <section class="servicio-detalle-card">
-                <div class="flex flex-col gap-4 mb-4 basis-2/3">
+                <div class="flex flex-col gap-4 basis-full lg:basis-2/3 min-w-0">
                     <h2 class="text-2xl font-semibold">Instalaciones de Agua</h2>
                     <ul class="list-disc list-inside mt-4 p-4">
                         <li>Controles de Legionella pneumophila según R.D. 865/2003</li>
@@ -100,16 +100,15 @@
                         <li>Sistemas de riego por aspersión</li>
                     </ul>
                 </div>
-                <img src="../assets/images/aguas-4.jpg" alt="Instalaciones de agua" class="servicio-media-image" />
+                <img src="../assets/images/aguas-4.jpg" alt="Instalaciones de agua" class="servicio-detalle-image" />
             </section>
         </section>
-        <section class="">
+        <section class="servicio-detalle-card">
             <div class="flex flex-col gap-4 mb-4 basis-2/3">
                 <h2 class="text-2xl font-semibold">SINAC </h2>
-                <p class="text-gris text-base">Para mas información sobre estandares de la calidad del agua y las redes de distribución consulte el Sistema de Información Nacional de Aguas de Consumo</p>
+                <p class="text-gris text-base">Introducimos su servicio dentro del SINAC</p>
             </div>
             <a href="https://sinac.sanidad.gob.es/SinacV2/index.html" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-6 flex-wrap">
-                <img src="../assets/images/logoministerio4.jpg" alt="Logo del Ministerio de Sanidad" class="h-20 w-auto object-contain" />
                 <img src="../assets/images/LOGO-SINAC.gif" alt="Logo SINAC" class="h-20 w-auto object-contain" />
             </a>
         </section>
@@ -134,7 +133,7 @@
         <h3 class="text-blanco text-2xl text-center">Contacto</h3>
         <h3 class="text-blanco text-2xl pl-4 text-center">Certificados</h3>
 
-        <div class="grid grid-cols-2 justify-between gap-3">
+        <div class="grid grid-cols-1 md:grid-cols-2 justify-between gap-3">
             <ul class="flex flex-col gap-1">
                 <li class="footer-link">
                     <img src="../assets/icons/casa.svg" alt="Correo electrónico" class="w-5 h-5" />
@@ -152,15 +151,15 @@
                     <img src="../assets/icons/arroba.svg" alt="arroba" class="w-5 h-5" />
                     <a class="text-blanco text-base underline" href="./pages/contacto.html">Formulario de contacto</a>
                 </li>
+                <div class="row-start-3 col-span-2 flex gap-10 items-center justify-center">
+                    <li class="footer-link">
+                        <a class="text-blanco text-base underline" href="../pages/aviso-legal.html">Nota legal</a>
+                    </li>
+                    <li class="footer-link">
+                        <a class="text-blanco text-base underline" href="../pages/politica-privacidad.html">+Info RGPDUE</a>
+                    </li>
+                </div>
             </ul>
-            <div class="row-start-3 col-span-2 flex gap-10 items-center justify-center">
-                <li class="footer-link">
-                    <a class="text-blanco text-base underline" href="../pages/aviso-legal.html">Nota legal</a>
-                </li>
-                <li class="footer-link">
-                    <a class="text-blanco text-base underline" href="../pages/politica-privacidad.html">+Info RGPDUE</a>
-                </li>
-            </div>
 
             <div class="flex gap-3 items-center justify-center">
                 <img src="../assets/icons/logo-pimelab-pequeño.png" alt="Logo de PIMELAB" class="w-20 h-auto" />

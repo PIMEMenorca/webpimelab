@@ -8,19 +8,17 @@
     <title>Pimelab</title>
 </head>
 
-<body>
-    <header class="bg-blanco-accent text-negro w-full sticky top-0 z-50 shadow-xl px-4 py-3">
+<body class="bg-none">
+    <header class=" ">
         <div class="flex items-center gap-3 lg:gap-6">
-            <img src="./assets/images/logo.png" alt="Logo Pimelab" class="logo h-7 md:h-15 lg:h-25 z-100"
-                aria-role="button banner" onclick="" />
+            <img src="./assets/images/logo.png" alt="Logo Pimelab" class="logo h-7 md:h-15 z-100" aria-role="button banner" onclick="" />
 
             <div id="slot-center" class="hidden md:flex lg:hidden flex-1 justify-center w-fit"></div>
 
             <div class="menu-container ml-auto lg:ml-0 lg:flex-1 lg:justify-center">
                 <button id="menu-button" type="button" class="lg:hidden" aria-expanded="false"
                     aria-controls="site-menu">
-                    <img src="./assets/icons/icon-menu.png" alt="menu Icon"
-                        class="h-5 hover:cursor-pointer hover:transform-[scale(1.2)]" />
+                    <img src="./assets/icons/icon-menu.png" alt="menu Icon" class="h-5 hover:cursor-pointer hover:transform-[scale(1.2)]" />
                 </button>
 
                 <ul class="menu-links" id="site-menu">
@@ -30,7 +28,7 @@
                         </button>
                     </li>
                     <li id="slot-drawer" class="menu-drawer-slot lg:hidden"></li>
-                    <li class="pagina"><a href="./pages/presentacion.html">Presentación</a></li>
+                    <li class="pagina"><a href="./pages/presentacion.html">Pimelab </a></li>
                     <li class="pagina"><a href="./pages/servicios.html">Servicios</a></li>
                     <li class="pagina"><a href="./pages/noticias.html">Noticias</a></li>
                     <li class="pagina"><a href="./pages/contacto.html">Contacto</a></li>
@@ -42,17 +40,17 @@
                     <input type="search" name="search" id="search-input" class="search-input" placeholder="Buscar..." />
                     <img src="./assets/icons/lupa.svg" alt="Lupa" class="w-4 h-4" />
                 </div>
-                <button id="login-control" class="boton-azul w-fit text-xl ">Area Clientes</button>
+                <button id="login-control" class="boton-azul w-fit text-xl ">Área Clientes</button>
             </div>
         </div>
     </header>
-    <main class="bg-blanco flex flex-col items-center gap-8">
-        <section class="hero slideshows ">
+    <main class="bg-blanco flex flex-col items-center gap-8 h-full  absolute top-0">
+        <section class="hero slideshows">
             <button class="slide-nav prev" type="button" aria-label="Slide anterior">&lt;</button>
 
             <div class="slide active">
                 <img src="./assets/images/hero2.jpg" alt="Laboratorio Pimelab" class="slide-image" />
-                <div class="slide-content">
+                <div class="slide-content rounded-inherit">
                     <h2 class="slide-title">Su centro tecnologico</h2>
                     <p class="slide-text">Le ofrecemos todo un abanico de servicios para cubrir todas sus necesidades</p>
                     <button class="hidden md:block boton-azul mt-4 lg:text-xl w-fit rounded-xl bg-blanco text-azul-oscuro" onclick="window.location.href='./pages/servicios.html#agua'">Saber más</button>
@@ -61,7 +59,7 @@
 
             <div class="slide">
                 <img src="./assets/images/hero3.jpg" alt="Servicios Pimelab" class="slide-image" />
-                <div class="slide-content">
+                <div class="slide-content rounded-inherit">
                     <h2 class="slide-title">La tecnologia mas moderna</h2>
                     <p class="slide-text">Equipamiento cientifico de última generación</p>
                     <button class="hidden md:block boton-azul mt-4 lg:text-xl w-fit rounded-xl bg-blanco text-azul-oscuro" onclick="window.location.href='./pages/servicios.html#agua'">Saber más</button>
@@ -70,7 +68,7 @@
 
             <div class="slide">
                 <img src="./assets/images/hero6.jpg" alt="Comunidad Pimelab" class="slide-image" />
-                <div class="slide-content">
+                <div class="slide-content rounded-inherit">
                     <h2 class="slide-title">300 m<sup>2</sup> de instalaciones</h2>
                     <p class="slide-text">Unas modernas instalaciones que dan respuesta a sus necesidades de análisis</p>
                     <button class="hidden md:block boton-azul mt-4 lg:text-xl w-fit rounded-xl bg-blanco text-azul-oscuro" onclick="window.location.href='./pages/servicios.html#agua'">Saber más</button>
@@ -79,7 +77,7 @@
 
             <div class="slide">
                 <img src="./assets/images/hero4.jpg" alt="Contacto Pimelab" class="slide-image" />
-                <div class="slide-content">
+                <div class="slide-content rounded-inherit">
                     <h2 class="slide-title">Ofrecemos calidad</h2>
                     <p class="slide-text">Mejora continua para que nuestros clientes dispongan de un perfecto servicio</p>
                     <button class="hidden md:block boton-azul mt-4 lg:text-xl w-fit rounded-xl bg-blanco text-azul-oscuro" onclick="window.location.href='./pages/servicios.html#agua'">Saber más</button>
@@ -88,7 +86,7 @@
 
             <div class="slide">
                 <img src="./assets/images/hero1.jpg" alt="Creatividad Pimelab" class="slide-image" />
-                <div class="slide-content">
+                <div class="slide-content rounded-inherit">
                     <h2 class="slide-title">Control de Legionella</h2>
                     <p class="slide-text">Análisis y control de la legionella en instalaciones de agua caliente sanitaria</p>
                     <button class="hidden md:block boton-azul mt-4 lg:text-xl w-fit rounded-xl bg-blanco text-azul-oscuro" onclick="window.location.href='./pages/servicios.html#agua'">Saber más</button>
@@ -97,7 +95,7 @@
                 
             <div class="slide">
                 <img src="./assets/images/foto-noticia1.jpg" alt="Innovación Pimelab" class="slide-image" />
-                    <div class="slide-content">
+                    <div class="slide-content rounded-inherit">
                     <h2 class="slide-title">Preparados para innovar</h2>
                     <p class="slide-text">Le acompañamos en su proceso de creación de nuevos productos</p>
                     <button class="hidden md:block boton-azul mt-4 lg:text-xl w-fit rounded-xl bg-blanco text-azul-oscuro" onclick="window.location.href='./pages/servicios.html#agua'">Saber más</button>
@@ -248,7 +246,7 @@
         <h3 class="text-blanco text-2xl text-center">Contacto</h3>
         <h3 class="text-blanco text-2xl pl-4 text-center">Certificados</h3>
 
-        <div class="grid grid-cols-2 justify-between gap-3">
+        <div class="grid grid-cols-1 md:grid-cols-2 justify-between gap-3">
             <ul class="flex flex-col gap-1">
                 <li class="footer-link">
                     <img src="./assets/icons/casa.svg" alt="Correo electrónico" class="w-5 h-5" />
@@ -266,15 +264,15 @@
                     <img src="./assets/icons/arroba.svg" alt="arroba" class="w-5 h-5" />
                     <a class="text-blanco text-base underline" href="./pages/contacto.html">Formulario de contacto</a>
                 </li>
+                <div class="row-start-3 col-span-2 flex gap-10 items-center justify-center">
+                    <li class="footer-link">
+                        <a class="text-blanco text-base underline" href="./pages/aviso-legal.html">Nota legal</a>
+                    </li>
+                    <li class="footer-link">
+                        <a class="text-blanco text-base underline" href="./pages/politica-privacidad.html">+Info RGPDUE</a>
+                    </li>
+                </div>
             </ul>
-            <div class="row-start-3 col-span-2 flex gap-10 items-center justify-center">
-                <li class="footer-link">
-                    <a class="text-blanco text-base underline" href="./pages/aviso-legal.html">Nota legal</a>
-                </li>
-                <li class="footer-link">
-                    <a class="text-blanco text-base underline" href="./pages/politica-privacidad.html">+Info RGPDUE</a>
-                </li>
-            </div>
 
             <div class="flex gap-3 items-center justify-center">
                 <img src="./assets/icons/logo-pimelab-pequeño.png" alt="Logo de PIMELAB" class="w-20 h-auto" />

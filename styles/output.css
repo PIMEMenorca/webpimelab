@@ -198,8 +198,14 @@
   }
 }
 @layer utilities {
+  .absolute {
+    position: absolute;
+  }
   .sticky {
     position: sticky;
+  }
+  .-top-1 {
+    top: calc(var(--spacing) * -1);
   }
   .top-0 {
     top: calc(var(--spacing) * 0);
@@ -309,11 +315,17 @@
   .w-full {
     width: 100%;
   }
+  .min-w-0 {
+    min-width: calc(var(--spacing) * 0);
+  }
   .flex-1 {
     flex: 1;
   }
   .basis-2\/3 {
     flex-basis: calc(2 / 3 * 100%);
+  }
+  .basis-full {
+    flex-basis: 100%;
   }
   .resize {
     resize: both;
@@ -433,6 +445,9 @@
   }
   .bg-footer {
     background-color: var(--color-footer);
+  }
+  .bg-none {
+    background-image: none;
   }
   .object-contain {
     object-fit: contain;
@@ -736,14 +751,14 @@
       display: none;
     }
   }
-  .lg\:h-25 {
-    @media (width >= 64rem) {
-      height: calc(var(--spacing) * 25);
-    }
-  }
   .lg\:flex-1 {
     @media (width >= 64rem) {
       flex: 1;
+    }
+  }
+  .lg\:basis-2\/3 {
+    @media (width >= 64rem) {
+      flex-basis: calc(2 / 3 * 100%);
     }
   }
   .lg\:grid-cols-3 {
@@ -816,12 +831,24 @@
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-primary);
   }
+  header {
+    position: sticky;
+    top: calc(var(--spacing) * 0);
+    z-index: 50;
+    width: 100%;
+    background-color: transparent;
+    padding-inline: calc(var(--spacing) * 40);
+    padding-block: calc(var(--spacing) * 3);
+    color: var(--color-negro);
+    --tw-shadow: 0 20px 25px -5px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 8px 10px -6px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
   .pagina {
     width: 100%;
     padding: calc(var(--spacing) * 2);
     text-align: left;
-    font-size: var(--text-2xl);
-    line-height: var(--tw-leading, var(--text-2xl--line-height));
+    font-size: var(--text-xl);
+    line-height: var(--tw-leading, var(--text-xl--line-height));
     &:hover {
       @media (hover: hover) {
         transform: scale(1.03);
@@ -993,6 +1020,7 @@
   }
   .slideshows {
     position: relative;
+    margin-bottom: calc(var(--spacing) * 3);
     width: 100%;
     overflow: hidden;
     padding: calc(var(--spacing) * 4);
@@ -1075,16 +1103,18 @@
     z-index: 1000;
     width: 85%;
     border-radius: var(--radius-md);
-    background-color: color-mix(in srgb, #073D87 70%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-azul-oscuro) 70%, transparent);
-    }
+    border-style: var(--tw-border-style);
+    border-width: 0px;
+    background-color: color-mix(in oklab, var(--color-azul-oscuro) 70%, transparent);
+    background-origin: border-box;
     padding: calc(var(--spacing) * 4);
     font-size: var(--text-base);
     line-height: var(--tw-leading, var(--text-base--line-height));
     color: var(--color-blanco);
     --tw-shadow: 0 20px 25px -5px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 8px 10px -6px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+    --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+    backface-visibility: hidden;
     @media (width >= 48rem) {
       right: auto;
     }
@@ -1095,13 +1125,17 @@
       left: calc(var(--spacing) * 10);
     }
     @media (width >= 48rem) {
-      width: calc(3 / 4 * 100%);
+      width: calc(1 / 3 * 100%);
     }
     @media (width >= 48rem) {
       background-color: transparent;
     }
     @media (width >= 48rem) {
       padding: calc(var(--spacing) * 6);
+    }
+    @media (width >= 48rem) {
+      --tw-shadow: 0 0 #0000;
+      box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
     }
     @media (width >= 64rem) {
       top: calc(var(--spacing) * 20);
@@ -1237,6 +1271,7 @@
     border-radius: var(--radius-md);
     background-color: var(--color-blanco-accent);
     padding: calc(var(--spacing) * 4);
+    padding-inline: calc(var(--spacing) * 40);
     text-align: center;
     --tw-shadow: 0 20px 25px -5px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 8px 10px -6px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
@@ -1308,7 +1343,7 @@
     height: calc(var(--spacing) * 32);
     overflow: hidden;
     @media (width >= 48rem) {
-      height: calc(var(--spacing) * 50);
+      height: calc(var(--spacing) * 40);
     }
   }
   .servicio-media-image {
@@ -1445,6 +1480,12 @@
     width: fit-content;
     align-items: center;
     gap: calc(var(--spacing) * 2);
+    font-size: var(--text-xs);
+    line-height: var(--tw-leading, var(--text-xs--line-height));
+    @media (width >= 48rem) {
+      font-size: var(--text-base);
+      line-height: var(--tw-leading, var(--text-base--line-height));
+    }
   }
   #login-control {
     width: fit-content;
@@ -1483,9 +1524,33 @@
     padding: calc(var(--spacing) * 5);
   }
   .servicio-media-image {
-    height: 100%;
+    height: auto;
+    width: 100%;
+    flex-shrink: 0;
     border-radius: var(--radius-xl);
     object-fit: cover;
+    @media (width >= 64rem) {
+      height: 100%;
+    }
+    @media (width >= 64rem) {
+      flex-basis: calc(1 / 3 * 100%);
+    }
+  }
+  .servicio-detalle-image {
+    height: auto;
+    width: 100%;
+    flex-shrink: 0;
+    border-radius: var(--radius-xl);
+    object-fit: cover;
+    @media (width >= 48rem) {
+      max-width: calc(1 / 3 * 100%);
+    }
+    @media (width >= 64rem) {
+      height: 100%;
+    }
+    @media (width >= 64rem) {
+      flex-basis: calc(1 / 3 * 100%);
+    }
   }
   .servicios-detalle-container {
     display: grid;
@@ -1497,7 +1562,6 @@
     }
   }
   .servicio-detalle-card {
-    margin-bottom: calc(var(--spacing) * 8);
     display: flex;
     flex-direction: column;
     gap: calc(var(--spacing) * 5);
@@ -1519,6 +1583,12 @@
     @media (width >= 64rem) {
       flex-direction: row;
     }
+    @media (width >= 64rem) {
+      align-items: stretch;
+    }
+  }
+  .rounded-inherit {
+    border-radius: inherit;
   }
 }
 @media (prefers-reduced-motion: reduce) {
