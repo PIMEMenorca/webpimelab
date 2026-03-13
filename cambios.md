@@ -30,7 +30,7 @@ Se pueden hacer pruebas de efectos al cargar la página o similar para dar un to
 QUIENES SOMOS?
 
 Me gusta el margen puesto
-Creo que se le podria sacar más partido a esta página, es muy similar a la de la página Antigua...
+Creo que se le podria sacar más partido a esta página, es muy similar a la de la página Antigua... ✓
  
 
 NUEVOS SERVICIOS
@@ -40,4 +40,4 @@ La parte de nuestros servicios creo que ha quedado bastante bien. Para llegar a 
 
 NOTICIAS:
 
-Seguir estructura titulo de la página servicios. Esto ocurre igual en la página contacto. Es importante que toda la página web se pueda identificar como una misma unidad 
+Seguir estructura titulo de la página servicios. Esto ocurre igual en la página contacto. Es importante que toda la página web se pueda identificar como una misma unidad ✓

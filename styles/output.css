@@ -981,13 +981,6 @@
       }
     }
   }
-  .hover\:underline {
-    &:hover {
-      @media (hover: hover) {
-        text-decoration-line: underline;
-      }
-    }
-  }
   .focus\:ring-2 {
     &:focus {
       --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
@@ -1003,11 +996,6 @@
     &:focus {
       --tw-outline-style: none;
       outline-style: none;
-    }
-  }
-  .md\:col-span-2 {
-    @media (width >= 48rem) {
-      grid-column: span 2 / span 2;
     }
   }
   .md\:mb-0 {
@@ -1322,13 +1310,12 @@
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    background-color: var(--color-blanco);
     font-family: var(--font-secondary);
   }
   main {
     width: 100%;
     flex: 1;
-    --tw-gradient-position: to bottom right in oklab;
-    background-image: linear-gradient(var(--tw-gradient-stops));
     --tw-gradient-from: var(--color-blanco);
     --tw-gradient-via: var(--color-blanco-accent);
     --tw-gradient-via-stops: var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-via) var(--tw-gradient-via-position), var(--tw-gradient-to) var(--tw-gradient-to-position);
@@ -1833,9 +1820,6 @@
     --tw-shadow: 0 25px 50px -12px var(--tw-shadow-color, rgb(0 0 0 / 0.25));
     --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-    --tw-backdrop-blur: blur(var(--blur-sm));
-    -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
-    backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
     backface-visibility: hidden;
     @media (width >= 48rem) {
       right: auto;
@@ -1977,17 +1961,11 @@
     }
   }
   .descripcion {
-    margin-bottom: calc(var(--spacing) * 3);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: calc(var(--spacing) * 6);
     border-radius: var(--radius-2xl);
-    --tw-gradient-position: to right in oklab;
-    background-image: linear-gradient(var(--tw-gradient-stops));
-    --tw-gradient-from: color-mix(in oklab, var(--color-azul-oscuro) 5%, transparent);
-    --tw-gradient-to: transparent;
-    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
     padding: calc(var(--spacing) * 8);
     padding-inline: calc(var(--spacing) * 6);
     @media (width >= 48rem) {
@@ -2360,7 +2338,8 @@
     }
   }
   .agua-legionella-list {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     column-gap: calc(var(--spacing) * 8);
     row-gap: calc(var(--spacing) * 2);
     padding-inline: calc(var(--spacing) * 6);
@@ -2370,9 +2349,6 @@
     --tw-leading: var(--leading-relaxed);
     line-height: var(--leading-relaxed);
     color: var(--color-gris);
-    @media (width >= 48rem) {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
     @media (width >= 48rem) {
       font-size: var(--text-base);
       line-height: var(--tw-leading, var(--text-base--line-height));

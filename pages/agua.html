@@ -68,15 +68,6 @@
             </div>
         </section>
 
-        <nav class="border-y border-blanco/10 bg-azul-oscuro/95">
-            <ul class="mx-auto flex w-full max-w-6xl items-center gap-1 overflow-x-auto px-4 py-1 md:px-8 lg:px-14">
-                <li><a href="#consumo-humano" class="agua-tab active block whitespace-nowrap border-b-4 border-blanco px-4 py-3 text-sm text-blanco/90">Consumo humano</a></li>
-                <li><a href="#aguas-bano" class="agua-tab block whitespace-nowrap border-b-4 border-transparent px-4 py-3 text-sm text-blanco/70 hover:text-blanco">Aguas de bano</a></li>
-                <li><a href="#aguas-residuales" class="agua-tab block whitespace-nowrap border-b-4 border-transparent px-4 py-3 text-sm text-blanco/70 hover:text-blanco">Aguas residuales</a></li>
-                <li><a href="#legionella" class="agua-tab block whitespace-nowrap border-b-4 border-transparent px-4 py-3 text-sm text-blanco/70 hover:text-blanco">Legionella</a></li>
-                <li><a href="#sinac" class="agua-tab block whitespace-nowrap border-b-4 border-transparent px-4 py-3 text-sm text-blanco/70 hover:text-blanco">SINAC</a></li>
-            </ul>
-        </nav>
 
         <section class="mx-auto w-full max-w-6xl px-6 py-10 md:px-10 lg:px-16">
             <article class="mb-9 flex items-start gap-4 rounded-r-xl border-l-4 border-azul-oscuro bg-azul-oscuro/7 px-4 py-4 md:px-6 md:py-5">
@@ -125,7 +116,7 @@
                         <li>Cumplimiento del R.D. 742/2013 de criterios tecnico-sanitarios.</li>
                     </ul>
                 </article>
-
+                
                 <article id="aguas-residuales" class="overflow-hidden rounded-xl border border-azul-oscuro/20 bg-blanco-accent shadow-sm">
                     <header class="flex items-center gap-3 border-b border-azul-oscuro/15 bg-azul-oscuro/7 px-5 py-4">
                         <span class="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-azul-oscuro text-blanco">3</span>
@@ -141,8 +132,9 @@
                         <li>Contaminantes: metales pesados, residuos de pesticidas y HPA.</li>
                     </ul>
                 </article>
+                
 
-                <article id="legionella" class="overflow-hidden rounded-xl border border-azul-oscuro/20 bg-blanco-accent shadow-sm md:col-span-2">
+                <article id="legionella" class="overflow-hidden rounded-xl border border-azul-oscuro/20 bg-blanco-accent shadow-sm ">
                     <header class="flex items-center gap-3 border-b border-azul-oscuro/15 bg-azul-oscuro/7 px-5 py-4">
                         <span class="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-azul-oscuro text-blanco">4</span>
                         <div>
@@ -211,30 +203,6 @@
             </form>
         </section>
 
-        <script>
-            document.addEventListener("DOMContentLoaded", () => {
-                const tabs = document.querySelectorAll(".agua-tab");
-
-                tabs.forEach((tab) => {
-                    tab.addEventListener("click", (event) => {
-                        event.preventDefault();
-                        tabs.forEach((item) => {
-                            item.classList.remove("active", "border-blanco", "text-blanco/90");
-                            item.classList.add("border-transparent", "text-blanco/70");
-                        });
-
-                        tab.classList.add("active", "border-blanco", "text-blanco/90");
-                        tab.classList.remove("border-transparent", "text-blanco/70");
-
-                        const target = document.querySelector(tab.getAttribute("href"));
-                        if (target) {
-                            const offset = target.getBoundingClientRect().top + window.scrollY - 130;
-                            window.scrollTo({ top: offset, behavior: "smooth" });
-                        }
-                    });
-                });
-            });
-        </script>
     </main>
     <footer class="site-footer">
         <div class="site-footer-grid">
@@ -249,11 +217,11 @@
                     <li class="footer-link">
                         <img src="../assets/icons/casa.svg" alt="Icono de casa" class=" w-5 h-5" />
                         <p>Oficina Ciutadella:</p> </li>
-                    <li class="px-10">Edifici Pau Segui, C/Comerciants, 9 - 07760 Ciutadella de Menorca - Illes Balears, Espana</li>
+                    <li class="px-10">Edifici Pau Segui, C/Comerciants, 9 - 07760 Ciutadella</li>
                     <li class="footer-link">
                         <img src="../assets/icons/casa.svg" alt="Icono de casa" class=" w-5 h-5" />
                         <p>Oficina Mahon:</p>  </li>
-                    <li class="px-10">C/Curniola, 7 - 07714 Mao - Illes Balears, Espana</li>
+                    <li class="px-10">C/Curniola, 7 - 07714 Mao </li>
                     <li class="footer-link">
                         <img src="../assets/icons/telefono.svg" alt="Icono de teléfono" class=" w-5 h-5" />
                         <p>Tel: 971 484 536</p>
@@ -268,7 +236,6 @@
                     <a class="site-footer-link" href="../pages/contacto.html">Formulario de contacto</a>
                 </div>
                 <a class="site-footer-link" href="../pages/aviso-legal.html">Nota legal</a>
-                
             </section>
 
             <section class="site-footer-block" aria-labelledby="footer-servicios-title">
