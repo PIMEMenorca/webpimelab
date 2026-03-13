@@ -65,13 +65,19 @@
     }
 }
 
-@keyframes entrarDerecha {
+@keyframes fadeInUp {
     0% {
-        transform: translateX(200%);
+        opacity: 0;
+        transform: translateY(30px);
     }
     100% {
-        transform: translateX(0);
+        opacity: 1;
+        transform: translateY(0);
     }
+}
+
+.fade-in {
+    animation: fadeInUp 0.8s ease-out both;
 }
 
 
@@ -81,7 +87,7 @@
     }
 
     main {
-        @apply w-full flex-1;
+        @apply w-full flex-1 bg-gradient-to-br from-blanco via-blanco-accent to-gris/10;
     }
     
     h1, h2, h3, h4, h5, h6 {
@@ -89,7 +95,7 @@
     }
 
     header{
-        @apply md:bg-transparent bg-azul-oscuro/90 text-blanco w-full sticky md:fixed top-0 z-50 px-3 lg:px-40 py-8;
+        @apply md:bg-transparent bg-azul-oscuro/95 text-blanco w-full sticky md:fixed top-0 z-50 px-3 lg:px-40 py-8 backdrop-blur-md;
     }
 
     .site-footer {
@@ -143,7 +149,7 @@
     }
 
     .scrolled{
-        @apply bg-azul-oscuro/90 backdrop-blur-sm shadow-md;
+        @apply bg-azul-oscuro/95 backdrop-blur-md shadow-2xl border-b border-blanco/10;
     }
 
     .pagina {
@@ -232,7 +238,7 @@
     }
 
     .slide-content {
-        @apply absolute w-[85%] md:w-1/3 left-7 right-4 -bottom-10 bg-azul-oscuro/70 md:bg-transparent bg-origin-border  md:-bottom-1 text-base lg:top-8 md:left-10 lg:left-1/3 md:right-auto p-4 md:p-6 rounded-md text-blanco shadow-xl md:shadow-none border-0 ring-0 z-1000 lg:flex lg:flex-col lg:justify-center lg:gap-4 backface-hidden;
+        @apply absolute w-[85%] md:w-1/3 left-7 right-4 -bottom-10 bg-azul-oscuro/80 md:bg-transparent bg-origin-border  md:-bottom-1 text-base lg:top-8 md:left-10 lg:left-1/3 md:right-auto p-4 md:p-6 rounded-md text-blanco shadow-2xl md:shadow-none border-0 ring-0 z-1000 lg:flex lg:flex-col lg:justify-center lg:gap-4 backface-hidden backdrop-blur-sm;
     }
 
     .slide-nav {
@@ -276,7 +282,7 @@
     }
 
     .descripcion {
-        @apply flex flex-col md:flex-row gap-6 items-start lg:px-60 px-6 mb-3;
+        @apply flex flex-col md:flex-row gap-6 items-start lg:px-60 px-6 mb-3 bg-gradient-to-r from-azul-oscuro/5 to-transparent p-8 rounded-2xl;
     }
 
     .servicios, .noticias {
@@ -319,7 +325,7 @@
     }
 
     .servicios .servicio-card {
-        @apply relative h-auto p-0 text-left rounded-xl overflow-hidden bg-blanco-accent shadow-xl hover:transform-[scale(1.02)] transition-all duration-300;
+        @apply relative h-auto p-0 text-left rounded-xl overflow-hidden bg-blanco-accent shadow-2xl hover:shadow-2xl hover:transform-[scale(1.02)] transition-all duration-500 border border-gris/20;
     }
 
     .servicio-media {
@@ -383,7 +389,7 @@
     }
 
     .noticia {
-        @apply bg-blanco-accent rounded-xl text-center transition-all duration-300 flex items-center hover:transform-[scale(1.02)] shadow-xl p-4 flex-col overflow-hidden;
+        @apply bg-blanco-accent rounded-xl text-center transition-all duration-500 flex items-center hover:transform-[scale(1.02)] shadow-2xl p-4 flex-col overflow-hidden border border-gris/20 hover:shadow-2xl;
     }
 
     .noticia img {
