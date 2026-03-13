@@ -88,7 +88,7 @@
         @apply font-primary;
     }
 
-    header{
+    body > header{
         @apply md:bg-transparent bg-azul-oscuro/90 text-blanco w-full sticky md:fixed top-0 z-50 px-3 lg:px-40 py-8;
     }
 
@@ -289,8 +289,31 @@
 
     .servicio {
         @apply bg-blanco-accent rounded-md p-4 text-center hover:bg-blanco-accent/80 transition-colors duration-300 flex flex-col hover:transform-[scale(1.05)] shadow-xl h-100 px-40;
-        animation: entrarDerecha 500ms ease-out both;
     }
+
+    .servicio#agua {
+       animation: entrarDerecha 500ms ease-out both;;
+    }
+
+    .servicio#agricultura {
+        animation: entrarDerecha 700ms ease-out both;
+    }
+
+    .servicio#alimentacion {
+        animation: entrarDerecha 700ms ease-out both;
+    }
+
+    .servicio#construccion {
+        animation: entrarDerecha 1100ms ease-out both;
+    }
+
+    .servicio#geotecnia {
+        animation: entrarDerecha 1300ms ease-out both;
+    }
+
+
+
+
 
     .servicio h3 {
         @apply inline-block pb-1;
@@ -432,6 +455,25 @@
 
     .servicio-detalle-card{
         @apply flex flex-col lg:flex-row gap-5 p-5 rounded-xl bg-blanco-accent shadow-xl hover:transform-[scale(1.02)] transition-all duration-300 lg:items-stretch;
+    }
+
+    .agua-legionella-list {
+        @apply grid gap-x-8 gap-y-2 px-6 py-5 text-sm leading-relaxed text-gris md:grid-cols-2 md:text-base;
+    }
+
+    .agua-legionella-item {
+        @apply relative pl-5;
+    }
+
+    .agua-legionella-item::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.55rem;
+        width: 0.4rem;
+        height: 0.4rem;
+        border-radius: 9999px;
+        background-color: var(--color-azul-oscuro);
     }
 
     .rounded-inherit {
