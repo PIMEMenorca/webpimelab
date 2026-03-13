@@ -6,7 +6,7 @@
     <title>Presentacion</title>
     <link rel="stylesheet" href="../styles/output.css">
 </head>
-<body class="h-page">
+<body class="bg-blanco">
     <header class="bg-azul-oscuro/90 sticky shadow-xl backdrop-blur-sm">
         <div class="flex items-center gap-3 lg:gap-6">
             <img src="../assets/icons/logo-pimelab-blanco.png" alt="Logo Pimelab" class="logo h-7 md:h-15 z-100 " aria-role="button banner" onclick="" />
@@ -43,135 +43,181 @@
             </div>
         </div>
     </header>
-    <main class="bg-blanco w-full py-8 px-40">
-        <section class="w-full px-4 md:px-6 lg:px-8">
-            <h1 class="mb-5 border-b border-gris/30 pb-2 text-3xl font-bold text-negro">Quienes Somos</h1>
+    <main class="bg-blanco w-full">
+        <section class="relative overflow-hidden bg-azul-oscuro pb-12 pt-22 md:pt-40">
+            <div class="pointer-events-none absolute -right-32 -top-16 h-80 w-80 rounded-full border border-blanco/10"></div>
+            <div class="pointer-events-none absolute -bottom-20 right-16 h-60 w-60 rounded-full border border-blanco/10"></div>
 
-            <div class="flex flex-col gap-5 md:flex-row md:items-start">
-                <div class="space-y-4 text-justify text-base leading-6 text-gris md:w-2/3 md:text-[20px]">
-                    <p>
-                        La Federación de la Pequeña y Mediana Empresa de Menorca, PIME Menorca, es una organización empresarial sin ánimo de lucro. Fue
-                        <strong>constituida el año 1977 con el objetivo de promover y difundir los derechos e intereses de los empresarios menorquines</strong>.
-                        Desde entonces, ha conseguido agrupar más de 1.800 empresas integradas en más de 36 asociaciones.
-                    </p>
-                    <p>
-                        La Federación ha combinado su labor patronal, en el marco de la economía de mercado, independencia y de ayuda al desarrollo de la
-                        actividad económica insular, con una clara vocación de servicio al pequeño y media empresario de Menorca.
-                    </p>
-                    <p>
-                        Con el fin de poner al alcance de las empresas de Menorca una infraestructura tecnológica adecuada para la implantación de sistemas de
-                        gestión y control de la calidad, el incremento de la calidad de producción, la mejora de la competitividad de las empresas a través de
-                        la innovación tecnológica, el fomento de la modernización y diversificación de las industries a través de la prestación de servicios a
-                        sus asociados y la realización de proyectos de I+D+i, la Federación creó el 1988 el Laboratorio para la Investigación y el Fomento de la
-                        Calidad - PIMELAB. El Centro inició su actividad en el campo de la edificación, análisis agrícola y control de calidad de calzado. Con
-                        el tiempo se han ido ampliando las diversas secciones, incorporando nuevos servicios, con el fin de contribuir a la mejora de la
-                        competitividad de las empresas.
-                    </p>
-                </div>
-
-                <img src="../assets/images/pime-difuminada.png" alt="Foto del logo de PIME en edificio"
-                    class="w-full md:w-1/3 md:max-w-75" />
-            </div>
-
-            <div class="mt-6 grid grid-cols-1 gap-3 gap-x-6 md:grid-cols-3 md:auto-rows-[500px]">
-                <img src="../assets/images/presentacion1.JPG" alt="Vehículos de PIMELAB"
-                    class="h-full w-full object-cover md:col-span-3" />
-                <img src="../assets/images/presentacion2.JPG" alt="Edificio de PIME"
-                    class="h-full w-full object-scale-down md:col-start-3 md:row-start-2" />
-                <img src="../assets/images/presentación3.JPG" alt="Tubos de ensayo en laboratorio"
-                    class="h-full w-full object-cover" />
-                <img src="../assets/images/presentacion4.jpg" alt="Análisis en laboratorio"
-                    class="h-full w-full object-cover object-top" />
-            </div>
-
-            <div class="mt-6 text-gris">
-                <p class="mb-2 text-sm md:text-[20px]">Las actividades actuales del centro son:</p>
-                <ul class="list-disc space-y-1 pl-5 text-base leading-6 md:text-[20px]">
-                    <li>la realización de proyectos de investigación y desarrollo tecnológico, y estudios sectoriales promoviendo la cooperación entre empresas.</li>
-                    <li>la participación en programas e iniciativas europeas, dentro del ámbito de la calidad y la investigación, así como la promoción de intercambios a nivel nacional e internacional.</li>
-                    <li>la colaboración en la transferencia de resultados de investigación.</li>
-                    <li>la promoción y realización de acciones formativas, informativas y de difusión dentro del ámbito de la calidad, medio ambiente y tecnología.</li>
-                    <li>la prestación de asistencia técnica y servicios analíticos para la mejora y el control de la calidad.</li>
-                    <li>la implantación de sistemas de gestión de la calidad.</li>
-                </ul>
+            <div class="mx-auto w-full max-w-6xl px-6 md:px-10 lg:px-16">
+                <p class="mb-3 text-xs tracking-[0.3em] text-blanco/75 uppercase">PIMELAB · Menorca</p>
+                <h1 class="max-w-2xl text-4xl leading-tight text-blanco md:text-6xl">Quienes somos</h1>
+                <p class="mt-5 max-w-3xl border-l-4 border-blanco/60 pl-4 text-sm leading-relaxed text-blanco/85 md:text-lg">
+                    Laboratorio de referencia al servicio de las empresas y la sociedad de Menorca desde 1988,
+                    integrado en la Federacion PIME.
+                </p>
             </div>
         </section>
-        <section class="login">
-            <h2 class="text-2xl font-bold mb-4 text-negro">Área de clientes</h2>
-            <p class="text-gris text-lg mb-6">Acceda a su cuenta para gestionar sus análisis, consultar resultados y
-                solicitar nuevos servicios.</p>
-            <form action="./pages/login.html" method="get">
-                <div class="mb-4">
-                    <label for="username" class="block text-gris text-sm font-medium mb-2 ">Nombre de usuario</label>
-                    <input type="text" id="username" name="username" class="bg-blanco-accent text-negro placeholder:text-gris placeholder:text-sm border border-gris focus:outline-none focus:ring-2 focus:ring-azul-oscuro rounded w-fit p-3" placeholder="Introduzca su nombre de usuario" />
+
+        <section class="bg-azul-oscuro/95">
+            <div class="mx-auto grid w-full max-w-6xl grid-cols-1 px-6 md:grid-cols-3 md:px-10 lg:px-16">
+                <article class="border-b border-blanco/15 px-6 py-7 text-center md:border-b-0 md:border-r">
+                    <p class="text-4xl font-bold text-blanco">1977</p>
+                    <p class="mt-1 text-xs tracking-[0.12em] text-blanco/70 uppercase">Fundacion PIME Menorca</p>
+                </article>
+                <article class="border-b border-blanco/15 px-6 py-7 text-center md:border-b-0 md:border-r">
+                    <p class="text-4xl font-bold text-blanco">+1.800</p>
+                    <p class="mt-1 text-xs tracking-[0.12em] text-blanco/70 uppercase">Empresas asociadas</p>
+                </article>
+                <article class="px-6 py-7 text-center">
+                    <p class="text-4xl font-bold text-blanco">+36</p>
+                    <p class="mt-1 text-xs tracking-[0.12em] text-blanco/70 uppercase">Asociaciones integradas</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="mx-auto w-full max-w-6xl px-6 py-12 md:px-10 lg:px-16">
+            <div class="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:items-start">
+                <div>
+                    <p class="mb-2 text-xs tracking-[0.3em] text-azul-oscuro uppercase">Nuestra historia</p>
+                    <h2 class="mb-5 text-3xl leading-tight text-negro md:text-4xl">De la patronal al laboratorio de calidad</h2>
+                    <div class="space-y-4 text-sm leading-relaxed text-gris md:text-base">
+                        <p>
+                            La Federacion de la Pequena y Mediana Empresa de Menorca, PIME Menorca, es una organizacion empresarial sin animo de lucro.
+                            Fue constituida en 1977 con el objetivo de promover y difundir los derechos e intereses de los empresarios menorquines.
+                        </p>
+                        <p>
+                            La Federacion ha combinado su labor patronal, en el marco de la economia de mercado, con una clara vocacion de servicio
+                            al pequeno y mediano empresario de Menorca.
+                        </p>
+                        <p>
+                            Para acercar una infraestructura tecnologica adecuada a las empresas de la isla,
+                            en 1988 se creo el Laboratorio para la Investigacion y el Fomento de la Calidad, PIMELAB.
+                        </p>
+                    </div>
+
+                    <div class="mt-5 rounded-r-lg border-l-4 border-azul-oscuro bg-azul-oscuro/7 px-4 py-4 text-sm leading-relaxed text-gris md:text-base">
+                        El centro inicio su actividad en edificacion, analisis agricola y control de calidad de calzado.
+                        Con el tiempo se han incorporado nuevos servicios para mejorar la competitividad de las empresas menorquinas.
+                    </div>
                 </div>
-                <div class="mb-4">
-                    <label for="password" class="block text-gris text-sm font-medium mb-2">Contraseña</label>
-                    <input type="password" id="password" name="password" class="bg-blanco-accent text-negro placeholder:text-gris placeholder:text-sm border border-gris focus:outline-none focus:ring-2 focus:ring-azul-oscuro rounded p-3" placeholder="Introduzca su contraseña" />
+
+                <div class="grid grid-cols-2 gap-3">
+                    <figure class="col-span-2 overflow-hidden rounded-xl shadow-lg">
+                        <img src="../assets/images/presentacion1.JPG" alt="Vehiculos PIMELAB" class="h-64 w-full object-cover" />
+                    </figure>
+                    <figure class="overflow-hidden rounded-xl shadow-lg">
+                        <img src="../assets/images/presentacion4.jpg" alt="Analisis en laboratorio" class="h-42 w-full object-cover" />
+                    </figure>
+                    <figure class="overflow-hidden rounded-xl shadow-lg">
+                        <img src="../assets/images/presentacion2.JPG" alt="Sede PIME" class="h-42 w-full object-cover" />
+                    </figure>
                 </div>
-                <button type="submit" class="boton-azul w-fit text-xl">Acceder</button>
-            </form>
+            </div>
+        </section>
+
+        <section class="mx-auto w-full max-w-6xl px-6 pb-12 md:px-10 lg:px-16">
+            <h2 class="text-2xl text-negro md:text-3xl">Hitos de PIMELAB</h2>
+            <div class="mt-5 grid grid-cols-1 gap-4 md:grid-cols-4">
+                <article class="rounded-xl border border-azul-oscuro/20 bg-blanco-accent p-4 text-center shadow-sm">
+                    <p class="text-2xl font-bold text-azul-oscuro">1977</p>
+                    <p class="mt-1 text-sm text-gris">Constitucion de PIME Menorca</p>
+                </article>
+                <article class="rounded-xl border border-azul-oscuro/20 bg-blanco-accent p-4 text-center shadow-sm">
+                    <p class="text-2xl font-bold text-azul-oscuro">1988</p>
+                    <p class="mt-1 text-sm text-gris">Creacion del laboratorio PIMELAB</p>
+                </article>
+                <article class="rounded-xl border border-azul-oscuro/20 bg-blanco-accent p-4 text-center shadow-sm">
+                    <p class="text-2xl font-bold text-azul-oscuro">2000s</p>
+                    <p class="mt-1 text-sm text-gris">Ampliacion de secciones y servicios</p>
+                </article>
+                <article class="rounded-xl border border-azul-oscuro/20 bg-azul-oscuro p-4 text-center shadow-sm">
+                    <p class="text-2xl font-bold text-blanco">Hoy</p>
+                    <p class="mt-1 text-sm text-blanco/80">Referente en calidad, I+D+i y asistencia tecnica</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="mx-auto w-full max-w-6xl px-6 pb-16 md:px-10 lg:px-16">
+            <p class="mb-2 text-xs tracking-[0.3em] text-azul-oscuro uppercase">Areas de actividad</p>
+            <h2 class="text-2xl text-negro md:text-3xl">Las actividades actuales del centro</h2>
+
+            <div class="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
+                <article class="rounded-xl border border-azul-oscuro/15 bg-blanco-accent p-5 shadow-sm">
+                    <span class="mb-3 inline-flex h-8 w-8 items-center justify-center rounded-full bg-azul-oscuro/15 text-azul-oscuro">1</span>
+                    <p class="text-sm leading-relaxed text-gris">Proyectos de investigacion y desarrollo tecnologico, y estudios sectoriales promoviendo la cooperacion entre empresas.</p>
+                </article>
+                <article class="rounded-xl border border-azul-oscuro/15 bg-blanco-accent p-5 shadow-sm">
+                    <span class="mb-3 inline-flex h-8 w-8 items-center justify-center rounded-full bg-azul-oscuro/15 text-azul-oscuro">2</span>
+                    <p class="text-sm leading-relaxed text-gris">Participacion en programas e iniciativas europeas dentro del ambito de la calidad y la investigacion.</p>
+                </article>
+                <article class="rounded-xl border border-azul-oscuro/15 bg-blanco-accent p-5 shadow-sm">
+                    <span class="mb-3 inline-flex h-8 w-8 items-center justify-center rounded-full bg-azul-oscuro/15 text-azul-oscuro">3</span>
+                    <p class="text-sm leading-relaxed text-gris">Colaboracion en la transferencia de resultados de investigacion aplicada al tejido empresarial.</p>
+                </article>
+                <article class="rounded-xl border border-azul-oscuro/15 bg-blanco-accent p-5 shadow-sm">
+                    <span class="mb-3 inline-flex h-8 w-8 items-center justify-center rounded-full bg-azul-oscuro/15 text-azul-oscuro">4</span>
+                    <p class="text-sm leading-relaxed text-gris">Promocion y realizacion de acciones formativas, informativas y de difusion en calidad, medio ambiente y tecnologia.</p>
+                </article>
+                <article class="rounded-xl border border-azul-oscuro/15 bg-blanco-accent p-5 shadow-sm">
+                    <span class="mb-3 inline-flex h-8 w-8 items-center justify-center rounded-full bg-azul-oscuro/15 text-azul-oscuro">5</span>
+                    <p class="text-sm leading-relaxed text-gris">Prestacion de asistencia tecnica y servicios analiticos para la mejora y el control de la calidad.</p>
+                </article>
+                <article class="rounded-xl border border-azul-oscuro/15 bg-blanco-accent p-5 shadow-sm">
+                    <span class="mb-3 inline-flex h-8 w-8 items-center justify-center rounded-full bg-azul-oscuro/15 text-azul-oscuro">6</span>
+                    <p class="text-sm leading-relaxed text-gris">Implantacion de sistemas de gestion de la calidad orientados a la mejora continua.</p>
+                </article>
+            </div>
         </section>
     </main>
-    <footer>
-        <h3 class="text-blanco text-2xl text-center">Contacto</h3>
-        <h3 class="text-blanco text-2xl pl-4 text-center">Certificados</h3>
+    <footer class="site-footer">
+        <div class="site-footer-grid">
+            <section class="site-footer-block site-footer-brand" aria-label="Logotipos">
+                <img src="../assets/icons/logo-pimelab-blanco.png" alt="Logo de PIMELAB" class="site-footer-logo-main" />
+                <img src="../assets/icons/logo-pime.png" alt="Logo de PIME Menorca" class="site-footer-logo-partner cursor-pointer" />
+            </section>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 justify-between gap-3">
-            <ul class="flex flex-col gap-1">
-                <div class="flex flex-col text-blanco">
-                    <p>Oficina Ciutadella: </p>
-                    <div class="flex flex-col p-3">
-                        <li class="footer-link">
-                            <img src="../assets/icons/casa.svg" alt="Correo electrónico" class="w-5 h-5" />
-                            <span class="text-blanco text-base">C/Comerciants, 9 - 07760 Ciutadella de Menorca - Illes Balears, España</span>
-                        </li>
-                        <li class="footer-link">
-                            <img src="../assets/icons/telefono.svg" alt="Teléfono" class="w-5 h-5" />
-                            <span class="text-blanco text-base">971 484 536</span>
-                        </li>
-                    </div>
+            <section class="site-footer-block" aria-labelledby="footer-contacto-title">
+                <h3 id="footer-contacto-title" class="site-footer-title">Contacto</h3>
+                <ul class="site-footer-contact-list">
+                    <li class="footer-link">
+                        <img src="../assets/icons/casa.svg" alt="Icono de casa" class=" w-5 h-5" />
+                        <p>Oficina Ciutadella:</p> </li>
+                    <li class="px-10">Edifici Pau Segui, C/Comerciants, 9 - 07760 Ciutadella de Menorca - Illes Balears, Espana</li>
+                    <li class="footer-link">
+                        <img src="../assets/icons/casa.svg" alt="Icono de casa" class=" w-5 h-5" />
+                        <p>Oficina Mahon:</p>  </li>
+                    <li class="px-10">C/Curniola, 7 - 07714 Mao - Illes Balears, Espana</li>
+                    <li class="footer-link">
+                        <img src="../assets/icons/telefono.svg" alt="Icono de teléfono" class=" w-5 h-5" />
+                        <p>Tel: 971 484 536</p>
+                    </li>
+                    <li class="footer-link">
+                        <img src="../assets/icons/mail.svg" alt="Icono de email" class=" w-5 h-5" />
+                        <p>Email: <a href="mailto:lab@pimemenorca.org">lab@pimemenorca.org</a></p>
+                    </li>
+                </ul>
+                <div class="footer-link">
+                    <img src="../assets/icons/arroba.svg" alt="icono arroba">
+                    <a class="site-footer-link" href="../pages/contacto.html">Formulario de contacto</a>
                 </div>
-                <div class="flex flex-col text-blanco">
-                    <p>Oficina Mahón: </p>
-                    <div class="flex flex-col p-3">
-                        <li class="footer-link">
-                            <img src="../assets/icons/casa.svg" alt="Correo electrónico" class="w-5 h-5" />
-                            <span class="text-blanco text-base">C/Curniola, 7 - 07714 Maó - Illes Balears, España</span>
-                        </li>
-                        <li class="footer-link">
-                            <img src="../assets/icons/telefono.svg" alt="Teléfono" class="w-5 h-5" />
-                            <span class="text-blanco text-base">971 352 464</span>
-                        </li>
-                    </div>
-                </div>
+                <a class="site-footer-link" href="../pages/aviso-legal.html">Nota legal</a>
                 
-                <li class="footer-link">
-                    <img src="../assets/icons/mail.svg" alt="Correo electrónico" class="w-5 h-5" />
-                    <span class="text-blanco text-base">lab@pimemenorca.org</span>
-                </li>
-                <li class="footer-link">
-                    <img src="../assets/icons/arroba.svg" alt="arroba" class="w-5 h-5" />
-                    <a class="text-blanco text-base underline" href="../pages/contacto.html">Formulario de contacto</a>
-                </li>
-                <div class="row-start-3 col-span-2 flex gap-10 items-center justify-center">
-                    <li class="footer-link">
-                        <a class="text-blanco text-base underline" href="../pages/aviso-legal.html">Nota legal</a>
-                    </li>
-                    <li class="footer-link">
-                        <a class="text-blanco text-base underline" href="../pages/politica-privacidad.html">+Info RGPDUE</a>
-                    </li>
-                </div>
-            </ul>
+            </section>
 
-            <div class="flex gap-3 items-center justify-center">
-                <img src="../assets/icons/logo-pimelab-pequeño.png" alt="Logo de PIMELAB" class="w-20 h-auto" />
-                <img src="../assets/icons/logo-pime.png" alt="Logo de PIME Menorca" class="w-20 h-auto cursor-pointer" />
-            </div>
-        </div>
+            <section class="site-footer-block" aria-labelledby="footer-servicios-title">
+                <h3 id="footer-servicios-title" class="site-footer-title">Servicios</h3>
+                <ul class="site-footer-services-list">
+                    <li><a href="../pages/servicios.html#agua">Aguas</a></li>
+                    <li><a href="../pages/servicios.html#calibracion">Agricultura</a></li>
+                    <li><a href="../pages/servicios.html#formacion">Alimentacion</a></li>
+                    <li><a href="../pages/servicios.html#biologia">Construccion</a></li>
+                </ul>
+            </section>
 
-        <div class="flex items-center justify-center border-l border-l-blanco pl-4 h-full">
-            <img src="../assets/icons/certificaciones.png" alt="Certificaciones" class="w-40 h-auto" />
+            <section class="site-footer-block" aria-labelledby="footer-cert-title">
+                <h3 id="footer-cert-title" class="site-footer-title">Certificaciones</h3>
+                <img src="../assets/icons/certificaciones.png" alt="Certificaciones" class="site-footer-certs" />
+            </section>
         </div>
     </footer>
     <script src="../javascript/menu.js"></script>

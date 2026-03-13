@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	const nextButton = document.querySelector(".slideshows .slide-nav.next");
 	const AUTO_PLAY_INTERVAL = 4000;
 	let autoplayTimerId = null;
+	let transitionResetTimerId = null;
 
 	if (!slideshow || !slides.length || !prevButton || !nextButton) {
 		return;
@@ -38,6 +39,9 @@ document.addEventListener("DOMContentLoaded", function () {
 			return;
 		}
 
+		slideshow.classList.add("is-animating");
+		slides.forEach((slide) => slide.classList.remove("exiting"));
+
 		const previousSlide = slides[currentSlideIndex];
 		previousSlide.classList.add("exiting");
 		previousSlide.classList.remove("active");
@@ -45,8 +49,14 @@ document.addEventListener("DOMContentLoaded", function () {
 		currentSlideIndex = nextSlideIndex;
 		slides[currentSlideIndex].classList.add("active");
 
-		setTimeout(() => {
+		if (transitionResetTimerId !== null) {
+			clearTimeout(transitionResetTimerId);
+		}
+
+		transitionResetTimerId = setTimeout(() => {
 			previousSlide.classList.remove("exiting");
+			slideshow.classList.remove("is-animating");
+			transitionResetTimerId = null;
 		}, 600);
 	}
 
@@ -62,6 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	slideshow.addEventListener("mouseenter", stopAutoplay);
 	slideshow.addEventListener("mouseleave", startAutoplay);
-
+	setTimeout(() => {
 	startAutoplay();
+	}, AUTO_PLAY_INTERVAL);
 });

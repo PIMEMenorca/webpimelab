@@ -16,9 +16,16 @@ document.addEventListener("DOMContentLoaded", function () {
     return;
   }
 
-  window.addEventListener('scroll', () => {
+  const syncHeaderScrolledState = () => {
+    if (!header) {
+      return;
+    }
+
     header.classList.toggle('scrolled', window.scrollY > 0);
-  });
+  };
+
+  syncHeaderScrolledState();
+  window.addEventListener('scroll', syncHeaderScrolledState, { passive: true });
 
   const placeHeaderControls = () => {
     if (!slotCenter || !slotDrawer || !slotRight || !searchControl || !loginControl) {
@@ -80,12 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
     loginForm.classList.add("active");
   });
 
-  document.addEventListener("click", (event) => {
-    if (loginForm.classList.contains("active") && !loginForm.contains(event.target) && event.target !== loginControl) {
-      loginForm.classList.remove("active");
-    }
-  });
-
+  // Evento para reedirigir a la web de PIME Menorca al hacer click en el logo de PIME
   PIME.addEventListener("click", (event) => {
     window.location.href = "https://www.pimemenorca.org/"
   });
