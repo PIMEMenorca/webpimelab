@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Noticias</title>
     <link rel="stylesheet" href="../styles/output.css">
+    <title>Noticia</title>
 </head>
-
 <body>
-    <header class="bg-azul-oscuro/90 sticky shadow-xl backdrop-blur-sm">
+    <header class="bg-azul-oscuro/90 sticky top-0 z-50 shadow-xl backdrop-blur-sm">
         <div class="flex items-center gap-3 lg:gap-6">
             <img src="../assets/icons/logo-pimelab-blanco.png" alt="Logo Pimelab" class="logo h-7 md:h-15 z-100 " aria-role="button banner" onclick="" />
 
@@ -45,68 +43,42 @@
             </div>
         </div>
     </header>
-    <main class="bg-blanco w-full">
-        <section class="relative overflow-hidden bg-azul-oscuro pb-12 pt-22 md:pt-40">
-            <div class="pointer-events-none absolute -right-32 -top-16 h-80 w-80 rounded-full border border-blanco/10"></div>
-            <div class="pointer-events-none absolute -bottom-20 right-16 h-60 w-60 rounded-full border border-blanco/10"></div>
-
-            <div class="mx-auto w-full max-w-6xl px-6 md:px-10 lg:px-16">
-                <p class="mb-3 text-xs tracking-[0.3em] text-blanco/75 uppercase">PIMELAB · Menorca</p>
-                <h1 class="max-w-2xl text-4xl leading-tight text-blanco md:text-6xl">Noticias</h1>
-                <p class="mt-5 max-w-3xl border-l-4 border-blanco/60 pl-4 text-sm leading-relaxed text-blanco/85 md:text-lg">
-                    Actualidad del laboratorio, certificaciones, mejoras tecnicas y novedades para empresas,
-                    instituciones y profesionales de la isla.
+    <main class="flex flex-col gap-4 px-4 py-6 lg:px-30 ">
+        <div class="header-noticia border-b border-[#d0daea] pb-6 mb-7">
+            <h1 class="text-[clamp(22px,3vw,30px)] font-bold text-azul-oscuro leading-tight mb-4">Titulo de la noticia</h1>
+            <h2 class="text-2xl text-azul-oscuro/70" >Subtitulo de la noticia</h2>
+            <div class="flex items-center gap-5 flex-wrap mt-4">
+                <p class="flex items-center gap-2 text-xs md:text-sm text-gris">
+                    <img src="../assets/icons/fecha.svg" alt="Icono de fecha" class="w-4 h-4" />
+                    
+                    16-03-2026
+                </p>
+                <p class="flex items-center gap-2 text-xs md:text-sm text-gris">
+                    <img src="../assets/icons/user.svg" alt="Icono de usuario" class="w-4 h-4" />
+                    Equipo PIMELAB
                 </p>
             </div>
-        </section>
-
-        <section class="mx-auto w-full max-w-7xl px-6 py-8 md:px-10 lg:px-16">
-            <h2 class="text-3xl font-bold mb-4 text-left w-full">Ultimas noticias</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <a href="./pages/noticias.html#noticia1" class="noticia">
-                <img src="https://placehold.co/480x280" alt="Noticia 1" class="w-full h-auto rounded-md mb-4 " />
-                <h3 class="text-lg font-semibold p-4">PIMELAB obtiene la certificación ISO 9001:2015</h3>
-                <p class="text-gris text-sm mt-2 p-4">PIMELAB se enorgullece de anunciar que ha obtenido la
-                    certificación ISO 9001:2015, un reconocimiento a nuestro compromiso con la calidad y la mejora
-                    continua en nuestros servicios de laboratorio.</p>
-            </a>
-            <a href="./pages/noticias.html#noticia2" class="noticia">
-                <img src="https://placehold.co/480x280" alt="Noticia 2" class="w-full h-auto rounded-md mb-4 " />
-                <h3 class="text-lg font-semibold p-4">PIMELAB amplía sus instalaciones con un nuevo laboratorio de
-                    microbiología</h3>
-                <p class="text-gris text-sm mt-2 p-4">PIMELAB se complace en anunciar la ampliación de sus
-                    instalaciones con la incorporación de un nuevo laboratorio de microbiología, equipado con
-                    tecnología de vanguardia para ofrecer servicios de análisis microbiológicos de alta calidad a
-                    nuestros clientes.</p>
-            </a>
-            <a href="./pages/noticias.html#noticia3" class="noticia">
-                <img src="https://placehold.co/480x280" alt="Noticia 3" class="w-full h-auto rounded-md mb-4" />
-                <h3 class="text-lg font-semibold p-4">PIMELAB lanza un nuevo servicio de análisis ambiental para
-                    empresas
-                </h3>
-                <p class="text-gris text-sm mt-2 p-4">PIMELAB se enorgullece de anunciar el lanzamiento de nuestro
-                    nuevo servicio de análisis ambiental, diseñado para ayudar a las empresas a cumplir con las
-                    regulaciones ambientales y promover prácticas sostenibles en sus operaciones.
-                </p>
-            </a>
+        </div>
+        <div class="contenido-noticia flex gap-6">
+            <div class="texto-noticia text-justify flex flex-col gap-4">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo dignissimos amet magnam beatae molestiae! Excepturi at libero quidem velit sed repellendus harum beatae voluptatibus, dolorum quia. Explicabo incidunt velit magni.
+                Illo, dolorem? Explicabo quod architecto, harum ea perspiciatis iure expedita id quis autem. Repudiandae porro ipsum quo quia molestias magnam tenetur laudantium soluta, voluptates labore corrupti? Labore quia natus voluptas!
+                Ut in consectetur quo sequi dolor sint molestias iste quis, architecto eius illo! Adipisci, a ipsam ipsum, eum non numquam commodi ea, voluptas magnam sed unde dolor. Atque, officiis odit.
+                Suscipit minima, recusandae ipsa nam repudiandae inventore sunt molestias eos mollitia amet nobis facere! Voluptates omnis velit ut iste itaque eius quaerat dolorum. Voluptatem atque blanditiis impedit eius, totam numquam.
+                Fugiat tempora veritatis eveniet dolores ab nulla enim numquam. Error ipsam consequuntur hic consequatur omnis laborum animi ut possimus cupiditate impedit esse quasi sapiente, assumenda nemo libero culpa ratione incidunt.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste sint dicta porro esse quidem sed voluptatem nihil quasi. Nam officia velit pariatur laudantium dolores at illum est eum neque architecto?
+                Impedit voluptas adipisci quos omnis, dicta dolore praesentium consequuntur? Quidem dolores obcaecati omnis, at repudiandae, voluptas quod exercitationem voluptates sunt placeat suscipit commodi cum sapiente, porro vero consequuntur eos iusto.
+                Eos recusandae fuga quas sint molestiae debitis ipsa! Laborum soluta esse repellat nostrum quaerat iste earum distinctio nobis sunt nisi reiciendis corrupti asperiores, qui molestiae excepturi fugiat repellendus hic? Beatae.
+                Velit totam temporibus, voluptas rem repudiandae nostrum qui vel quos repellendus sint? Maxime quidem necessitatibus voluptatum rerum ut consequuntur dolorum odio, perferendis illo dolores aliquam officiis in dicta et repellendus!
+                Fugiat hic tempora officia. Ea, cupiditate labore. Dolores rerum nemo animi, possimus maiores corrupti est corporis modi velit libero nobis incidunt, molestias quidem placeat ipsum porro fugit commodi temporibus dolorum!</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis dolores iste ex quam et cumque, qui sunt blanditiis cum? Dolor perspiciatis et debitis nemo assumenda minus ea nihil autem illo.
+                Unde atque dolores, repudiandae officia odit fugiat deserunt, deleniti dicta eaque error accusamus! Numquam eligendi suscipit natus reiciendis temporibus nam officia illo repellat aut impedit omnis, eum itaque animi. Tempore.
+                Nam, ipsum numquam nemo itaque recusandae rerum odit consectetur minima! Eius eos consequatur pariatur expedita deleniti laudantium, repellat, distinctio modi dolore fugit nobis mollitia aperiam, animi sunt quaerat rem quibusdam!
+                Cupiditate repellat, numquam nisi ut neque eligendi aspernatur quod, veniam deleniti quaerat cum voluptatum laboriosam praesentium adipisci non nulla obcaecati pariatur blanditiis? Vero maiores doloremque corrupti? Ducimus odio est eveniet?
+                Debitis consequatur animi ipsam ex similique voluptates neque rerum fuga quis, eum laborum omnis eos eaque. Tempore, explicabo soluta quam recusandae unde quasi porro at sequi illum saepe distinctio blanditiis!</p>
             </div>
-        </section>
-        <section class="login mx-auto w-full max-w-7xl px-6 pb-10 md:px-10 lg:px-16">
-            <h2 class="text-2xl font-bold mb-4 text-negro">Área de clientes</h2>
-            <p class="text-gris text-lg mb-6">Acceda a su cuenta para gestionar sus análisis, consultar resultados y
-                solicitar nuevos servicios.</p>
-            <form action="./pages/login.html" method="get">
-                <div class="mb-4">
-                    <label for="username" class="block text-gris text-sm font-medium mb-2 ">Nombre de usuario</label>
-                    <input type="text" id="username" name="username" class="bg-blanco-accent text-negro placeholder:text-gris placeholder:text-sm border border-gris focus:outline-none focus:ring-2 focus:ring-azul-oscuro rounded w-fit p-3" placeholder="Introduzca su nombre de usuario" />
-                </div>
-                <div class="mb-4">
-                    <label for="password" class="block text-gris text-sm font-medium mb-2">Contraseña</label>
-                    <input type="password" id="password" name="password" class="bg-blanco-accent text-negro placeholder:text-gris placeholder:text-sm border border-gris focus:outline-none focus:ring-2 focus:ring-azul-oscuro rounded p-3" placeholder="Introduzca su contraseña" />
-                </div>
-                <button type="submit" class="boton-azul w-fit text-xl">Acceder</button>
-            </form>
-        </section>
+            <img src="https://placehold.co/240x140" alt="Imagen de la noticia" class="shrink-0 w-full md:w-1/3 h-auto rounded-md place-self-start" />
+        </div>
     </main>
     <footer class="site-footer">
         <div class="site-footer-grid">
@@ -140,7 +112,6 @@
                     <a class="site-footer-link" href="../pages/contacto.html">Formulario de contacto</a>
                 </div>
                 <a class="site-footer-link" href="../pages/aviso-legal.html">Nota legal</a>
-                
             </section>
 
             <section class="site-footer-block" aria-labelledby="footer-servicios-title">
@@ -161,5 +132,4 @@
     </footer>
     <script src="../javascript/menu.js"></script>
 </body>
-
 </html>

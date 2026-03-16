@@ -41,3 +41,8 @@ La parte de nuestros servicios creo que ha quedado bastante bien. Para llegar a 
 NOTICIAS:
 
 Seguir estructura titulo de la página servicios. Esto ocurre igual en la página contacto. Es importante que toda la página web se pueda identificar como una misma unidad ✓
+
+
+- igualar estilos de heros ✓
+- crear pagina noticia✓
+- crear pagians para todos los servicios ✓

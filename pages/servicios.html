@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -45,10 +45,24 @@
             </div>
         </div>
     </header>
-    <main class="bg-blanco flex flex-col items-center gap-8 py-8 px-30">
-        <section class="servicios w-full px-2 md:px-4">
+    <main class="bg-blanco w-full">
+        <section class="relative overflow-hidden bg-azul-oscuro pb-12 pt-22 md:pt-40">
+            <div class="pointer-events-none absolute -right-32 -top-16 h-80 w-80 rounded-full border border-blanco/10"></div>
+            <div class="pointer-events-none absolute -bottom-20 right-16 h-60 w-60 rounded-full border border-blanco/10"></div>
+
+            <div class="mx-auto w-full max-w-6xl px-6 md:px-10 lg:px-16">
+                <p class="mb-3 text-xs tracking-[0.3em] text-blanco/75 uppercase">PIMELAB · Menorca</p>
+                <h1 class="max-w-2xl text-4xl leading-tight text-blanco md:text-6xl">Nuestros servicios</h1>
+                <p class="mt-5 max-w-3xl border-l-4 border-blanco/60 pl-4 text-sm leading-relaxed text-blanco/85 md:text-lg">
+                    Análisis y control especializado para aguas, agricultura, alimentación, construcción, geotecnia y
+                    viales, con metodología rigurosa y soporte técnico para empresas de Menorca.
+                </p>
+            </div>
+        </section>
+
+        <section class="servicios mx-auto w-full max-w-7xl px-6 py-8 md:px-10 lg:px-16">
             <div class="servicios-header">
-                <h1 class="text-3xl font-bold mb-1">Nuestros servicios</h1>
+                <h2 class="text-3xl font-bold mb-1">Servicios por area</h2>
                 <p class="servicios-subtitle">Análisis y control para diferentes sectores</p>
             </div>
 
@@ -62,7 +76,7 @@
                             <img src="../assets/icons/agua.png" alt="" aria-hidden="true" />
                         </span>
                         <h3>Aguas</h3>
-                        <p class="text-sm leading-relaxed">La tecnología más moderna y un equipo altamente cualificado nos permiten garantizar la fiabilidad y rigor de nuestros servicios. Analizamos aguas naturales, de bebida, de baño y residuales, incluyendo control de legionella.</p>
+                        <p class="text-sm leading-relaxed">Aguas naturales y de bebida, de baño, residuales y control de legionella.</p>
                         <p class="text-gris text-sm font-semibold">Ofrecemos:</p>
                         <ul class="text-gris text-sm leading-relaxed servicio-check-list">
                             <li>Control de calidad de aguas naturales y de bebida.</li>
@@ -83,21 +97,19 @@
                             <img src="../assets/icons/agricultura.png" alt="" aria-hidden="true" />
                         </span>
                         <h3>Agricultura</h3>
-                        <p class="text-sm leading-relaxed">Controles de calidad de suelo, aguas para el riego, análisis de fertilizantes y de alimentación animal.</p>
+                        <p class="text-sm leading-relaxed">Suelos agrícolas, aguas de riego, fertilizantes orgánicos y alimentación animal.</p>
                         <p class="text-gris text-sm font-semibold">Ofrecemos:</p>
                         <ul class="text-gris text-sm leading-relaxed servicio-check-list">
-                            <li>Caracterización de suelo agrícola</li>
-                            <li>Análisis de aguas para el riego</li>
-                            <li>Estudios de fertilidad</li>
-                            <li>Análisis de alimentación animal</li>
-                            <li>Control de calidad de alimentos para el ganado</li>
-                            <li>Comprobación de presencia de contaminantes en suelos agrícolas</li>
+                            <li>Caracterización del suelo para recomendación de abonado.</li>
+                            <li>Aptitud del agua para riego.</li>
+                            <li>Caracterización de fertilizantes para recomendación de abonado.</li>
+                            <li>Control de calidad de alimentos destinados a alimentación animal.</li>
                         </ul>
                         <span class="servicio-link mt-auto">Ver más <img src="../assets/icons/flecha-derecha.svg" alt="" aria-hidden="true" /></span>
                     </div>
                 </a>
 
-                <a id="alimentación" href="../pages/servicios.html#alimentacion" class="servicio servicio-card h-full">
+                <a id="alimentacion" href="../pages/alimentacion.html" class="servicio servicio-card h-full">
                     <div class="servicio-media h-44 md:h-48">
                         <img src="../assets/images/servicio-alimentacion.jpg" alt="Servicio de análisis de alimentación" class="servicio-media-image" />
                     </div>
@@ -106,23 +118,20 @@
                             <img src="../assets/icons/alimentacion.png" alt="" aria-hidden="true" />
                         </span>
                         <h3>Alimentación</h3>
-                        <p class="text-sm leading-relaxed">Análisis microbiológicos y de seguridad alimentaria para industrias cárnicas y lácteas, pastelerías, panaderías, hoteles y restaurantes.</p>
+                        <p class="text-sm leading-relaxed">Industrias lácteas, cárnicas, pastelería, panadería, restaurantes y hoteles.</p>
                         <p class="text-gris text-sm font-semibold">Ofrecemos:</p>
                         <ul class="text-gris text-sm leading-relaxed servicio-check-list">
-                            <li>Controles de calidad</li>
-                            <li>Controles de contaminacion microbiológica (Análisis de patógenos)</li>
-                            <li>Análisis de aditivos</li>
-                            <li>Insecpecciones higiénico-sanitarias</li>
-                            <li>Control higiéneco de superficies, manipuladores y ambientes</li>
-                            <li>Análisis nutricionales para prevenir contaminación quimica y nutritiva</li>
-                            <li>Controles microbiológicos ambientales</li>
+                            <li>Control de calidad microbiológico.</li>
+                            <li>Análisis de patógenos alimentarios.</li>
+                            <li>Inspecciones higiénico-sanitarias.</li>
+                            <li>Sistemas de APPCC y trazabilidad.</li>
                         </ul>
                         <span class="servicio-link mt-auto">Ver más <img src="../assets/icons/flecha-derecha.svg" alt="" aria-hidden="true" /></span>
                     </div>
                 </a>
             </div>
             <div class="w-full flex flex-col md:flex-row md:items-stretch justify-center gap-6 col-span-3 mt-6">
-                <a id="construccion" href="../pages/servicios.html#construccion" class="servicio servicio-card w-full md:w-[calc((100%-3rem)/3)] md:self-stretch">
+                <a id="construccion" href="../pages/construccion.html" class="servicio servicio-card w-full md:basis-[calc((100%-3rem)/3)] md:max-w-[calc((100%-3rem)/3)] md:flex-none md:self-stretch">
                     <div class="servicio-media h-44 md:h-48">
                         <img src="../assets/images/servicio-construccion.jpg" alt="Servicio de construcción" class="servicio-media-image" />
                     </div>
@@ -131,21 +140,20 @@
                             <img src="../assets/icons/construccion.png" alt="" aria-hidden="true" />
                         </span>
                         <h3>Construcción</h3>
-                        <p class="text-sm leading-relaxed">Ensayos de resistencia, control de calidad y análisis de materiales de construcción. Patología de construcciones.</p>
+                        <p class="text-sm leading-relaxed">Hormigón, aceros, áridos, cemento, prefabricados y patología de construcciones.</p>
                         <p class="text-gris text-sm font-semibold">Ofrecemos controles y ensayos para:</p>
                         <ul class="text-gris text-sm leading-relaxed servicio-check-list">
-                            <li>Hormigón</li>
-                            <li>Áridos (naturales y reciclados)</li>
-                            <li>Cemento</li>
-                            <li>Acero</li>
-                            <li>Bloques y piezas de hormigón</li>
-                            <li>Patología de Construcciones</li>
+                            <li>Hormigón.</li>
+                            <li>Áridos naturales y reciclados.</li>
+                            <li>Cemento y aceros.</li>
+                            <li>Prefabricados de hormigón.</li>
+                            <li>Patología de construcciones.</li>
                         </ul>
                         <span class="servicio-link mt-auto">Ver más <img src="../assets/icons/flecha-derecha.svg" alt="" aria-hidden="true" /></span>
                     </div>
                 </a>
     
-                <a id="geotecnia" href="../pages/servicios.html#geotecnia" class="servicio servicio-card w-full md:w-[calc((100%-3rem)/3)] md:self-stretch">
+                <a id="geotecnia" href="../pages/geotecnia.html" class="servicio servicio-card w-full md:basis-[calc((100%-3rem)/3)] md:max-w-[calc((100%-3rem)/3)] md:flex-none md:self-stretch">
                     <div class="servicio-media h-44 md:h-48">
                         <img src="../assets/images/servicio-geotecnia.jpg" alt="Servicio de geotecnia" class="servicio-media-image" />
                     </div>
@@ -154,38 +162,21 @@
                             <img src="../assets/icons/planeta-tierra.png" alt="" aria-hidden="true" />
                         </span>
                         <h3>Geotecnia</h3>
-                        <p class="text-sm leading-relaxed">Hidrogeología, estudios geotécnicos y de taludes, ensayos in situ y control de estabilidad del terreno.</p>
+                        <p class="text-sm leading-relaxed">Estudios geotécnicos, estudio de taludes e hidrogeología.</p>
                         <p class="text-gris text-sm font-semibold">Ofrecemos controles y ensayos para:</p>
                         <ul class="text-gris text-sm leading-relaxed servicio-check-list">
-                            <li>Hidrogeología</li>
-                            <li>Estudios geotécnicos y de taludes</li>
-                            <li>Ensayos in situ</li>
-                            <li>Control de estabilidad del terreno</li>
-                            <li>Ensayos de aptitud de materiales</li>
-                            <li>Ensayos de carga y resistencia</li>
-                            <li>Estudios de compactación</li>
+                            <li>Estudios geotécnicos conforme al CTE.</li>
+                            <li>Estudios de taludes.</li>
+                            <li>Ensayos in situ.</li>
+                            <li>Estudios hidrogeológicos.</li>
+                            <li>Contaminación del suelo.</li>
                         </ul>
                         <span class="servicio-link mt-auto">Ver más <img src="../assets/icons/flecha-derecha.svg" alt="" aria-hidden="true" /></span>
                     </div>
                 </a>
+
             </div>
             
-        </section>
-        <section class="login">
-            <h2 class="text-2xl font-bold mb-4 text-negro">Área de clientes</h2>
-            <p class="text-gris text-lg mb-6">Acceda a su cuenta para gestionar sus análisis, consultar resultados y
-                solicitar nuevos servicios.</p>
-            <form action="./pages/login.html" method="get">
-                <div class="mb-4">
-                    <label for="username" class="block text-gris text-sm font-medium mb-2 ">Nombre de usuario</label>
-                    <input type="text" id="username" name="username" class="bg-blanco-accent text-negro placeholder:text-gris placeholder:text-sm border border-gris focus:outline-none focus:ring-2 focus:ring-azul-oscuro rounded w-fit p-3" placeholder="Introduzca su nombre de usuario" />
-                </div>
-                <div class="mb-4">
-                    <label for="password" class="block text-gris text-sm font-medium mb-2">Contraseña</label>
-                    <input type="password" id="password" name="password" class="bg-blanco-accent text-negro placeholder:text-gris placeholder:text-sm border border-gris focus:outline-none focus:ring-2 focus:ring-azul-oscuro rounded p-3" placeholder="Introduzca su contraseña" />
-                </div>
-                <button type="submit" class="boton-azul w-fit text-xl">Acceder</button>
-            </form>
         </section>
     </main>
     <footer class="site-footer">
@@ -226,10 +217,12 @@
             <section class="site-footer-block" aria-labelledby="footer-servicios-title">
                 <h3 id="footer-servicios-title" class="site-footer-title">Servicios</h3>
                 <ul class="site-footer-services-list">
-                    <li><a href="../pages/servicios.html#agua">Aguas</a></li>
-                    <li><a href="../pages/servicios.html#calibracion">Agricultura</a></li>
-                    <li><a href="../pages/servicios.html#formacion">Alimentacion</a></li>
-                    <li><a href="../pages/servicios.html#biologia">Construccion</a></li>
+                    <li><a href="../pages/agua.html">Aguas</a></li>
+                    <li><a href="../pages/agricultura.html">Agricultura</a></li>
+                    <li><a href="../pages/alimentacion.html">Alimentación</a></li>
+                    <li><a href="../pages/construccion.html">Construcción</a></li>
+                    <li><a href="../pages/geotecnia.html">Geotecnia</a></li>
+                    <li><a href="../pages/viales.html">Viales</a></li>
                 </ul>
             </section>
 
