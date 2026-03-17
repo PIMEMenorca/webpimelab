@@ -233,6 +233,18 @@
         @apply absolute inset-0 w-full shadow-xl opacity-0 pointer-events-none z-10 before:absolute md:before:inset-x-0 before:top-0 before:h-24 md:before:bg-linear-to-b md:before:from-azul-oscuro/80 md:before:to-transparent md:before:z-20 md:after:bg-linear-to-r md:after:from-azul-oscuro/80 md:after:to-transparent md:after:absolute after:inset-0 after:z-10;
     }
 
+    .slide-indicators {
+        @apply absolute bottom-4 left-1/2 -translate-x-1/2 z-30 flex gap-3;
+    }
+
+    .slide-indicators li.active {
+        @apply bg-blanco;
+    }
+
+    .slide-indicators li {
+        @apply w-3 h-3 rounded-full bg-blanco/50 cursor-pointer transition-colors duration-300;
+    }
+
     .slide-image {
         @apply block w-full object-contain;
     }

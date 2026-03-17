@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	const slides = Array.from(document.querySelectorAll(".slideshows .slide"));
 	const prevButton = document.querySelector(".slideshows .slide-nav.prev");
 	const nextButton = document.querySelector(".slideshows .slide-nav.next");
+	const indicators = Array.from(document.querySelectorAll(".slideshows .slide-indicators li"));
 	const AUTO_PLAY_INTERVAL = 4000;
 	let autoplayTimerId = null;
 	let transitionResetTimerId = null;
@@ -34,8 +35,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	function showSlide(index) {
 		const nextSlideIndex = (index + slides.length) % slides.length;
-
 		if (nextSlideIndex === currentSlideIndex) {
+			updateIndicators();
 			return;
 		}
 
@@ -48,6 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 		currentSlideIndex = nextSlideIndex;
 		slides[currentSlideIndex].classList.add("active");
+		updateIndicators();
 
 		if (transitionResetTimerId !== null) {
 			clearTimeout(transitionResetTimerId);
@@ -59,6 +61,8 @@ document.addEventListener("DOMContentLoaded", function () {
 			transitionResetTimerId = null;
 		}, 600);
 	}
+
+	updateIndicators();
 
 	prevButton.addEventListener("click", function () {
 		showSlide(currentSlideIndex - 1);
@@ -118,9 +122,26 @@ document.addEventListener("DOMContentLoaded", function () {
 			}
 		});
 	}, observerOptions);
+	// añadir logica para indicadores de diapositivas
+	indicators.forEach((indicator, index) => {
+		indicator.addEventListener("click", () => {
+			showSlide(index);
+			startAutoplay();
+		});
+	});
 
-	
-	
+	// resaltar el indicador activo
+	function updateIndicators() {
+		indicators.forEach((indicator, index) => {
+			if (index === currentSlideIndex) {
+				indicator.classList.add("active");
+			} else {
+				indicator.classList.remove("active");
+			}
+		});
+	}
+
+	// añadir la clase 'fade-in' a los elementos que deseas animar
 	document.querySelectorAll('.fade-in').forEach(el => {
 		observer.observe(el);
 	});
