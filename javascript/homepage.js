@@ -76,6 +76,35 @@ document.addEventListener("DOMContentLoaded", function () {
 	startAutoplay();
 	}, AUTO_PLAY_INTERVAL);
 
+	// Touch swipe functionality for mobile
+	let touchStartX = 0;
+	let touchEndX = 0;
+
+	slideshow.addEventListener("touchstart", (e) => {
+		touchStartX = e.changedTouches[0].screenX;
+	}, false);
+
+	slideshow.addEventListener("touchend", (e) => {
+		touchEndX = e.changedTouches[0].screenX;
+		handleSwipe();
+	}, false);
+
+	function handleSwipe() {
+		const swipeThreshold = 50;
+		const difference = touchStartX - touchEndX;
+
+		if (Math.abs(difference) > swipeThreshold) {
+			if (difference > 0) {
+				// Swiped left, show next slide
+				showSlide(currentSlideIndex + 1);
+			} else {
+				// Swiped right, show previous slide
+				showSlide(currentSlideIndex - 1);
+			}
+			startAutoplay();
+		}
+	}
+
 	// Intersection Observer for fade-in animations
 	const observerOptions = {
 		threshold: 0.1,
@@ -90,6 +119,8 @@ document.addEventListener("DOMContentLoaded", function () {
 		});
 	}, observerOptions);
 
+	
+	
 	document.querySelectorAll('.fade-in').forEach(el => {
 		observer.observe(el);
 	});

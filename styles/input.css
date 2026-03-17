@@ -226,7 +226,7 @@
     }
     
     .slideshows {
-        @apply relative w-full p-4 md:p-0;
+        @apply relative w-full p-0;
     }
 
     .slide {
@@ -238,11 +238,11 @@
     }
 
     .slide-content {
-        @apply absolute w-[85%]  left-7 right-4 -bottom-10 bg-azul-oscuro/80 md:bg-transparent bg-origin-border  md:top-10 text-base lg:top-8 md:left-10 lg:left-1/8 md:right-auto p-4 md:p-6 rounded-md text-blanco shadow-2xl md:shadow-none border-0 ring-0 z-1000 lg:flex lg:flex-col lg:justify-center lg:gap-4 backface-hidden;
+        @apply absolute w-[85%] hidden md:block left-7 right-4 -bottom-10 bg-azul-oscuro/80 md:bg-transparent bg-origin-border  md:top-10 text-base lg:top-8 md:left-10 lg:left-1/8 md:right-auto p-4 md:p-6 rounded-md text-blanco shadow-2xl md:shadow-none border-0 ring-0 z-1000 lg:flex lg:flex-col lg:justify-center lg:gap-4 backface-hidden;
     }
 
     .slide-nav {
-        @apply absolute top-1/2 -translate-y-1/2 z-30 w-10 h-10 md:w-12 md:h-12 rounded-full text-azul-oscuro md:text-blanco flex items-center justify-center md:text-xl font-bold transition-all duration-300 hover:bg-azul-oscuro hover:scale-105;
+        @apply absolute hidden top-1/2 -translate-y-1/2 z-30 w-10 h-10 md:w-12 md:h-12 rounded-full text-azul-oscuro md:text-blanco md:flex items-center justify-center md:text-xl font-bold transition-all duration-300 hover:bg-azul-oscuro hover:scale-105;
     }
 
     .slide-nav.prev {
@@ -282,7 +282,7 @@
     }
 
     .cta-strip {
-        @apply w-full bg-[#003d7a] mt-8 md:mt-0;
+        @apply w-full bg-[#003d7a];
     }
 
     .cta-strip-inner {
