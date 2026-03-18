@@ -383,7 +383,7 @@
 
 
     .contenido-noticia {
-        @apply mx-auto text-gris text-base leading-relaxed;
+        @apply text-gris text-base leading-relaxed justify-between;
     }
 
 

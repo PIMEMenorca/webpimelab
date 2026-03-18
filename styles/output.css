@@ -2267,7 +2267,7 @@
     animation: entrarDerecha 1300ms ease-out both;
   }
   .contenido-noticia {
-    margin-inline: auto;
+    justify-content: space-between;
     font-size: var(--text-base);
     line-height: var(--tw-leading, var(--text-base--line-height));
     --tw-leading: var(--leading-relaxed);
