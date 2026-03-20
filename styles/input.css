@@ -87,7 +87,7 @@
     }
 
     main {
-        @apply w-full flex-1 from-blanco via-blanco-accent to-gris/10;
+        @apply w-full flex-1 from-blanco via-blanco-accent to-gris/10 overflow-x-hidden;
     }
     
     h1, h2, h3, h4, h5, h6 {
@@ -576,6 +576,21 @@
         border-radius: inherit;
     }
 
+    /* estilos para el carrusel de noticias */
+    .pagination {
+        @apply text-center mb-4;
+    }
+
+    .pagination a {
+        @apply text-[#007BFF] px-4 py-2 decoration-0 my-1.5 rounded-md hover:bg-[#007BFF]  hover:text-white transition-colors duration-300;
+    }
+
+    .pagination.active{
+        @apply bg-[#007BFF] text-white;
+    }
+    #page-numbers {
+        @apply mt-5 text-sm;
+
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -587,4 +602,5 @@
     .slide.active .slide-content {
         animation: none;
     }
+}
 }
